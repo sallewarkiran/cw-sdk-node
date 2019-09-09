@@ -24,7 +24,11 @@ const defaultTradeURL = "wss://trading.service.cryptowat.ch";
 
 export function loadStreamCredentials(opts: StreamOpts): StreamOpts {
   if (!opts.creds) {
-    throw new Error("Missing stream credentials");
+    opts.creds = {
+      apiKey: "",
+      secretKey: "",
+      url: defaultStreamURL
+    };
   }
   if (!opts.creds.url) {
     opts.creds.url = defaultStreamURL;
@@ -35,7 +39,11 @@ export function loadStreamCredentials(opts: StreamOpts): StreamOpts {
 
 export function loadTradeCredentials(opts: TradeOpts): TradeOpts {
   if (!opts.creds) {
-    throw new Error("Missing trade credentials");
+    opts.creds = {
+      apiKey: "",
+      secretKey: "",
+      url: defaultTradeURL
+    };
   }
   if (!opts.creds.url) {
     opts.creds.url = defaultTradeURL;
