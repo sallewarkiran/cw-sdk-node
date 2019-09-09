@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "google/protobuf/duration.proto";
+
+service StatUpdates {
+  // Returns a stream of vwap updates
+  rpc GetVWAPUpdates(VWAPSubOptions) returns (stream VWAPUpdate);
+}
+
+message VWAPSubOptions {
+  // If set, stats-agg will only send out updates for instruments which
+  // have one of the specified quote assets.
+  repeated uint64 quote_asset_ids = 1;
+
+  // Tells the stats-agg the minimum time interval between subsequent updates.
+  // In other words, it's the inverse of the desired update rate.
+  google.protobuf.Duration min_update_interval = 2;
+}
+
+message VWAPUpdate {
+  uint64 instrument_id = 1;
+  string vwap = 2;
+}
