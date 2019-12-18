@@ -1,8 +1,8 @@
-import { ProtobufBroker, ProtobufClient, ProtobufStream } from 'websocket/modules/proto';
-import { TradeClient } from 'websocket/TradeClient';
-import { PlaceOrderOpt } from 'websocket/types/trading';
-import { getNumber } from 'util/helpers';
-import logger from 'util/logger';
+import { ProtobufBroker, ProtobufClient, ProtobufStream } from '../../websocket/modules/proto';
+import { TradeClient } from '../../websocket/TradeClient';
+import { PlaceOrderOpt } from '../../websocket/types/trading';
+import { getNumber } from '../../util/helpers';
+import logger from '../../util/logger';
 import { getConnOpts, getMockWebSocketServer, getTradeOpts, validToken } from './ws-test-server';
 
 test('client-trade-session', () => {

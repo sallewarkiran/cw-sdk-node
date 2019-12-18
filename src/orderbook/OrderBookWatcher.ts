@@ -1,9 +1,9 @@
-import { Updater } from 'orderbook/Updater';
-import { SnapshotRetriever } from 'orderbook/SnapshotRetriever';
-import { OrderBookSnapshot } from 'util/types/shared';
-import { StreamClient } from 'websocket';
-import logger from 'util/logger';
-import { RESTClient } from 'rest';
+import { Updater } from '../orderbook/Updater';
+import { SnapshotRetriever } from '../orderbook/SnapshotRetriever';
+import { OrderBookSnapshot } from '../util/types/shared';
+import { StreamClient } from '../websocket';
+import logger from '../util/logger';
+import { RESTClient } from '../rest';
 
 /**
  * Allows user to subscribe to an orderbook and recieve updates. StreamClient must be

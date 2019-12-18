@@ -4,8 +4,8 @@ import {
   OrderBookDelta,
   OrderDeltas,
   DeltaItem
-} from 'util/types/shared';
-import { sortDeltaItems, binarySearchOrders } from 'util/helpers';
+} from '../util/types/shared';
+import { sortDeltaItems, binarySearchOrders } from '../util/helpers';
 
 /**
  * Internal class for handling OrderBook delta transforms

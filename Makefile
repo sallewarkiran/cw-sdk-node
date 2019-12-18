@@ -66,8 +66,8 @@ test-package: build ## Tests packaged npm module
 		echo $$PACK ; \
 		echo mv $$PACK $$TMP ; \
 		mv $$PACK $$TMP ; \
-		cp test/package/package.json $$TMP ; \
-		cp test/package/index.js $$TMP ; \
+		cp __tests__/package/package.json $$TMP ; \
+		cp __tests__/package/index.js $$TMP ; \
 		cd $$TMP ; \
 		npm i $$PACK ; \
 		node . ; \
