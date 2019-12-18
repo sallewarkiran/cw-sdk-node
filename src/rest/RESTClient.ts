@@ -21,9 +21,9 @@ import { RESTResponse, RESTOpts, RESTAllowance } from './types/client';
 import superagent from 'superagent';
 import { RestError } from './errors';
 import { loadRESTCredentials } from '../util/credentials';
-import { Market, Asset, OrderBookSnapshot } from 'util/types/shared';
-import { transformSnapshot } from 'util/helpers';
-import version from 'version';
+import { Market, Asset, OrderBookSnapshot } from '../util/types/shared';
+import { transformSnapshot } from '../util/helpers';
+import version from '../version';
 
 export class RESTClient {
   private apiKey?: string;

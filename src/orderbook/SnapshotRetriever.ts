@@ -1,5 +1,5 @@
-import { RESTClient } from 'rest';
-import { OrderBookSnapshot, MarketSelector } from 'util/types/shared';
+import { RESTClient } from '../rest';
+import { OrderBookSnapshot, MarketSelector } from '../util/types/shared';
 
 /**
  * Internal class to handle retrieving orderbook snapshots via the REST API.

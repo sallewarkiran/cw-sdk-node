@@ -1,4 +1,4 @@
-import { OrderBookDelta, OrderBookSnapshot, OrderBookState } from 'util/types/shared';
+import { OrderBookDelta, OrderBookSnapshot, OrderBookState } from '../util/types/shared';
 import { SnapshotRetriever } from './SnapshotRetriever';
 import { EventEmitter } from 'events';
 import { OrderBook } from './OrderBook';
