@@ -1,2 +1,7 @@
 node_modules
 /build
+*.log
+cw-sdk-node-*.tgz
+
+# yarn
+.yarn-cache

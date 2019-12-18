@@ -1,6 +1,6 @@
 {
   "name": "cw-sdk-node",
-  "version": "0.0.2",
+  "version": "1.0.0-beta.1",
   "description": "Cryptowatch SDK for NodeJS",
   "author": "Cryptowatch <infra@cryptowatch>",
   "homepage": "https://cryptowat.ch/docs/websocket-api",
@@ -15,20 +15,21 @@
     "build/**/*"
   ],
   "scripts": {
-    "lint": "tslint -p tsconfig.json",
+    "lint": "eslint */**.ts",
     "test": "jest",
-    "build": "tsc",
+    "build": "tsc -p tsconfig.release.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint"
+    "preversion": "npm run lint",
+    "docs": "rm -rf ./docs && npx typedoc --mode file --plugin typedoc-plugin-markdown --out docs --excludeNotExported --excludePrivate --excludeExternals --externalPattern \"**/modules/proto/*\" --readme none ./src"
   },
   "dependencies": {
-    "@types/long": "^4.0.0",
-    "@types/ws": "^6.0.3",
     "big.js": "^5.2.2",
+    "decimal.js-light": "^2.5.0",
     "js-yaml": "^3.13.1",
     "long": "^4.0.0",
     "protobufjs": "^6.8.8",
+    "superagent": "^5.1.0",
     "uuid": "^3.3.3",
     "winston": "^3.2.1",
     "ws": "^7.1.2"
@@ -38,25 +39,43 @@
     "@types/get-port": "^4.0.1",
     "@types/jest": "^24.0.18",
     "@types/js-yaml": "^3.12.1",
+    "@types/long": "^4.0.0",
     "@types/node": "^12.7.4",
+    "@types/superagent": "^4.1.3",
     "@types/uuid": "^3.4.5",
+    "@types/ws": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "deepmerge": "^4.0.0",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "get-port": "^5.0.0",
     "in-series": "^0.0.4",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.19.0",
-    "tslint-config-prettier": "^1.18.0",
+    "prettier": "^1.19.1",
+    "superagent-mocker": "^0.5.2",
+    "ts-jest": "^24.1.0",
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^2.2.11",
     "typescript": "^3.6.2",
     "yarn": "^1.17.3"
   },
-  "keywords": ["cryptowatch", "crypto", "trade", "stream", "kraken"],
+  "keywords": [
+    "cryptowatch",
+    "crypto",
+    "trade",
+    "stream",
+    "kraken"
+  ],
   "jest": {
+    "testEnvironment": "node",
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -65,10 +84,14 @@
       "json",
       "node"
     ],
-    "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.json"
-      }
-    }
+    "modulePaths": [
+      "./src/"
+    ],
+    "testRegex": "(/__tests__/.*(test|spec))\\.(ts|js)x?$",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx,js,jsx}",
+      "!src/**/*.d.ts"
+    ]
   }
 }

@@ -1,5 +1,7 @@
-import * as winston from "winston";
-import { LogLevel } from "../types/client";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import winston from 'winston';
+
+export type LogLevel = 'debug' | 'info' | 'warn' | 'error' | 'disabled';
 
 const levels: { [key: string]: number } = {
   debug: 0,
@@ -9,7 +11,7 @@ const levels: { [key: string]: number } = {
   disabled: 4
 };
 
-const defaultLevel = "info";
+const defaultLevel = 'info';
 
 class Logger {
   private logger: winston.Logger;
@@ -22,13 +24,13 @@ class Logger {
     }
     this.level = level;
 
-    const loggerFormat = winston.format.printf(info => {
+    const loggerFormat = winston.format.printf((info) => {
       return `[${info.label}] ${info.message}`;
     });
 
     this.logger = winston.createLogger({
       format: winston.format.combine(
-        winston.format.label({ label: "cw-sdk-node" }),
+        winston.format.label({ label: 'cw-sdk-node' }),
         winston.format.colorize({ all: true }),
         winston.format.splat(),
         winston.format.simple(),
@@ -36,40 +38,40 @@ class Logger {
       ),
       transports: [
         new winston.transports.Console({
-          level: "debug"
+          level: 'debug'
         })
       ]
     });
   }
 
-  public setLevel(newLevel: LogLevel | undefined) {
+  public setLevel(newLevel: LogLevel | undefined): void {
     this.level = newLevel || defaultLevel;
   }
 
-  public disable() {
-    this.level = "disabled";
+  public disable(): void {
+    this.level = 'disabled';
   }
 
-  public error(message: string, ...meta: any[]) {
-    if (this.shouldLog("error")) {
+  public error(message: string, ...meta: any[]): void {
+    if (this.shouldLog('error')) {
       this.logger.error(message, meta);
     }
   }
 
-  public warn(message: string, ...meta: any[]) {
-    if (this.shouldLog("warn")) {
+  public warn(message: string, ...meta: any[]): void {
+    if (this.shouldLog('warn')) {
       this.logger.warn(message, meta);
     }
   }
 
-  public info(message: string, ...meta: any[]) {
-    if (this.shouldLog("info")) {
+  public info(message: string, ...meta: any[]): void {
+    if (this.shouldLog('info')) {
       this.logger.info(message, meta);
     }
   }
 
-  public debug(message: string, ...meta: any[]) {
-    if (this.shouldLog("debug")) {
+  public debug(message: string, ...meta: any[]): void {
+    if (this.shouldLog('debug')) {
       this.logger.debug(message, meta);
     }
   }
