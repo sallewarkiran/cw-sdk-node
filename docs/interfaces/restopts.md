@@ -18,6 +18,6 @@
 
 • **creds**: *object*
 
-Defined in rest/types/client.ts:18
+Defined in src/rest/types/client.ts:18
 
 #### Type declaration:

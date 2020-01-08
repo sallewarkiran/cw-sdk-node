@@ -19,7 +19,7 @@
 
 • **performance**: *string*
 
-Defined in websocket/types/pairs.ts:19
+Defined in src/websocket/types/pairs.ts:19
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **window**: *string*
 
-Defined in websocket/types/pairs.ts:18
+Defined in src/websocket/types/pairs.ts:18

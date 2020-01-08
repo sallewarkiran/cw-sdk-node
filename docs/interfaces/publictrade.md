@@ -22,7 +22,7 @@
 
 • **amount**: *string*
 
-Defined in websocket/types/markets.ts:46
+Defined in src/websocket/types/markets.ts:46
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **externalID**: *string*
 
-Defined in websocket/types/markets.ts:42
+Defined in src/websocket/types/markets.ts:42
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **price**: *string*
 
-Defined in websocket/types/markets.ts:45
+Defined in src/websocket/types/markets.ts:45
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-Defined in websocket/types/markets.ts:44
+Defined in src/websocket/types/markets.ts:44
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/markets.ts:43
+Defined in src/websocket/types/markets.ts:43

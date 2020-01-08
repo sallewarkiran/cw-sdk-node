@@ -23,7 +23,7 @@
 
 • **allowance**: *[RESTAllowance](restallowance.md)*
 
-Defined in rest/types/client.ts:9
+Defined in src/rest/types/client.ts:9
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **result**: *T*
 
-Defined in rest/types/client.ts:8
+Defined in src/rest/types/client.ts:8

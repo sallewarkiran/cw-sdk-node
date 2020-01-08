@@ -19,7 +19,7 @@ export interface Market {
 }
 
 export interface Interval {
-  period: number;
+  period: string;
   ohlc: OHLC;
   closeTime: Date;
   volumeBase: string;

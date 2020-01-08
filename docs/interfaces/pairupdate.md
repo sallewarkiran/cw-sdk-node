@@ -21,7 +21,7 @@
 
 • **pair**: *[Pair](pair.md)*
 
-Defined in websocket/types/pairs.ts:2
+Defined in src/websocket/types/pairs.ts:2
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **performanceUpdate**? : *[PerformanceUpdate](performanceupdate.md)*
 
-Defined in websocket/types/pairs.ts:4
+Defined in src/websocket/types/pairs.ts:4
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **trendlineUpdate**? : *[TrendlineUpdate](trendlineupdate.md)*
 
-Defined in websocket/types/pairs.ts:5
+Defined in src/websocket/types/pairs.ts:5
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **vwapUpdate**? : *[VWAPUpdate](vwapupdate.md)*
 
-Defined in websocket/types/pairs.ts:3
+Defined in src/websocket/types/pairs.ts:3

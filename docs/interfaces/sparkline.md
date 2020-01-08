@@ -19,7 +19,7 @@
 
 • **price**: *string*
 
-Defined in websocket/types/markets.ts:68
+Defined in src/websocket/types/markets.ts:68
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/markets.ts:67
+Defined in src/websocket/types/markets.ts:67

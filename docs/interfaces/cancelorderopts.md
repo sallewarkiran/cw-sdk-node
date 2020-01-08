@@ -20,7 +20,7 @@
 
 • **marketID**: *number*
 
-Defined in websocket/types/trading.ts:58
+Defined in src/websocket/types/trading.ts:58
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **orderID**: *string*
 
-Defined in websocket/types/trading.ts:59
+Defined in src/websocket/types/trading.ts:59
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **requestID**? : *string*
 
-Defined in websocket/types/trading.ts:62
+Defined in src/websocket/types/trading.ts:62

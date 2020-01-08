@@ -21,7 +21,7 @@
 
 • **price**: *string*
 
-Defined in websocket/types/pairs.ts:25
+Defined in src/websocket/types/pairs.ts:25
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/pairs.ts:24
+Defined in src/websocket/types/pairs.ts:24
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **volume**: *string*
 
-Defined in websocket/types/pairs.ts:26
+Defined in src/websocket/types/pairs.ts:26
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **window**: *string*
 
-Defined in websocket/types/pairs.ts:23
+Defined in src/websocket/types/pairs.ts:23

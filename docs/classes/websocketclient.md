@@ -59,7 +59,7 @@
 
 \+ **new WebSocketClient**(`opts`: [WebSocketOpts](../interfaces/websocketopts.md)): *[WebSocketClient](websocketclient.md)*
 
-Defined in websocket/WebSocketClient.ts:64
+Defined in src/websocket/WebSocketClient.ts:64
 
 **Parameters:**
 
@@ -75,7 +75,7 @@ Name | Type |
 
 • **connState**: *symbol*
 
-Defined in websocket/WebSocketClient.ts:58
+Defined in src/websocket/WebSocketClient.ts:58
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **subscriptions**: *object*
 
-Defined in websocket/WebSocketClient.ts:47
+Defined in src/websocket/WebSocketClient.ts:47
 
 #### Type declaration:
 
@@ -97,7 +97,7 @@ ___
 
 *Inherited from void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:9
+Defined in node_modules/@types/node/events.d.ts:9
 
 ## Methods
 
@@ -109,7 +109,7 @@ Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/event
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:11
+Defined in node_modules/@types/node/events.d.ts:11
 
 **Parameters:**
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **connect**(): *void*
 
-Defined in websocket/WebSocketClient.ts:101
+Defined in src/websocket/WebSocketClient.ts:101
 
 **Returns:** *void*
 
@@ -143,7 +143,7 @@ ___
 
 ▸ **disconnect**(): *void*
 
-Defined in websocket/WebSocketClient.ts:161
+Defined in src/websocket/WebSocketClient.ts:161
 
 **Returns:** *void*
 
@@ -157,7 +157,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:23
+Defined in node_modules/@types/node/events.d.ts:23
 
 **Parameters:**
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **error**(`e`: string): *void*
 
-Defined in websocket/WebSocketClient.ts:133
+Defined in src/websocket/WebSocketClient.ts:133
 
 **Parameters:**
 
@@ -194,7 +194,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:24
+Defined in node_modules/@types/node/events.d.ts:24
 
 **Returns:** *Array‹string | symbol›*
 
@@ -208,7 +208,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:20
+Defined in node_modules/@types/node/events.d.ts:20
 
 **Returns:** *number*
 
@@ -218,7 +218,7 @@ ___
 
 ▸ **getSubscriptions**(): *ClientSubscription[]*
 
-Defined in websocket/WebSocketClient.ts:173
+Defined in src/websocket/WebSocketClient.ts:173
 
 **Returns:** *ClientSubscription[]*
 
@@ -232,7 +232,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:25
+Defined in node_modules/@types/node/events.d.ts:25
 
 **Parameters:**
 
@@ -252,7 +252,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:21
+Defined in node_modules/@types/node/events.d.ts:21
 
 **Parameters:**
 
@@ -272,7 +272,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:17
+Defined in node_modules/@types/node/events.d.ts:17
 
 **Parameters:**
 
@@ -300,7 +300,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:12
+Defined in node_modules/@types/node/events.d.ts:12
 
 **Parameters:**
 
@@ -324,7 +324,7 @@ ___
 
 ▸ **onConnect**(`fn`: function): *void*
 
-Defined in websocket/WebSocketClient.ts:138
+Defined in src/websocket/WebSocketClient.ts:138
 
 **Parameters:**
 
@@ -340,7 +340,7 @@ ___
 
 ▸ **onDisconnect**(`fn`: function): *void*
 
-Defined in websocket/WebSocketClient.ts:142
+Defined in src/websocket/WebSocketClient.ts:142
 
 **Parameters:**
 
@@ -356,7 +356,7 @@ ___
 
 ▸ **onError**(`fn`: function): *void*
 
-Defined in websocket/WebSocketClient.ts:150
+Defined in src/websocket/WebSocketClient.ts:150
 
 **Parameters:**
 
@@ -378,7 +378,7 @@ ___
 
 ▸ **onStateChange**(`fn`: function): *void*
 
-Defined in websocket/WebSocketClient.ts:146
+Defined in src/websocket/WebSocketClient.ts:146
 
 **Parameters:**
 
@@ -404,7 +404,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:13
+Defined in node_modules/@types/node/events.d.ts:13
 
 **Parameters:**
 
@@ -432,7 +432,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:14
+Defined in node_modules/@types/node/events.d.ts:14
 
 **Parameters:**
 
@@ -460,7 +460,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:15
+Defined in node_modules/@types/node/events.d.ts:15
 
 **Parameters:**
 
@@ -488,7 +488,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:22
+Defined in node_modules/@types/node/events.d.ts:22
 
 **Parameters:**
 
@@ -508,7 +508,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:18
+Defined in node_modules/@types/node/events.d.ts:18
 
 **Parameters:**
 
@@ -528,7 +528,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:16
+Defined in node_modules/@types/node/events.d.ts:16
 
 **Parameters:**
 
@@ -552,7 +552,7 @@ ___
 
 ▸ **send**(`data`: Buffer | Uint8Array): *void*
 
-Defined in websocket/WebSocketClient.ts:154
+Defined in src/websocket/WebSocketClient.ts:154
 
 **Parameters:**
 
@@ -572,7 +572,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:19
+Defined in node_modules/@types/node/events.d.ts:19
 
 **Parameters:**
 
@@ -588,7 +588,7 @@ ___
 
 ▸ **state**(): *symbol*
 
-Defined in websocket/WebSocketClient.ts:169
+Defined in src/websocket/WebSocketClient.ts:169
 
 **Returns:** *symbol*
 
@@ -600,7 +600,7 @@ ___
 
 *Inherited from void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:8
+Defined in node_modules/@types/node/events.d.ts:8
 
 **`deprecated`** since v4.0.0
 

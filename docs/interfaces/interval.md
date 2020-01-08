@@ -22,7 +22,7 @@
 
 • **closeTime**: *Date*
 
-Defined in websocket/types/markets.ts:24
+Defined in src/websocket/types/markets.ts:24
 
 ___
 
@@ -30,15 +30,15 @@ ___
 
 • **ohlc**: *[OHLC](ohlc.md)*
 
-Defined in websocket/types/markets.ts:23
+Defined in src/websocket/types/markets.ts:23
 
 ___
 
 ###  period
 
-• **period**: *number*
+• **period**: *string*
 
-Defined in websocket/types/markets.ts:22
+Defined in src/websocket/types/markets.ts:22
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **volumeBase**: *string*
 
-Defined in websocket/types/markets.ts:25
+Defined in src/websocket/types/markets.ts:25
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **volumeQuote**: *string*
 
-Defined in websocket/types/markets.ts:26
+Defined in src/websocket/types/markets.ts:26

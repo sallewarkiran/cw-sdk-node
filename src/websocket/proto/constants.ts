@@ -1,4 +1,5 @@
 import { OrderSide, FundingType, OrderType } from '../types/trading';
+import { Period } from '../../rest/types/data';
 
 // NOTE: the mapping for buy/sell is different for PrivateOrder and PublicTrade
 export const privateOrderSideFromProto: { [key: number]: OrderSide } = {
@@ -63,34 +64,18 @@ export const orderTypeToProto: { [key: string]: number } = {
   // settleposition: 12
 };
 
-export enum Period {
-  Period1M = 60,
-  Period3M = 180,
-  Period5M = 300,
-  Period15M = 900,
-  Period30M = 1800,
-  Period1H = 3600,
-  Period2H = 7200,
-  Period4H = 14400,
-  Period6H = 21600,
-  Period12H = 43200,
-  Period1D = 86400,
-  Period3D = 259200,
-  Period1W = 604800
-}
-
 export const periodFromInt: { [key: number]: Period } = {
-  60: Period.Period1M,
-  180: Period.Period3M,
-  300: Period.Period5M,
-  900: Period.Period15M,
-  1800: Period.Period30M,
-  3600: Period.Period1H,
-  7200: Period.Period2H,
-  14400: Period.Period4H,
-  21600: Period.Period6H,
-  43200: Period.Period12H,
-  86400: Period.Period1D,
-  259200: Period.Period3D,
-  604800: Period.Period1W
+  60: Period['1m'],
+  180: Period['3m'],
+  300: Period['5m'],
+  900: Period['15m'],
+  1800: Period['30m'],
+  3600: Period['1h'],
+  7200: Period['2h'],
+  14400: Period['4h'],
+  21600: Period['6h'],
+  43200: Period['12h'],
+  86400: Period['1d'],
+  259200: Period['3d'],
+  604800: Period['1w']
 };

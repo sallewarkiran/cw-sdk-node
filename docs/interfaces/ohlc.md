@@ -21,7 +21,7 @@
 
 • **close**: *string*
 
-Defined in websocket/types/markets.ts:33
+Defined in src/websocket/types/markets.ts:33
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **high**: *string*
 
-Defined in websocket/types/markets.ts:31
+Defined in src/websocket/types/markets.ts:31
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **low**: *string*
 
-Defined in websocket/types/markets.ts:32
+Defined in src/websocket/types/markets.ts:32
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **open**: *string*
 
-Defined in websocket/types/markets.ts:30
+Defined in src/websocket/types/markets.ts:30

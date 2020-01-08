@@ -11,8 +11,9 @@ import {
 } from '../types/markets';
 import { sideFromProto } from './sideFromProto';
 import { getDateFromSecs, getDateFromNs, getNumber } from '../../util/helpers';
-import { periodFromInt, Period } from './constants';
+import { periodFromInt } from './constants';
 import { PublicOrder, OrderBookSnapshot, OrderBookDelta } from 'util/types/shared';
+import { Period } from '../../rest/types/data';
 
 function publicOrderFromProto(publicOrder: ProtobufMarkets.IOrder): PublicOrder | null {
   if (!publicOrder.priceStr || !publicOrder.amountStr) {

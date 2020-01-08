@@ -19,7 +19,7 @@
 
 • **allowance**: *[RESTAllowance](restallowance.md)*
 
-Defined in rest/types/client.ts:14
+Defined in src/rest/types/client.ts:14
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **error**: *string*
 
-Defined in rest/types/client.ts:13
+Defined in src/rest/types/client.ts:13

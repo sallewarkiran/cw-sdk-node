@@ -19,7 +19,7 @@
 
 • **amount**: *string*
 
-Defined in util/types/shared.ts:27
+Defined in src/util/types/shared.ts:27
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **price**: *string*
 
-Defined in util/types/shared.ts:26
+Defined in src/util/types/shared.ts:26

@@ -19,7 +19,7 @@
 
 • **type**: *PriceParamType*
 
-Defined in websocket/types/trading.ts:79
+Defined in src/websocket/types/trading.ts:79
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **value**: *number*
 
-Defined in websocket/types/trading.ts:78
+Defined in src/websocket/types/trading.ts:78

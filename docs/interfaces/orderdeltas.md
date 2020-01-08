@@ -19,9 +19,9 @@
 
 • **remove**: *string[]*
 
-Defined in util/types/shared.ts:22
+Defined in src/util/types/shared.ts:22
 
-Defined in websocket/types/markets.ts:38
+Defined in src/websocket/types/markets.ts:38
 
 ___
 
@@ -29,6 +29,6 @@ ___
 
 • **set**: *[PublicOrder](publicorder.md)[]*
 
-Defined in util/types/shared.ts:21
+Defined in src/util/types/shared.ts:21
 
-Defined in websocket/types/markets.ts:37
+Defined in src/websocket/types/markets.ts:37

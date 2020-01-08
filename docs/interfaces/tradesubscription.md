@@ -19,7 +19,7 @@
 
 • **auth**? : *[TradeSessionAuth](tradesessionauth.md)*
 
-Defined in websocket/types/client.ts:45
+Defined in src/websocket/types/client.ts:45
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **marketID**: *number*
 
-Defined in websocket/types/client.ts:44
+Defined in src/websocket/types/client.ts:44
