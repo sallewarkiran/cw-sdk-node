@@ -36,7 +36,7 @@ Internal class for handling OrderBook delta transforms
 
 \+ **new OrderBook**(`snapshot?`: [OrderBookSnapshot](../interfaces/orderbooksnapshot.md)): *[OrderBook](orderbook.md)*
 
-Defined in orderbook/OrderBook.ts:16
+Defined in src/orderbook/OrderBook.ts:16
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 *Implementation of [OrderBookSnapshot](../interfaces/orderbooksnapshot.md).[asks](../interfaces/orderbooksnapshot.md#asks)*
 
-Defined in orderbook/OrderBook.ts:16
+Defined in src/orderbook/OrderBook.ts:16
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 *Implementation of [OrderBookSnapshot](../interfaces/orderbooksnapshot.md).[bids](../interfaces/orderbooksnapshot.md#bids)*
 
-Defined in orderbook/OrderBook.ts:15
+Defined in src/orderbook/OrderBook.ts:15
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 *Implementation of [OrderBookSnapshot](../interfaces/orderbooksnapshot.md).[seqNum](../interfaces/orderbooksnapshot.md#seqnum)*
 
-Defined in orderbook/OrderBook.ts:14
+Defined in src/orderbook/OrderBook.ts:14
 
 ## Methods
 
@@ -82,7 +82,7 @@ Defined in orderbook/OrderBook.ts:14
 
 ▸ **applyDelta**(`delta`: [OrderBookDelta](../interfaces/orderbookdelta.md), `ignoreSeqNum`: boolean): *[OrderBook](orderbook.md)*
 
-Defined in orderbook/OrderBook.ts:38
+Defined in src/orderbook/OrderBook.ts:38
 
 **Parameters:**
 
@@ -99,7 +99,7 @@ ___
 
 ▸ **applySnapshot**(`snapshot`: [OrderBookSnapshot](../interfaces/orderbooksnapshot.md)): *void*
 
-Defined in orderbook/OrderBook.ts:32
+Defined in src/orderbook/OrderBook.ts:32
 
 **Parameters:**
 
@@ -115,6 +115,6 @@ ___
 
 ▸ **getSnapshot**(): *[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)*
 
-Defined in orderbook/OrderBook.ts:24
+Defined in src/orderbook/OrderBook.ts:24
 
 **Returns:** *[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)*

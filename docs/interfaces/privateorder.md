@@ -26,7 +26,7 @@
 
 • **amount**: *string*
 
-Defined in websocket/types/trading.ts:6
+Defined in src/websocket/types/trading.ts:6
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 • **amountFilled**: *string*
 
-Defined in websocket/types/trading.ts:16
+Defined in src/websocket/types/trading.ts:16
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **expireTime**? : *Date*
 
-Defined in websocket/types/trading.ts:10
+Defined in src/websocket/types/trading.ts:10
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **fundingType**: *[FundingType](../README.md#fundingtype)*
 
-Defined in websocket/types/trading.ts:9
+Defined in src/websocket/types/trading.ts:9
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **id**: *string*
 
-Defined in websocket/types/trading.ts:14
+Defined in src/websocket/types/trading.ts:14
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **price**: *string*
 
-Defined in websocket/types/trading.ts:5
+Defined in src/websocket/types/trading.ts:5
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-Defined in websocket/types/trading.ts:7
+Defined in src/websocket/types/trading.ts:7
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/trading.ts:15
+Defined in src/websocket/types/trading.ts:15
 
 ___
 
@@ -90,4 +90,4 @@ ___
 
 • **type**: *[OrderType](../README.md#ordertype)*
 
-Defined in websocket/types/trading.ts:8
+Defined in src/websocket/types/trading.ts:8

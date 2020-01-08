@@ -19,7 +19,7 @@
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/pairs.ts:14
+Defined in src/websocket/types/pairs.ts:14
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **vwap**: *string*
 
-Defined in websocket/types/pairs.ts:13
+Defined in src/websocket/types/pairs.ts:13

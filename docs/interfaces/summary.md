@@ -25,7 +25,7 @@
 
 • **changeAbsolute**: *string*
 
-Defined in websocket/types/markets.ts:61
+Defined in src/websocket/types/markets.ts:61
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **changePercent**: *string*
 
-Defined in websocket/types/markets.ts:62
+Defined in src/websocket/types/markets.ts:62
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **high**: *string*
 
-Defined in websocket/types/markets.ts:57
+Defined in src/websocket/types/markets.ts:57
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **last**: *string*
 
-Defined in websocket/types/markets.ts:56
+Defined in src/websocket/types/markets.ts:56
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **low**: *string*
 
-Defined in websocket/types/markets.ts:58
+Defined in src/websocket/types/markets.ts:58
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **numTrades**: *number*
 
-Defined in websocket/types/markets.ts:63
+Defined in src/websocket/types/markets.ts:63
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **volumeBase**: *string*
 
-Defined in websocket/types/markets.ts:59
+Defined in src/websocket/types/markets.ts:59
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 • **volumeQuote**: *string*
 
-Defined in websocket/types/markets.ts:60
+Defined in src/websocket/types/markets.ts:60

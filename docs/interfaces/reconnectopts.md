@@ -21,7 +21,7 @@
 
 • **backoff**: *boolean*
 
-Defined in websocket/types/client.ts:26
+Defined in src/websocket/types/client.ts:26
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **enabled**: *boolean*
 
-Defined in websocket/types/client.ts:21
+Defined in src/websocket/types/client.ts:21
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **maxTimeout**: *number*
 
-Defined in websocket/types/client.ts:32
+Defined in src/websocket/types/client.ts:32
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **timeout**: *number*
 
-Defined in websocket/types/client.ts:29
+Defined in src/websocket/types/client.ts:29

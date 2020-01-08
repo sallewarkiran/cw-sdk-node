@@ -25,7 +25,7 @@
 
 • **intervals**? : *[Interval](interval.md)[]*
 
-Defined in websocket/types/markets.ts:10
+Defined in src/websocket/types/markets.ts:10
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **market**: *Market*
 
-Defined in websocket/types/markets.ts:5
+Defined in src/websocket/types/markets.ts:5
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **orderBookDelta**? : *[OrderBookDelta](orderbookdelta.md)*
 
-Defined in websocket/types/markets.ts:7
+Defined in src/websocket/types/markets.ts:7
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **orderBookSnapshot**? : *[OrderBookSnapshot](orderbooksnapshot.md)*
 
-Defined in websocket/types/markets.ts:6
+Defined in src/websocket/types/markets.ts:6
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **orderBookSpread**? : *[OrderBookSpread](orderbookspread.md)*
 
-Defined in websocket/types/markets.ts:8
+Defined in src/websocket/types/markets.ts:8
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **sparkline**? : *[Sparkline](sparkline.md)*
 
-Defined in websocket/types/markets.ts:12
+Defined in src/websocket/types/markets.ts:12
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **summary**? : *[Summary](summary.md)*
 
-Defined in websocket/types/markets.ts:11
+Defined in src/websocket/types/markets.ts:11
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 • **trades**? : *[PublicTrade](publictrade.md)[]*
 
-Defined in websocket/types/markets.ts:9
+Defined in src/websocket/types/markets.ts:9

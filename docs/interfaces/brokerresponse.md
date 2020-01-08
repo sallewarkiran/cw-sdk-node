@@ -19,7 +19,7 @@
 
 • **error**? : *Error*
 
-Defined in websocket/types/trading.ts:74
+Defined in src/websocket/types/trading.ts:74
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **resolution**? : *RequestResolutionUpdate*
 
-Defined in websocket/types/trading.ts:73
+Defined in src/websocket/types/trading.ts:73

@@ -18,4 +18,4 @@
 
 • **id**: *number*
 
-Defined in websocket/types/pairs.ts:9
+Defined in src/websocket/types/pairs.ts:9

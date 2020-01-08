@@ -25,7 +25,7 @@
 
 • **creds**: *[Credentials](credentials.md)*
 
-Defined in websocket/types/client.ts:6
+Defined in src/websocket/types/client.ts:6
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **logLevel**? : *[LogLevel](../README.md#loglevel)*
 
-Defined in websocket/types/client.ts:12
+Defined in src/websocket/types/client.ts:12
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **nonce**? : *string*
 
-Defined in websocket/types/client.ts:16
+Defined in src/websocket/types/client.ts:16
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 • **reconnect**: *[ReconnectOpts](reconnectopts.md)*
 
-Defined in websocket/types/client.ts:10
+Defined in src/websocket/types/client.ts:10

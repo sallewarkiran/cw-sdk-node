@@ -19,7 +19,7 @@
 
 • **failed**: *[SubscriptionError](subscriptionerror.md)[]*
 
-Defined in websocket/types/client.ts:57
+Defined in src/websocket/types/client.ts:57
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **subscriptions**: *string[]*
 
-Defined in websocket/types/client.ts:56
+Defined in src/websocket/types/client.ts:56

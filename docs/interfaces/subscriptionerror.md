@@ -19,7 +19,7 @@
 
 • **error**: *string*
 
-Defined in websocket/types/client.ts:62
+Defined in src/websocket/types/client.ts:62
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **subscription**: *string*
 
-Defined in websocket/types/client.ts:61
+Defined in src/websocket/types/client.ts:61

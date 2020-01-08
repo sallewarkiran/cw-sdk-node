@@ -20,7 +20,7 @@
 
 • **asks**: *[OrderDeltas](orderdeltas.md)*
 
-Defined in util/types/shared.ts:17
+Defined in src/util/types/shared.ts:17
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **bids**: *[OrderDeltas](orderdeltas.md)*
 
-Defined in util/types/shared.ts:16
+Defined in src/util/types/shared.ts:16
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **seqNum**: *number*
 
-Defined in util/types/shared.ts:15
+Defined in src/util/types/shared.ts:15

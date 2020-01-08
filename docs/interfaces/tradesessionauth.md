@@ -21,7 +21,7 @@
 
 • **apiKey**: *string*
 
-Defined in websocket/types/client.ts:49
+Defined in src/websocket/types/client.ts:49
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **apiSecret**: *string*
 
-Defined in websocket/types/client.ts:50
+Defined in src/websocket/types/client.ts:50
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **customerID**? : *string*
 
-Defined in websocket/types/client.ts:51
+Defined in src/websocket/types/client.ts:51
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **keyPassphrase**? : *string*
 
-Defined in websocket/types/client.ts:52
+Defined in src/websocket/types/client.ts:52

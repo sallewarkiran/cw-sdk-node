@@ -20,7 +20,7 @@
 
 • **cost**: *number*
 
-Defined in rest/types/client.ts:2
+Defined in src/rest/types/client.ts:2
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **remaining**: *number*
 
-Defined in rest/types/client.ts:3
+Defined in src/rest/types/client.ts:3
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **upgrade**: *string*
 
-Defined in rest/types/client.ts:4
+Defined in src/rest/types/client.ts:4

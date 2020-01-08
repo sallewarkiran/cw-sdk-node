@@ -50,7 +50,7 @@ can trade.
 
 \+ **new SessionTracker**(`tradeSubs`: [TradeSubscription](../interfaces/tradesubscription.md)[]): *[SessionTracker](sessiontracker.md)*
 
-Defined in websocket/SessionTracker.ts:25
+Defined in src/websocket/SessionTracker.ts:25
 
 **Parameters:**
 
@@ -68,7 +68,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:9
+Defined in node_modules/@types/node/events.d.ts:9
 
 ## Methods
 
@@ -80,7 +80,7 @@ Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/event
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:11
+Defined in node_modules/@types/node/events.d.ts:11
 
 **Parameters:**
 
@@ -108,7 +108,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:23
+Defined in node_modules/@types/node/events.d.ts:23
 
 **Parameters:**
 
@@ -129,7 +129,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:24
+Defined in node_modules/@types/node/events.d.ts:24
 
 **Returns:** *Array‹string | symbol›*
 
@@ -143,7 +143,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:20
+Defined in node_modules/@types/node/events.d.ts:20
 
 **Returns:** *number*
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **isModuleReady**(`mID`: number, `m`: Module): *boolean*
 
-Defined in websocket/SessionTracker.ts:56
+Defined in src/websocket/SessionTracker.ts:56
 
 **Parameters:**
 
@@ -170,7 +170,7 @@ ___
 
 ▸ **isReady**(): *boolean*
 
-Defined in websocket/SessionTracker.ts:41
+Defined in src/websocket/SessionTracker.ts:41
 
 **Returns:** *boolean*
 
@@ -184,7 +184,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:25
+Defined in node_modules/@types/node/events.d.ts:25
 
 **Parameters:**
 
@@ -204,7 +204,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:21
+Defined in node_modules/@types/node/events.d.ts:21
 
 **Parameters:**
 
@@ -224,7 +224,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:17
+Defined in node_modules/@types/node/events.d.ts:17
 
 **Parameters:**
 
@@ -252,7 +252,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:12
+Defined in node_modules/@types/node/events.d.ts:12
 
 **Parameters:**
 
@@ -280,7 +280,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:13
+Defined in node_modules/@types/node/events.d.ts:13
 
 **Parameters:**
 
@@ -308,7 +308,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:14
+Defined in node_modules/@types/node/events.d.ts:14
 
 **Parameters:**
 
@@ -336,7 +336,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:15
+Defined in node_modules/@types/node/events.d.ts:15
 
 **Parameters:**
 
@@ -364,7 +364,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:22
+Defined in node_modules/@types/node/events.d.ts:22
 
 **Parameters:**
 
@@ -384,7 +384,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:18
+Defined in node_modules/@types/node/events.d.ts:18
 
 **Parameters:**
 
@@ -404,7 +404,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:16
+Defined in node_modules/@types/node/events.d.ts:16
 
 **Parameters:**
 
@@ -428,7 +428,7 @@ ___
 
 ▸ **reset**(): *void*
 
-Defined in websocket/SessionTracker.ts:60
+Defined in src/websocket/SessionTracker.ts:60
 
 **Returns:** *void*
 
@@ -442,7 +442,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:19
+Defined in node_modules/@types/node/events.d.ts:19
 
 **Parameters:**
 
@@ -458,7 +458,7 @@ ___
 
 ▸ **setModuleReady**(`mID`: number, `m`: Module): *void*
 
-Defined in websocket/SessionTracker.ts:45
+Defined in src/websocket/SessionTracker.ts:45
 
 **Parameters:**
 
@@ -477,7 +477,7 @@ ___
 
 *Inherited from void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:8
+Defined in node_modules/@types/node/events.d.ts:8
 
 **`deprecated`** since v4.0.0
 

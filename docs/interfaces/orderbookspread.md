@@ -20,7 +20,7 @@
 
 • **ask**: *[PublicOrder](publicorder.md)*
 
-Defined in websocket/types/markets.ts:52
+Defined in src/websocket/types/markets.ts:52
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **bid**: *[PublicOrder](publicorder.md)*
 
-Defined in websocket/types/markets.ts:51
+Defined in src/websocket/types/markets.ts:51
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/markets.ts:50
+Defined in src/websocket/types/markets.ts:50

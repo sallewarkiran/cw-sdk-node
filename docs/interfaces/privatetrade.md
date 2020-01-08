@@ -23,7 +23,7 @@
 
 • **amount**: *string*
 
-Defined in websocket/types/trading.ts:87
+Defined in src/websocket/types/trading.ts:87
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **id**: *string*
 
-Defined in websocket/types/trading.ts:83
+Defined in src/websocket/types/trading.ts:83
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **orderID**: *string*
 
-Defined in websocket/types/trading.ts:85
+Defined in src/websocket/types/trading.ts:85
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **price**: *string*
 
-Defined in websocket/types/trading.ts:86
+Defined in src/websocket/types/trading.ts:86
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-Defined in websocket/types/trading.ts:88
+Defined in src/websocket/types/trading.ts:88
 
 ___
 
@@ -63,4 +63,4 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/trading.ts:84
+Defined in src/websocket/types/trading.ts:84

@@ -25,7 +25,7 @@
 
 • **amountClosed**: *string*
 
-Defined in websocket/types/trading.ts:97
+Defined in src/websocket/types/trading.ts:97
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **amountOpen**: *string*
 
-Defined in websocket/types/trading.ts:96
+Defined in src/websocket/types/trading.ts:96
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **avgPrice**: *string*
 
-Defined in websocket/types/trading.ts:95
+Defined in src/websocket/types/trading.ts:95
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **id**: *string*
 
-Defined in websocket/types/trading.ts:92
+Defined in src/websocket/types/trading.ts:92
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **orderIDs**: *string[]*
 
-Defined in websocket/types/trading.ts:98
+Defined in src/websocket/types/trading.ts:98
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-Defined in websocket/types/trading.ts:94
+Defined in src/websocket/types/trading.ts:94
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in websocket/types/trading.ts:93
+Defined in src/websocket/types/trading.ts:93
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 • **tradeIDs**: *string[]*
 
-Defined in websocket/types/trading.ts:99
+Defined in src/websocket/types/trading.ts:99

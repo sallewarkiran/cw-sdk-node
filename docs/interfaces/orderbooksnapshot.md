@@ -24,7 +24,7 @@
 
 • **asks**: *[PublicOrder](publicorder.md)[]*
 
-Defined in util/types/shared.ts:4
+Defined in src/util/types/shared.ts:4
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **bids**: *[PublicOrder](publicorder.md)[]*
 
-Defined in util/types/shared.ts:3
+Defined in src/util/types/shared.ts:3
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 • **seqNum**: *number*
 
-Defined in util/types/shared.ts:2
+Defined in src/util/types/shared.ts:2

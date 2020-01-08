@@ -32,7 +32,7 @@ connected to start getting updates.
 
 \+ **new OrderBookWatcher**(`marketID`: number, `streamClient`: [StreamClient](streamclient.md), `restClient`: [RESTClient](restclient.md)): *[OrderBookWatcher](orderbookwatcher.md)*
 
-Defined in orderbook/OrderBookWatcher.ts:24
+Defined in src/orderbook/OrderBookWatcher.ts:24
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ Name | Type | Description |
 
 • **get inSync**(): *boolean*
 
-Defined in orderbook/OrderBookWatcher.ts:22
+Defined in src/orderbook/OrderBookWatcher.ts:22
 
 true if a snpshot has been retrieved and all of the latest deltas have been applied successfully
 
@@ -62,7 +62,7 @@ true if a snpshot has been retrieved and all of the latest deltas have been appl
 
 ▸ **destroy**(): *void*
 
-Defined in orderbook/OrderBookWatcher.ts:52
+Defined in src/orderbook/OrderBookWatcher.ts:52
 
 Unsubscribes from updates to the watched market from the supplied StreamClient,
 clears all snapshot retrieval timeouts, and tears down all event listeners.
@@ -77,7 +77,7 @@ ___
 
 ▸ **onError**(`callback`: function): *void*
 
-Defined in orderbook/OrderBookWatcher.ts:88
+Defined in src/orderbook/OrderBookWatcher.ts:88
 
 Adds an event listener that triggers the supplied callback on any error caught
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **onSyncStatusChange**(`callback`: function): *void*
 
-Defined in orderbook/OrderBookWatcher.ts:73
+Defined in src/orderbook/OrderBookWatcher.ts:73
 
 Adds an event listener that triggers the supplied callback any time the inSync status changes.
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **onUpdate**(`callback`: function): *void*
 
-Defined in orderbook/OrderBookWatcher.ts:61
+Defined in src/orderbook/OrderBookWatcher.ts:61
 
 Adds an event listener that triggers on each new update from an OrderBook snapshot and/or delta
 

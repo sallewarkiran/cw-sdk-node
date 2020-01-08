@@ -39,7 +39,7 @@
 
 \+ **new RESTClient**(`options?`: [RESTOpts](../interfaces/restopts.md)): *[RESTClient](restclient.md)*
 
-Defined in rest/RESTClient.ts:31
+Defined in src/rest/RESTClient.ts:31
 
 **Parameters:**
 
@@ -55,7 +55,7 @@ Name | Type |
 
 ▸ **getAllowance**(): *[RESTAllowance](../interfaces/restallowance.md)*
 
-Defined in rest/RESTClient.ts:71
+Defined in src/rest/RESTClient.ts:71
 
 Returns the most recently retrieved REST allowance data.
 
@@ -67,7 +67,7 @@ ___
 
 ▸ **getAssetByID**(`assetId`: number): *Promise‹[Asset](../README.md#asset)›*
 
-Defined in rest/RESTClient.ts:189
+Defined in src/rest/RESTClient.ts:189
 
 Returns a single market, with associated routes.
 
@@ -85,7 +85,7 @@ ___
 
 ▸ **getAssetBySymbol**(`assetSymbol`: string): *Promise‹[Asset](../README.md#asset)›*
 
-Defined in rest/RESTClient.ts:181
+Defined in src/rest/RESTClient.ts:181
 
 Returns a single asset, with associated routes.
 
@@ -103,7 +103,7 @@ ___
 
 ▸ **getExchange**(`exchangeSymbol`: string): *Promise‹[ExchangeDescription](../README.md#exchangedescription)›*
 
-Defined in rest/RESTClient.ts:92
+Defined in src/rest/RESTClient.ts:92
 
 Returns a single exchange, with associated routes.
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **getExchangeMarkets**(`exchangeSymbol`: string): *Promise‹[MarketDescription](../README.md#marketdescription)[]›*
 
-Defined in rest/RESTClient.ts:144
+Defined in src/rest/RESTClient.ts:144
 
 Returns a list of supported markets for a specific exchange.
 
@@ -143,7 +143,7 @@ ___
 
 ▸ **getExchanges**(): *Promise‹[ExchangeBrief](../README.md#exchangebrief)[]›*
 
-Defined in rest/RESTClient.ts:83
+Defined in src/rest/RESTClient.ts:83
 
 Returns a list of all supported exchanges.
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **getMarketByID**(`marketID`: number): *Promise‹[Market](../README.md#market)›*
 
-Defined in rest/RESTClient.ts:173
+Defined in src/rest/RESTClient.ts:173
 
 Returns a single market.
 
@@ -175,7 +175,7 @@ ___
 
 ▸ **getMarketBySymbol**(`marketSymbol`: [MarketSymbol](../README.md#marketsymbol)): *Promise‹[Market](../README.md#market)›*
 
-Defined in rest/RESTClient.ts:165
+Defined in src/rest/RESTClient.ts:165
 
 Returns a single market.
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **getMarketDescription**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[MarketDescription](../README.md#marketdescription)›*
 
-Defined in rest/RESTClient.ts:154
+Defined in src/rest/RESTClient.ts:154
 
 Returns a single market, with associated routes.
 
@@ -214,7 +214,7 @@ ___
 
 ▸ **getMarkets**(): *Promise‹[MarketBrief](../README.md#marketbrief)[]›*
 
-Defined in rest/RESTClient.ts:117
+Defined in src/rest/RESTClient.ts:117
 
 Returns a list of all supported markets.
 
@@ -228,7 +228,7 @@ ___
 
 ▸ **getOHLC**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[MarketOHLC](../README.md#marketohlc)›*
 
-Defined in rest/RESTClient.ts:199
+Defined in src/rest/RESTClient.ts:199
 
 Returns a market's OHLC candlestick data.
 
@@ -249,7 +249,7 @@ ___
 
 ▸ **getOrderBookSnapshot**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)›*
 
-Defined in rest/RESTClient.ts:228
+Defined in src/rest/RESTClient.ts:228
 
 Returns a market's order book.
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **getPair**(`pairSymbol`: string): *Promise‹[PairDetails](../README.md#pairdetails)›*
 
-Defined in rest/RESTClient.ts:109
+Defined in src/rest/RESTClient.ts:109
 
 Returns a single pair. Lists all markets for this pair.
 
@@ -290,7 +290,7 @@ ___
 
 ▸ **getPairsIndex**(): *Promise‹[PairBrief](../README.md#pairbrief)[]›*
 
-Defined in rest/RESTClient.ts:100
+Defined in src/rest/RESTClient.ts:100
 
 Returns all pairs (in no particular order).
 
@@ -304,7 +304,7 @@ ___
 
 ▸ **getPrice**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Price](../README.md#price)›*
 
-Defined in rest/RESTClient.ts:243
+Defined in src/rest/RESTClient.ts:243
 
 Returns a market's last price.
 
@@ -325,7 +325,7 @@ ___
 
 ▸ **getSummaries**(): *Promise‹[Summaries](../README.md#summaries)›*
 
-Defined in rest/RESTClient.ts:125
+Defined in src/rest/RESTClient.ts:125
 
 Returns the market summary for all supported markets. Some values may be out of date by a few seconds.
 
@@ -339,7 +339,7 @@ ___
 
 ▸ **getSummary**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Summary](../interfaces/summary.md)›*
 
-Defined in rest/RESTClient.ts:135
+Defined in src/rest/RESTClient.ts:135
 
 Returns a single market summary.
 
@@ -360,7 +360,7 @@ ___
 
 ▸ **getTrades**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Trade](../README.md#trade)[]›*
 
-Defined in rest/RESTClient.ts:253
+Defined in src/rest/RESTClient.ts:253
 
 Returns a market's most recent trades, incrementing chronologically.
 

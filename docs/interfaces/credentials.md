@@ -20,7 +20,7 @@
 
 • **apiKey**: *string*
 
-Defined in util/types/credentials.ts:6
+Defined in src/util/types/credentials.ts:6
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **secretKey**: *string*
 
-Defined in util/types/credentials.ts:7
+Defined in src/util/types/credentials.ts:7
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **url**? : *string*
 
-Defined in util/types/credentials.ts:8
+Defined in src/util/types/credentials.ts:8

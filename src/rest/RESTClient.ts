@@ -200,7 +200,6 @@ export class RESTClient {
     return await this.getRestData<MarketOHLCRaw>(
       `/markets/${exchangeSymbol}/${pairSymbol}/ohlc`
     ).then<MarketOHLC>((marketOHLC) => {
-      const t0 = performance.now();
       const result: Partial<MarketOHLC> = {};
       for (const key in marketOHLC) {
         result[key as Period] = marketOHLC[key as Period].map<CandleData>((value) => ({
@@ -212,9 +211,6 @@ export class RESTClient {
           volume: value[5].toString()
         }));
       }
-      const t1 = performance.now();
-      console.log('mapping data took ' + (t1 - t0) + ' milliseconds.');
-
       return result as MarketOHLC;
     });
   }

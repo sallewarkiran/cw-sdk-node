@@ -3,7 +3,6 @@
 # Class: SnapshotRetriever
 
 Internal class to handle retrieving orderbook snapshots via the REST API.
-Internal class to handle retrieving orderbook snapshots via the REST API.
 
 ## Hierarchy
 
@@ -25,7 +24,7 @@ Internal class to handle retrieving orderbook snapshots via the REST API.
 
 \+ **new SnapshotRetriever**(`marketSelector`: [MarketSelector](../README.md#marketselector), `restClient`: [RESTClient](restclient.md)): *[SnapshotRetriever](snapshotretriever.md)*
 
-Defined in orderbook/SnapshotRetriever.ts:9
+Defined in src/orderbook/SnapshotRetriever.ts:9
 
 **Parameters:**
 
@@ -42,6 +41,6 @@ Name | Type |
 
 ▸ **getOrderBookSnapshot**(): *Promise‹[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)›*
 
-Defined in orderbook/SnapshotRetriever.ts:16
+Defined in src/orderbook/SnapshotRetriever.ts:16
 
 **Returns:** *Promise‹[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)›*

@@ -66,7 +66,7 @@
 
 *Overrides [WebSocketClient](websocketclient.md).[constructor](websocketclient.md#constructor)*
 
-Defined in websocket/TradeClient.ts:53
+Defined in src/websocket/TradeClient.ts:53
 
 **Parameters:**
 
@@ -84,7 +84,7 @@ Name | Type |
 
 *Inherited from [WebSocketClient](websocketclient.md).[connState](websocketclient.md#protected-connstate)*
 
-Defined in websocket/WebSocketClient.ts:58
+Defined in src/websocket/WebSocketClient.ts:58
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 • **orders**: *object*
 
-Defined in websocket/TradeClient.ts:36
+Defined in src/websocket/TradeClient.ts:36
 
 #### Type declaration:
 
@@ -104,7 +104,7 @@ ___
 
 • **positions**: *object*
 
-Defined in websocket/TradeClient.ts:46
+Defined in src/websocket/TradeClient.ts:46
 
 #### Type declaration:
 
@@ -118,7 +118,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[subscriptions](websocketclient.md#subscriptions)*
 
-Defined in websocket/WebSocketClient.ts:47
+Defined in src/websocket/WebSocketClient.ts:47
 
 #### Type declaration:
 
@@ -130,7 +130,7 @@ ___
 
 • **trades**: *object*
 
-Defined in websocket/TradeClient.ts:41
+Defined in src/websocket/TradeClient.ts:41
 
 #### Type declaration:
 
@@ -144,7 +144,7 @@ ___
 
 *Inherited from void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:9
+Defined in node_modules/@types/node/events.d.ts:9
 
 ## Methods
 
@@ -156,7 +156,7 @@ Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/event
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:11
+Defined in node_modules/@types/node/events.d.ts:11
 
 **Parameters:**
 
@@ -180,7 +180,7 @@ ___
 
 ▸ **cancelOrder**(`opts`: [CancelOrderOpts](../interfaces/cancelorderopts.md)): *Promise‹void›*
 
-Defined in websocket/TradeClient.ts:156
+Defined in src/websocket/TradeClient.ts:156
 
 **Parameters:**
 
@@ -198,7 +198,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[connect](websocketclient.md#connect)*
 
-Defined in websocket/WebSocketClient.ts:101
+Defined in src/websocket/WebSocketClient.ts:101
 
 **Returns:** *void*
 
@@ -210,7 +210,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[disconnect](websocketclient.md#disconnect)*
 
-Defined in websocket/WebSocketClient.ts:161
+Defined in src/websocket/WebSocketClient.ts:161
 
 **Returns:** *void*
 
@@ -224,7 +224,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:23
+Defined in node_modules/@types/node/events.d.ts:23
 
 **Parameters:**
 
@@ -243,7 +243,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[error](websocketclient.md#error)*
 
-Defined in websocket/WebSocketClient.ts:133
+Defined in src/websocket/WebSocketClient.ts:133
 
 **Parameters:**
 
@@ -263,7 +263,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:24
+Defined in node_modules/@types/node/events.d.ts:24
 
 **Returns:** *Array‹string | symbol›*
 
@@ -277,7 +277,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:20
+Defined in node_modules/@types/node/events.d.ts:20
 
 **Returns:** *number*
 
@@ -289,7 +289,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[getSubscriptions](websocketclient.md#getsubscriptions)*
 
-Defined in websocket/WebSocketClient.ts:173
+Defined in src/websocket/WebSocketClient.ts:173
 
 **Returns:** *ClientSubscription[]*
 
@@ -303,7 +303,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:25
+Defined in node_modules/@types/node/events.d.ts:25
 
 **Parameters:**
 
@@ -323,7 +323,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:21
+Defined in node_modules/@types/node/events.d.ts:21
 
 **Parameters:**
 
@@ -343,7 +343,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:17
+Defined in node_modules/@types/node/events.d.ts:17
 
 **Parameters:**
 
@@ -371,7 +371,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:12
+Defined in node_modules/@types/node/events.d.ts:12
 
 **Parameters:**
 
@@ -397,7 +397,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onConnect](websocketclient.md#onconnect)*
 
-Defined in websocket/WebSocketClient.ts:138
+Defined in src/websocket/WebSocketClient.ts:138
 
 **Parameters:**
 
@@ -415,7 +415,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onDisconnect](websocketclient.md#ondisconnect)*
 
-Defined in websocket/WebSocketClient.ts:142
+Defined in src/websocket/WebSocketClient.ts:142
 
 **Parameters:**
 
@@ -433,7 +433,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onError](websocketclient.md#onerror)*
 
-Defined in websocket/WebSocketClient.ts:150
+Defined in src/websocket/WebSocketClient.ts:150
 
 **Parameters:**
 
@@ -455,7 +455,7 @@ ___
 
 ▸ **onOrdersUpdate**(`fn`: function): *void*
 
-Defined in websocket/TradeClient.ts:103
+Defined in src/websocket/TradeClient.ts:103
 
 **Parameters:**
 
@@ -477,7 +477,7 @@ ___
 
 ▸ **onPositionsUpdate**(`fn`: function): *void*
 
-Defined in websocket/TradeClient.ts:115
+Defined in src/websocket/TradeClient.ts:115
 
 **Parameters:**
 
@@ -499,7 +499,7 @@ ___
 
 ▸ **onReady**(`fn`: function): *void*
 
-Defined in websocket/TradeClient.ts:97
+Defined in src/websocket/TradeClient.ts:97
 
 **Parameters:**
 
@@ -517,7 +517,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onStateChange](websocketclient.md#onstatechange)*
 
-Defined in websocket/WebSocketClient.ts:146
+Defined in src/websocket/WebSocketClient.ts:146
 
 **Parameters:**
 
@@ -539,7 +539,7 @@ ___
 
 ▸ **onTradesUpdate**(`fn`: function): *void*
 
-Defined in websocket/TradeClient.ts:109
+Defined in src/websocket/TradeClient.ts:109
 
 **Parameters:**
 
@@ -565,7 +565,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:13
+Defined in node_modules/@types/node/events.d.ts:13
 
 **Parameters:**
 
@@ -589,7 +589,7 @@ ___
 
 ▸ **placeOrder**(`opts`: Partial‹[PlaceOrderOpt](../interfaces/placeorderopt.md)›): *Promise‹[PrivateOrder](../interfaces/privateorder.md)›*
 
-Defined in websocket/TradeClient.ts:121
+Defined in src/websocket/TradeClient.ts:121
 
 **Parameters:**
 
@@ -609,7 +609,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:14
+Defined in node_modules/@types/node/events.d.ts:14
 
 **Parameters:**
 
@@ -637,7 +637,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:15
+Defined in node_modules/@types/node/events.d.ts:15
 
 **Parameters:**
 
@@ -665,7 +665,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:22
+Defined in node_modules/@types/node/events.d.ts:22
 
 **Parameters:**
 
@@ -685,7 +685,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:18
+Defined in node_modules/@types/node/events.d.ts:18
 
 **Parameters:**
 
@@ -705,7 +705,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:16
+Defined in node_modules/@types/node/events.d.ts:16
 
 **Parameters:**
 
@@ -731,7 +731,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[send](websocketclient.md#send)*
 
-Defined in websocket/WebSocketClient.ts:154
+Defined in src/websocket/WebSocketClient.ts:154
 
 **Parameters:**
 
@@ -751,7 +751,7 @@ ___
 
 *Overrides void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:19
+Defined in node_modules/@types/node/events.d.ts:19
 
 **Parameters:**
 
@@ -769,7 +769,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[state](websocketclient.md#state)*
 
-Defined in websocket/WebSocketClient.ts:169
+Defined in src/websocket/WebSocketClient.ts:169
 
 **Returns:** *symbol*
 
@@ -781,7 +781,7 @@ ___
 
 *Inherited from void*
 
-Defined in /home/dave/src/cryptowatch/cw-sdk-node/node_modules/@types/node/events.d.ts:8
+Defined in node_modules/@types/node/events.d.ts:8
 
 **`deprecated`** since v4.0.0
 
