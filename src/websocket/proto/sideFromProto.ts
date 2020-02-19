@@ -2,7 +2,7 @@ import { ProtobufMarkets } from '../modules/proto';
 import { OrderSide } from '../types/trading';
 import { privateOrderSideFromProto } from './constants';
 
-export function sideFromProto(side: number | ProtobufMarkets.Trade.Side): OrderSide | null {
+export function sideFromProto(side: number | ProtobufMarkets.Trade.OrderSide): OrderSide | null {
   if (typeof side === 'number') {
     if (privateOrderSideFromProto[side]) {
       return privateOrderSideFromProto[side];
@@ -10,8 +10,11 @@ export function sideFromProto(side: number | ProtobufMarkets.Trade.Side): OrderS
     return null;
   }
 
-  if (side === ProtobufMarkets.Trade.Side.BUY) {
+  if (side === ProtobufMarkets.Trade.OrderSide.BUYSIDE) {
     return 'buy';
+  } else if (side === ProtobufMarkets.Trade.OrderSide.SELLSIDE) {
+    return 'sell';
   }
-  return 'sell';
+
+  return 'unknown';
 }

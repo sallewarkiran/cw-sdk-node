@@ -23,7 +23,7 @@ export interface PrivateOrder {
   // error?: number;
 }
 
-export type OrderSide = 'buy' | 'sell';
+export type OrderSide = 'buy' | 'sell' | 'unknown';
 
 export type FundingType = 'spot' | 'margin';
 

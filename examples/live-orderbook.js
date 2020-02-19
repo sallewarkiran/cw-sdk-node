@@ -1,4 +1,4 @@
-import { StreamClient, RESTClient, OrderBookWatcher } from 'cw-sdk-node';
+import { StreamClient, RESTClient, createOrderBookWatcher } from 'cw-sdk-node';
 const restClient = new RESTClient();
 const streamClient = new StreamClient({
   creds: {
@@ -16,28 +16,28 @@ let orderBookWatcher = null;
 
 function run() {
   // Get the ID of the market you want to watch
-  restClient
-    .getMarketBySymbol({
+
+  createOrderBookWatcher(
+    // a market ID can also be supplied instead of exchange/base/quote
+    {
       exchange: 'kraken',
       base: 'btc',
       quote: 'usd'
-    })
-    .then((market) => {
-      // Set up an OrderBookWatcher
-      orderBookWatcher = new OrderBookWatcher(market.id, streamClient, restClient);
-
-      // Set up event callbacks
-      orderBookWatcher.onUpdate((marketId, snapshot) => {
-        console.log(`Market ${marketId} OrderBook updated!`, snapshot);
-      });
-
-      orderBookWatcher.onError((marketID, error) => {
-        console.error(`Error updating OrderBook on Marked "${marketID}"!`, error);
-      });
-
-      // Connect to stream
-      streamClient.connect();
+    },
+    streamClient,
+    restClient
+  ).then((orderBookWatcher) => {
+    orderBookWatcher.onUpdate((marketId, snapshot) => {
+      console.log(`Market ${marketId} OrderBook updated!`, snapshot);
     });
+
+    orderBookWatcher.onError((marketID, error) => {
+      console.error(`Error updating OrderBook on Marked "${marketID}"!`, error);
+    });
+
+    // Connect to stream
+    streamClient.connect();
+  });
 }
 
 run();

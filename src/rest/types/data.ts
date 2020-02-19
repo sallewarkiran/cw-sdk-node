@@ -54,12 +54,6 @@ export type ExchangeBrief = Brief<ExchangeBase>;
 export type MarketDescription = Description<MarketBase>;
 export type MarketBrief = Brief<MarketBase>;
 
-export type MarketSymbol = {
-  exchange: string;
-  base: string;
-  quote: string;
-};
-
 export type Price = {
   price: number;
 };

@@ -1,6 +1,6 @@
 import { OrderBook } from '../OrderBook';
-import { mockSnapshot } from '../__mocks__/data/snapshot';
-import { mockDelta4, mockDelta1 } from '../__mocks__/data/deltas';
+import { mockSnapshot } from './data/snapshot';
+import { mockDelta4, mockDelta1 } from './data/deltas';
 
 describe('OrderBook.js tests', () => {
   describe('constructor tests', () => {

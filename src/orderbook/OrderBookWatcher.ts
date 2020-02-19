@@ -1,9 +1,6 @@
 import { Updater } from '../orderbook/Updater';
-import { SnapshotRetriever } from '../orderbook/SnapshotRetriever';
 import { OrderBookSnapshot } from '../util/types/shared';
 import { StreamClient } from '../websocket';
-import logger from '../util/logger';
-import { RESTClient } from '../rest';
 
 /**
  * Allows user to subscribe to an orderbook and recieve updates. StreamClient must be
@@ -11,7 +8,7 @@ import { RESTClient } from '../rest';
  */
 export class OrderBookWatcher {
   private streamClient: StreamClient;
-  private subscriptionUpdater: Updater;
+  private snapshotUpdater: Updater;
   private marketID: number;
   private firstSync = true;
   private _inSync = false;
@@ -25,22 +22,14 @@ export class OrderBookWatcher {
 
   /**
    * @param marketID ID of market to montior orderbook
-   * @param streamClient StreamClient for LiveOrderBook to use
-   * @param restClient RESTClient for LiveOrderBook to use
+   * @param snapshotUpdater Updater to handle orderbook deltas and snapshots
+   * @param streamClient StreamClient for OrderBookWatcher to subscribe to
    */
-  constructor(marketID: number, streamClient: StreamClient, restClient: RESTClient) {
-    this.streamClient = streamClient;
-    this.streamClient.subscribe([`markets:${marketID}:book:deltas`]);
+  constructor(marketID: number, snapshotUpdater: Updater, streamClient: StreamClient) {
     this.marketID = marketID;
-
-    this.subscriptionUpdater = new Updater(new SnapshotRetriever(marketID, restClient));
-    this.streamClient.onMarketUpdate((marketUpdate) => {
-      if (marketUpdate.orderBookDelta)
-        this.subscriptionUpdater.applyDelta(marketUpdate.orderBookDelta);
-    });
-    this.onError((marketID, error) => {
-      logger.error(`Error occurred with marketID: ${marketID}.\n`, error);
-    });
+    this.snapshotUpdater = snapshotUpdater;
+    this.streamClient = streamClient;
+    this.streamClient.subscribe([`markets:${this.marketID}:book:deltas`]);
   }
 
   /**
@@ -51,7 +40,7 @@ export class OrderBookWatcher {
    */
   public destroy(): void {
     this.streamClient.unsubscribe([`markets:${this.marketID}:book:deltas`]);
-    this.subscriptionUpdater.destroy();
+    this.snapshotUpdater.destroy();
   }
 
   /**
@@ -61,7 +50,7 @@ export class OrderBookWatcher {
   public onUpdate(
     callback: (marketID: number, orderBookSnapshot: OrderBookSnapshot) => void
   ): void {
-    this.subscriptionUpdater.onOrderBookUpdate((orderBookSnapshot) => {
+    this.snapshotUpdater.onOrderBookUpdate((orderBookSnapshot) => {
       callback(this.marketID, orderBookSnapshot);
     });
   }
@@ -71,7 +60,7 @@ export class OrderBookWatcher {
    * @param callback function that is passed the marketID and current inSync status
    */
   public onSyncStatusChange(callback: (marketID: number, inSync: boolean) => void): void {
-    this.subscriptionUpdater.onStateUpdate((orderBookState) => {
+    this.snapshotUpdater.onStateUpdate((orderBookState) => {
       if (this.firstSync || orderBookState.inSync !== this.inSync) {
         this.firstSync = false;
         this._inSync = orderBookState.inSync;
@@ -86,7 +75,7 @@ export class OrderBookWatcher {
    */
 
   public onError(callback: (marketID: number, error: Error) => void): void {
-    this.subscriptionUpdater.onError((error) => {
+    this.snapshotUpdater.onError((error) => {
       callback(this.marketID, error);
     });
   }

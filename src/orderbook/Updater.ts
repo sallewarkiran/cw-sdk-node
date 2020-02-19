@@ -9,7 +9,7 @@ enum UpdaterEvents {
   OnOrderBookUpdate = 'onOrderBookUpdate',
   OnStateUpdate = 'onStateUpdate',
   OnDeltaRetrieved = 'onDeltaRetrieved',
-  Error = 'error'
+  OnError = 'onError'
 }
 
 type DeltaCheckResult = {
@@ -87,7 +87,7 @@ export class Updater {
    * @param callback function that is passed caught errors
    */
   public onError(callback: (error: Error) => void): void {
-    this.updaterEvents.on(UpdaterEvents.Error, callback);
+    this.updaterEvents.on(UpdaterEvents.OnError, callback);
   }
 
   /**
@@ -150,7 +150,7 @@ export class Updater {
       this.fetchSnapshotTimer = null;
     }
     this.fetchSnapshotAttempt += 1;
-    this.updaterEvents.emit(UpdaterEvents.Error, error);
+    this.updaterEvents.emit(UpdaterEvents.OnError, error);
     this.scheduleSnapshotRetrieval();
   }
 
