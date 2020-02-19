@@ -1,6 +1,6 @@
 {
   "name": "cw-sdk-node",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Cryptowatch SDK for NodeJS",
   "author": "Cryptowatch <infra@cryptowatch>",
   "homepage": "https://cryptowat.ch/docs/websocket-api",
@@ -19,6 +19,8 @@
     "test": "jest",
     "build": "tsc -p tsconfig.release.json",
     "prepare": "npm run build",
+    "pbjs:static-module": "pbjs -t static-module -w commonjs -o index.tmp.js proto/{client,markets,stream,broker}/*.proto",
+    "pbjs:definitions": "pbjs -t static-module proto/{client,markets,stream,broker}/*.proto | pbts -o proto.d.ts -",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "docs": "rm -rf ./docs && typedoc --options ./typedoc.js ./src"
@@ -36,6 +38,7 @@
     "ws": "^7.2.1"
   },
   "devDependencies": {
+    "@fluffy-spoon/substitute": "^1.107.0",
     "@types/big.js": "^4.0.5",
     "@types/get-port": "^4.2.0",
     "@types/jest": "^24.0.25",
@@ -62,8 +65,7 @@
     "ts-jest": "^24.3.0",
     "typedoc": "^0.15.6",
     "typedoc-plugin-markdown": "^2.2.16",
-    "typescript": "^3.7.4",
-    "yarn": "^1.21.1"
+    "typescript": "^3.7.4"
   },
   "keywords": [
     "cryptowatch",

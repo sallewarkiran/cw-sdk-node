@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-// Package ProtobufMarkets contains definitions for observables update messages;
+// Package ProtobufMarkets contains definitions for series update messages;
 // the main wrapper messages is a MarketUpdateMessage.
 
 // NOTE: While a lot of these types have been expanded to indices, to prevent
@@ -42,14 +42,26 @@ message Trade {
   string priceStr = 8;
   string amountStr = 9;
 
-  enum Side {
-    BUY = 0;
-    SELL = 1;
+  enum OrderSide {
+    UNKNOWN = 0;
+    BUYSIDE = 1;
+    SELLSIDE = 2;
   }
-  Side side = 12;
+  OrderSide orderSide = 13;
 
-  reserved "price", "amount", "timestampMillis", "id", "priceDouble", "amountDouble";
-  reserved 1, 3, 4, 5, 6, 7;
+  reserved "price", "amount", "timestampMillis", "id", "priceDouble", "amountDouble", "side";
+  reserved 1, 3, 4, 5, 6, 7, 12;
+
+  // Deprecated
+  // Enum definitions are properties on the top-level message, so
+  // BUY and SELL are actually reserved on Trade. We need to keep
+  // this definition around because there doens't seem to be a way to
+  // reserve/deprecate enum values
+  enum Side {
+    option deprecated = true;
+    BUY = 0 [deprecated = true];
+    SELL = 1 [deprecated = true];
+  }
 }
 
 // MarketUpdateMessage is the primary message for market updates; it wraps all

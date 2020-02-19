@@ -1,7 +1,7 @@
 import { Updater } from '../../orderbook/Updater';
 import { SnapshotRetriever } from '../../orderbook/SnapshotRetriever';
-import { mockDelta1, mockDelta4, mockDelta5 } from '../../orderbook/__mocks__/data/deltas';
-import { mockSnapshot } from '../../orderbook/__mocks__/data/snapshot';
+import { mockDelta1, mockDelta4, mockDelta5 } from './data/deltas';
+import { mockSnapshot } from './data/snapshot';
 
 jest.mock('orderbook/SnapshotRetriever');
 

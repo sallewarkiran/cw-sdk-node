@@ -56,9 +56,10 @@ export type DeltaItem = {
   overridden: boolean;
 };
 
-export type MarketSelector =
-  | {
-      exchangeSymbol: string;
-      pairSymbol: string;
-    }
-  | number;
+export type MarketSymbol = {
+  exchange: string;
+  base: string;
+  quote: string;
+};
+
+export type MarketSelector = MarketSymbol | number;

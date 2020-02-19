@@ -147,11 +147,11 @@ function publicTradesFromProto(tradesUpdate: ProtobufMarkets.ITradesUpdate): Pub
       return;
     }
 
-    if (trade.side !== 0 || trade.side !== 1) {
+    if (trade.orderSide !== 0 && trade.orderSide !== 1 && trade.orderSide !== 2) {
       return;
     }
 
-    const side = sideFromProto(trade.side);
+    const side = sideFromProto(trade.orderSide);
     if (!side) {
       return;
     }

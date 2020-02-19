@@ -11,7 +11,6 @@ import {
   Summary,
   Summaries,
   TradeRaw,
-  MarketSymbol,
   Trade,
   MarketOHLC,
   Period,
@@ -21,7 +20,13 @@ import { RESTResponse, RESTOpts, RESTAllowance } from './types/client';
 import superagent from 'superagent';
 import { RestError } from './errors';
 import { loadRESTCredentials } from '../util/credentials';
-import { Market, Asset, OrderBookSnapshot } from '../util/types/shared';
+import {
+  Market,
+  Asset,
+  OrderBookSnapshot,
+  MarketSelector,
+  MarketSymbol
+} from '../util/types/shared';
 import { transformSnapshot } from '../util/helpers';
 import version from '../version';
 
@@ -160,10 +165,23 @@ export class RESTClient {
 
   /**
    * Returns a single market.
+   * @param marketSelector MarketSelector id of market (number) or MarketSymbol (Example: {exchange: 'kraken', base: 'btc', quote:'usd'})
+   */
+
+  async getMarket(marketSelector: MarketSelector): Promise<Market> {
+    if (typeof marketSelector === 'number') {
+      return await this.getMarketByID(marketSelector);
+    } else {
+      return await this.getMarketBySymbol(marketSelector);
+    }
+  }
+
+  /**
+   * Returns a single market.
    * @param marketSymbol MarketSymbol (Example: {exchange: 'kraken', base: 'btc', quote:'usd'})
    */
   async getMarketBySymbol(marketSymbol: MarketSymbol): Promise<Market> {
-    return this.getRestData<Market>(`/v2/markets`, marketSymbol);
+    return (await this.getRestData<Market[]>(`/v2/markets`, marketSymbol))[0];
   }
 
   /**
@@ -171,7 +189,20 @@ export class RESTClient {
    * @param marketID number id of specific market.
    */
   async getMarketByID(marketID: number): Promise<Market> {
-    return this.getRestData<Market>(`/v2/markets/${marketID}`);
+    return await this.getRestData<Market>(`/v2/markets/${marketID}`);
+  }
+
+  /**
+   * Returns a single asset.
+   * @param assetSelector number|string id of asset (number) or asset symbol (Example: 'btc')
+   */
+
+  async getAsset(assetSelector: number | string): Promise<Asset> {
+    if (typeof assetSelector === 'number') {
+      return await this.getAssetByID(assetSelector);
+    } else {
+      return await this.getAssetBySymbol(assetSelector);
+    }
   }
 
   /**
@@ -179,7 +210,7 @@ export class RESTClient {
    * @param assetSymbol string symbol for specific requested asset (Examples: 'btc', 'usd', 'eth', 'jpy', etc...)
    */
   async getAssetBySymbol(assetSymbol: string): Promise<Asset> {
-    return this.getRestData<Asset>(`/v2/assets`, { symbol: assetSymbol });
+    return await this.getRestData<Asset>(`/v2/assets`, { symbol: assetSymbol });
   }
 
   /**
@@ -187,7 +218,7 @@ export class RESTClient {
    * @param assetId number id of specific asset
    */
   async getAssetByID(assetId: number): Promise<Asset> {
-    return this.getRestData<Asset>(`/v2/assets/${assetId}`);
+    return await this.getRestData<Asset>(`/v2/assets/${assetId}`);
   }
 
   /**
