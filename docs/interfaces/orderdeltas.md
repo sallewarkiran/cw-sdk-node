@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [OrderDeltas](orderdeltas.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [OrderDeltas](orderdeltas.md)
 
 # Interface: OrderDeltas
 

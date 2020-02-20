@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [WebSocketOpts](websocketopts.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [WebSocketOpts](websocketopts.md)
 
 # Interface: WebSocketOpts
 

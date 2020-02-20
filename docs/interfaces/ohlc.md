@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [OHLC](ohlc.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [OHLC](ohlc.md)
 
 # Interface: OHLC
 

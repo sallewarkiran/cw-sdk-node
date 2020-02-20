@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [RestError](resterror.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [RestError](resterror.md)
 
 # Class: RestError
 
@@ -47,7 +47,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:974
+Defined in node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:973
+Defined in node_modules/typescript/lib/lib.es5.d.ts:973
 
 ___
 
@@ -75,9 +75,7 @@ ___
 
 *Inherited from void*
 
-*Overrides void*
-
-Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:975
+Defined in node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
@@ -93,4 +91,4 @@ ___
 
 ▪ **Error**: *ErrorConstructor*
 
-Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:984
+Defined in node_modules/typescript/lib/lib.es5.d.ts:984

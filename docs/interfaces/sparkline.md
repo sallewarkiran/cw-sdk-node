@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [Sparkline](sparkline.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [Sparkline](sparkline.md)
 
 # Interface: Sparkline
 

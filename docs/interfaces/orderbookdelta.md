@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [OrderBookDelta](orderbookdelta.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [OrderBookDelta](orderbookdelta.md)
 
 # Interface: OrderBookDelta
 

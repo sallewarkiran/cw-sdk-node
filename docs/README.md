@@ -1,6 +1,6 @@
-[cw-sdk-node](README.md)
+[cw-sdk-node - v1.0.0-beta.3](README.md)
 
-# cw-sdk-node
+# cw-sdk-node - v1.0.0-beta.3
 
 ## Index
 
@@ -129,6 +129,7 @@
 ### Functions
 
 * [binarySearchOrders](README.md#binarysearchorders)
+* [createOrderBookWatcher](README.md#createorderbookwatcher)
 * [getDateFromMs](README.md#getdatefromms)
 * [getDateFromNs](README.md#getdatefromns)
 * [getDateFromSecs](README.md#getdatefromsecs)
@@ -209,7 +210,7 @@ ___
 
 Ƭ **CandleData**: *object*
 
-Defined in src/rest/types/data.ts:144
+Defined in src/rest/types/data.ts:138
 
 #### Type declaration:
 
@@ -219,7 +220,7 @@ ___
 
 Ƭ **CandleDataRaw**: *[number, number, number, number, number, number]*
 
-Defined in src/rest/types/data.ts:143
+Defined in src/rest/types/data.ts:137
 
 CandleData is an array of numbers in this order:
 [ CloseTime, OpenPrice, HighPrice, LowPrice, ClosePrice, Volume ]
@@ -230,7 +231,7 @@ ___
 
 Ƭ **ChangeSummary**: *object*
 
-Defined in src/rest/types/data.ts:67
+Defined in src/rest/types/data.ts:61
 
 #### Type declaration:
 
@@ -302,7 +303,7 @@ ___
 
 Ƭ **LiquiditySide**: *object*
 
-Defined in src/rest/types/data.ts:125
+Defined in src/rest/types/data.ts:119
 
 #### Type declaration:
 
@@ -366,7 +367,7 @@ ___
 
 Ƭ **MarketOHLC**: *object*
 
-Defined in src/rest/types/data.ts:157
+Defined in src/rest/types/data.ts:151
 
 #### Type declaration:
 
@@ -376,7 +377,7 @@ ___
 
 Ƭ **MarketOHLCRaw**: *object*
 
-Defined in src/rest/types/data.ts:153
+Defined in src/rest/types/data.ts:147
 
 #### Type declaration:
 
@@ -386,7 +387,7 @@ ___
 
 Ƭ **MarketOrderBookLiquidity**: *object*
 
-Defined in src/rest/types/data.ts:134
+Defined in src/rest/types/data.ts:128
 
 #### Type declaration:
 
@@ -394,9 +395,9 @@ ___
 
 ###  MarketSelector
 
-Ƭ **MarketSelector**: *object | number*
+Ƭ **MarketSelector**: *[MarketSymbol](README.md#marketsymbol) | number*
 
-Defined in src/util/types/shared.ts:59
+Defined in src/util/types/shared.ts:65
 
 ___
 
@@ -404,7 +405,7 @@ ___
 
 Ƭ **MarketSymbol**: *object*
 
-Defined in src/rest/types/data.ts:57
+Defined in src/util/types/shared.ts:59
 
 #### Type declaration:
 
@@ -414,7 +415,7 @@ ___
 
 Ƭ **OrderBookSnapshotRaw**: *object*
 
-Defined in src/rest/types/data.ts:91
+Defined in src/rest/types/data.ts:85
 
 #### Type declaration:
 
@@ -432,7 +433,7 @@ ___
 
 ###  OrderSide
 
-Ƭ **OrderSide**: *"buy" | "sell"*
+Ƭ **OrderSide**: *"buy" | "sell" | "unknown"*
 
 Defined in src/websocket/types/trading.ts:26
 
@@ -468,7 +469,7 @@ ___
 
 Ƭ **Price**: *object*
 
-Defined in src/rest/types/data.ts:63
+Defined in src/rest/types/data.ts:57
 
 #### Type declaration:
 
@@ -478,7 +479,7 @@ ___
 
 Ƭ **PriceSummary**: *object*
 
-Defined in src/rest/types/data.ts:72
+Defined in src/rest/types/data.ts:66
 
 #### Type declaration:
 
@@ -488,7 +489,7 @@ ___
 
 Ƭ **Prices**: *object*
 
-Defined in src/rest/types/data.ts:161
+Defined in src/rest/types/data.ts:155
 
 #### Type declaration:
 
@@ -500,7 +501,7 @@ ___
 
 Ƭ **PublicOrderRaw**: *[number, number]*
 
-Defined in src/rest/types/data.ts:89
+Defined in src/rest/types/data.ts:83
 
 PublicOrders are arrays of numbers in this order:
 [ Price, Amount ]
@@ -511,7 +512,7 @@ ___
 
 Ƭ **Summaries**: *object*
 
-Defined in src/rest/types/data.ts:165
+Defined in src/rest/types/data.ts:159
 
 #### Type declaration:
 
@@ -523,7 +524,7 @@ ___
 
 Ƭ **Trade**: *object*
 
-Defined in src/rest/types/data.ts:102
+Defined in src/rest/types/data.ts:96
 
 #### Type declaration:
 
@@ -533,7 +534,7 @@ ___
 
 Ƭ **TradeRaw**: *[number, number, number, number]*
 
-Defined in src/rest/types/data.ts:101
+Defined in src/rest/types/data.ts:95
 
 Trades are arrays of numbers in this order:
 [ ID, Timestamp, Price, Amount ]
@@ -736,6 +737,24 @@ Name | Type | Default |
 `reverse` | boolean | false |
 
 **Returns:** *object*
+
+___
+
+###  createOrderBookWatcher
+
+▸ **createOrderBookWatcher**(`marketSelector`: [MarketSelector](README.md#marketselector), `streamClient`: [StreamClient](classes/streamclient.md), `restClient`: [RESTClient](classes/restclient.md)): *Promise‹[OrderBookWatcher](classes/orderbookwatcher.md)›*
+
+Defined in src/orderbook/index.ts:8
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`marketSelector` | [MarketSelector](README.md#marketselector) |
+`streamClient` | [StreamClient](classes/streamclient.md) |
+`restClient` | [RESTClient](classes/restclient.md) |
+
+**Returns:** *Promise‹[OrderBookWatcher](classes/orderbookwatcher.md)›*
 
 ___
 
@@ -997,7 +1016,7 @@ ___
 
 ###  sideFromProto
 
-▸ **sideFromProto**(`side`: number | Side): *[OrderSide](README.md#orderside) | null*
+▸ **sideFromProto**(`side`: number | OrderSide): *[OrderSide](README.md#orderside) | null*
 
 Defined in src/websocket/proto/sideFromProto.ts:5
 
@@ -1005,7 +1024,7 @@ Defined in src/websocket/proto/sideFromProto.ts:5
 
 Name | Type |
 ------ | ------ |
-`side` | number &#124; Side |
+`side` | number &#124; OrderSide |
 
 **Returns:** *[OrderSide](README.md#orderside) | null*
 

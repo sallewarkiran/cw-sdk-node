@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [RESTClient](restclient.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [RESTClient](restclient.md)
 
 # Class: RESTClient
 
@@ -15,11 +15,13 @@
 ### Methods
 
 * [getAllowance](restclient.md#getallowance)
+* [getAsset](restclient.md#getasset)
 * [getAssetByID](restclient.md#getassetbyid)
 * [getAssetBySymbol](restclient.md#getassetbysymbol)
 * [getExchange](restclient.md#getexchange)
 * [getExchangeMarkets](restclient.md#getexchangemarkets)
 * [getExchanges](restclient.md#getexchanges)
+* [getMarket](restclient.md#getmarket)
 * [getMarketByID](restclient.md#getmarketbyid)
 * [getMarketBySymbol](restclient.md#getmarketbysymbol)
 * [getMarketDescription](restclient.md#getmarketdescription)
@@ -39,7 +41,7 @@
 
 \+ **new RESTClient**(`options?`: [RESTOpts](../interfaces/restopts.md)): *[RESTClient](restclient.md)*
 
-Defined in src/rest/RESTClient.ts:31
+Defined in src/rest/RESTClient.ts:36
 
 **Parameters:**
 
@@ -55,7 +57,7 @@ Name | Type |
 
 ▸ **getAllowance**(): *[RESTAllowance](../interfaces/restallowance.md)*
 
-Defined in src/rest/RESTClient.ts:71
+Defined in src/rest/RESTClient.ts:76
 
 Returns the most recently retrieved REST allowance data.
 
@@ -63,11 +65,29 @@ Returns the most recently retrieved REST allowance data.
 
 ___
 
+###  getAsset
+
+▸ **getAsset**(`assetSelector`: number | string): *Promise‹[Asset](../README.md#asset)›*
+
+Defined in src/rest/RESTClient.ts:200
+
+Returns a single asset.
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`assetSelector` | number &#124; string | number|string id of asset (number) or asset symbol (Example: 'btc')  |
+
+**Returns:** *Promise‹[Asset](../README.md#asset)›*
+
+___
+
 ###  getAssetByID
 
 ▸ **getAssetByID**(`assetId`: number): *Promise‹[Asset](../README.md#asset)›*
 
-Defined in src/rest/RESTClient.ts:189
+Defined in src/rest/RESTClient.ts:220
 
 Returns a single market, with associated routes.
 
@@ -85,7 +105,7 @@ ___
 
 ▸ **getAssetBySymbol**(`assetSymbol`: string): *Promise‹[Asset](../README.md#asset)›*
 
-Defined in src/rest/RESTClient.ts:181
+Defined in src/rest/RESTClient.ts:212
 
 Returns a single asset, with associated routes.
 
@@ -103,7 +123,7 @@ ___
 
 ▸ **getExchange**(`exchangeSymbol`: string): *Promise‹[ExchangeDescription](../README.md#exchangedescription)›*
 
-Defined in src/rest/RESTClient.ts:92
+Defined in src/rest/RESTClient.ts:97
 
 Returns a single exchange, with associated routes.
 
@@ -123,7 +143,7 @@ ___
 
 ▸ **getExchangeMarkets**(`exchangeSymbol`: string): *Promise‹[MarketDescription](../README.md#marketdescription)[]›*
 
-Defined in src/rest/RESTClient.ts:144
+Defined in src/rest/RESTClient.ts:149
 
 Returns a list of supported markets for a specific exchange.
 
@@ -143,7 +163,7 @@ ___
 
 ▸ **getExchanges**(): *Promise‹[ExchangeBrief](../README.md#exchangebrief)[]›*
 
-Defined in src/rest/RESTClient.ts:83
+Defined in src/rest/RESTClient.ts:88
 
 Returns a list of all supported exchanges.
 
@@ -153,11 +173,29 @@ Returns a list of all supported exchanges.
 
 ___
 
+###  getMarket
+
+▸ **getMarket**(`marketSelector`: [MarketSelector](../README.md#marketselector)): *Promise‹[Market](../README.md#market)›*
+
+Defined in src/rest/RESTClient.ts:171
+
+Returns a single market.
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`marketSelector` | [MarketSelector](../README.md#marketselector) | MarketSelector id of market (number) or MarketSymbol (Example: {exchange: 'kraken', base: 'btc', quote:'usd'})  |
+
+**Returns:** *Promise‹[Market](../README.md#market)›*
+
+___
+
 ###  getMarketByID
 
 ▸ **getMarketByID**(`marketID`: number): *Promise‹[Market](../README.md#market)›*
 
-Defined in src/rest/RESTClient.ts:173
+Defined in src/rest/RESTClient.ts:191
 
 Returns a single market.
 
@@ -175,7 +213,7 @@ ___
 
 ▸ **getMarketBySymbol**(`marketSymbol`: [MarketSymbol](../README.md#marketsymbol)): *Promise‹[Market](../README.md#market)›*
 
-Defined in src/rest/RESTClient.ts:165
+Defined in src/rest/RESTClient.ts:183
 
 Returns a single market.
 
@@ -193,7 +231,7 @@ ___
 
 ▸ **getMarketDescription**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[MarketDescription](../README.md#marketdescription)›*
 
-Defined in src/rest/RESTClient.ts:154
+Defined in src/rest/RESTClient.ts:159
 
 Returns a single market, with associated routes.
 
@@ -214,7 +252,7 @@ ___
 
 ▸ **getMarkets**(): *Promise‹[MarketBrief](../README.md#marketbrief)[]›*
 
-Defined in src/rest/RESTClient.ts:117
+Defined in src/rest/RESTClient.ts:122
 
 Returns a list of all supported markets.
 
@@ -228,7 +266,7 @@ ___
 
 ▸ **getOHLC**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[MarketOHLC](../README.md#marketohlc)›*
 
-Defined in src/rest/RESTClient.ts:199
+Defined in src/rest/RESTClient.ts:230
 
 Returns a market's OHLC candlestick data.
 
@@ -249,7 +287,7 @@ ___
 
 ▸ **getOrderBookSnapshot**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)›*
 
-Defined in src/rest/RESTClient.ts:228
+Defined in src/rest/RESTClient.ts:255
 
 Returns a market's order book.
 
@@ -270,7 +308,7 @@ ___
 
 ▸ **getPair**(`pairSymbol`: string): *Promise‹[PairDetails](../README.md#pairdetails)›*
 
-Defined in src/rest/RESTClient.ts:109
+Defined in src/rest/RESTClient.ts:114
 
 Returns a single pair. Lists all markets for this pair.
 
@@ -290,7 +328,7 @@ ___
 
 ▸ **getPairsIndex**(): *Promise‹[PairBrief](../README.md#pairbrief)[]›*
 
-Defined in src/rest/RESTClient.ts:100
+Defined in src/rest/RESTClient.ts:105
 
 Returns all pairs (in no particular order).
 
@@ -304,7 +342,7 @@ ___
 
 ▸ **getPrice**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Price](../README.md#price)›*
 
-Defined in src/rest/RESTClient.ts:243
+Defined in src/rest/RESTClient.ts:270
 
 Returns a market's last price.
 
@@ -325,7 +363,7 @@ ___
 
 ▸ **getSummaries**(): *Promise‹[Summaries](../README.md#summaries)›*
 
-Defined in src/rest/RESTClient.ts:125
+Defined in src/rest/RESTClient.ts:130
 
 Returns the market summary for all supported markets. Some values may be out of date by a few seconds.
 
@@ -339,7 +377,7 @@ ___
 
 ▸ **getSummary**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Summary](../interfaces/summary.md)›*
 
-Defined in src/rest/RESTClient.ts:135
+Defined in src/rest/RESTClient.ts:140
 
 Returns a single market summary.
 
@@ -360,7 +398,7 @@ ___
 
 ▸ **getTrades**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Trade](../README.md#trade)[]›*
 
-Defined in src/rest/RESTClient.ts:253
+Defined in src/rest/RESTClient.ts:280
 
 Returns a market's most recent trades, incrementing chronologically.
 

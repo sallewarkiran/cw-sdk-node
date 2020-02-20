@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [SnapshotRetriever](snapshotretriever.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [SnapshotRetriever](snapshotretriever.md)
 
 # Class: SnapshotRetriever
 
@@ -22,7 +22,7 @@ Internal class to handle retrieving orderbook snapshots via the REST API.
 
 ###  constructor
 
-\+ **new SnapshotRetriever**(`marketSelector`: [MarketSelector](../README.md#marketselector), `restClient`: [RESTClient](restclient.md)): *[SnapshotRetriever](snapshotretriever.md)*
+\+ **new SnapshotRetriever**(`marketSymbol`: [MarketSymbol](../README.md#marketsymbol), `restClient`: [RESTClient](restclient.md)): *[SnapshotRetriever](snapshotretriever.md)*
 
 Defined in src/orderbook/SnapshotRetriever.ts:9
 
@@ -30,7 +30,7 @@ Defined in src/orderbook/SnapshotRetriever.ts:9
 
 Name | Type |
 ------ | ------ |
-`marketSelector` | [MarketSelector](../README.md#marketselector) |
+`marketSymbol` | [MarketSymbol](../README.md#marketsymbol) |
 `restClient` | [RESTClient](restclient.md) |
 
 **Returns:** *[SnapshotRetriever](snapshotretriever.md)*
