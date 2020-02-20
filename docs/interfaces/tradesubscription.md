@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [TradeSubscription](tradesubscription.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [TradeSubscription](tradesubscription.md)
 
 # Interface: TradeSubscription
 

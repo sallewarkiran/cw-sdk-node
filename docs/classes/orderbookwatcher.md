@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [OrderBookWatcher](orderbookwatcher.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [OrderBookWatcher](orderbookwatcher.md)
 
 # Class: OrderBookWatcher
 
@@ -30,17 +30,17 @@ connected to start getting updates.
 
 ###  constructor
 
-\+ **new OrderBookWatcher**(`marketID`: number, `streamClient`: [StreamClient](streamclient.md), `restClient`: [RESTClient](restclient.md)): *[OrderBookWatcher](orderbookwatcher.md)*
+\+ **new OrderBookWatcher**(`marketID`: number, `snapshotUpdater`: [Updater](updater.md), `streamClient`: [StreamClient](streamclient.md)): *[OrderBookWatcher](orderbookwatcher.md)*
 
-Defined in src/orderbook/OrderBookWatcher.ts:24
+Defined in src/orderbook/OrderBookWatcher.ts:21
 
 **Parameters:**
 
 Name | Type | Description |
 ------ | ------ | ------ |
 `marketID` | number | ID of market to montior orderbook |
-`streamClient` | [StreamClient](streamclient.md) | StreamClient for LiveOrderBook to use |
-`restClient` | [RESTClient](restclient.md) | RESTClient for LiveOrderBook to use  |
+`snapshotUpdater` | [Updater](updater.md) | Updater to handle orderbook deltas and snapshots |
+`streamClient` | [StreamClient](streamclient.md) | StreamClient for OrderBookWatcher to subscribe to  |
 
 **Returns:** *[OrderBookWatcher](orderbookwatcher.md)*
 
@@ -50,7 +50,7 @@ Name | Type | Description |
 
 • **get inSync**(): *boolean*
 
-Defined in src/orderbook/OrderBookWatcher.ts:22
+Defined in src/orderbook/OrderBookWatcher.ts:19
 
 true if a snpshot has been retrieved and all of the latest deltas have been applied successfully
 
@@ -62,7 +62,7 @@ true if a snpshot has been retrieved and all of the latest deltas have been appl
 
 ▸ **destroy**(): *void*
 
-Defined in src/orderbook/OrderBookWatcher.ts:52
+Defined in src/orderbook/OrderBookWatcher.ts:41
 
 Unsubscribes from updates to the watched market from the supplied StreamClient,
 clears all snapshot retrieval timeouts, and tears down all event listeners.
@@ -77,7 +77,7 @@ ___
 
 ▸ **onError**(`callback`: function): *void*
 
-Defined in src/orderbook/OrderBookWatcher.ts:88
+Defined in src/orderbook/OrderBookWatcher.ts:77
 
 Adds an event listener that triggers the supplied callback on any error caught
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **onSyncStatusChange**(`callback`: function): *void*
 
-Defined in src/orderbook/OrderBookWatcher.ts:73
+Defined in src/orderbook/OrderBookWatcher.ts:62
 
 Adds an event listener that triggers the supplied callback any time the inSync status changes.
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **onUpdate**(`callback`: function): *void*
 
-Defined in src/orderbook/OrderBookWatcher.ts:61
+Defined in src/orderbook/OrderBookWatcher.ts:50
 
 Adds an event listener that triggers on each new update from an OrderBook snapshot and/or delta
 

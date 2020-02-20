@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [StreamClient](streamclient.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [StreamClient](streamclient.md)
 
 # Class: StreamClient
 
@@ -103,7 +103,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@types/node/events.d.ts:9
+Defined in node_modules/@types/node/events.d.ts:19
 
 ## Methods
 
@@ -115,7 +115,7 @@ Defined in node_modules/@types/node/events.d.ts:9
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:11
+Defined in node_modules/@types/node/events.d.ts:21
 
 **Parameters:**
 
@@ -167,7 +167,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:23
+Defined in node_modules/@types/node/events.d.ts:33
 
 **Parameters:**
 
@@ -206,7 +206,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:24
+Defined in node_modules/@types/node/events.d.ts:34
 
 **Returns:** *Array‹string | symbol›*
 
@@ -220,7 +220,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:20
+Defined in node_modules/@types/node/events.d.ts:30
 
 **Returns:** *number*
 
@@ -246,7 +246,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:25
+Defined in node_modules/@types/node/events.d.ts:35
 
 **Parameters:**
 
@@ -266,7 +266,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:21
+Defined in node_modules/@types/node/events.d.ts:31
 
 **Parameters:**
 
@@ -286,7 +286,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:17
+Defined in node_modules/@types/node/events.d.ts:27
 
 **Parameters:**
 
@@ -314,7 +314,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:12
+Defined in node_modules/@types/node/events.d.ts:22
 
 **Parameters:**
 
@@ -470,7 +470,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:13
+Defined in node_modules/@types/node/events.d.ts:23
 
 **Parameters:**
 
@@ -498,7 +498,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:14
+Defined in node_modules/@types/node/events.d.ts:24
 
 **Parameters:**
 
@@ -526,7 +526,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:15
+Defined in node_modules/@types/node/events.d.ts:25
 
 **Parameters:**
 
@@ -554,7 +554,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:22
+Defined in node_modules/@types/node/events.d.ts:32
 
 **Parameters:**
 
@@ -574,7 +574,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:18
+Defined in node_modules/@types/node/events.d.ts:28
 
 **Parameters:**
 
@@ -594,7 +594,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:16
+Defined in node_modules/@types/node/events.d.ts:26
 
 **Parameters:**
 
@@ -640,7 +640,7 @@ ___
 
 *Overrides void*
 
-Defined in node_modules/@types/node/events.d.ts:19
+Defined in node_modules/@types/node/events.d.ts:29
 
 **Parameters:**
 
@@ -702,7 +702,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/@types/node/events.d.ts:8
+Defined in node_modules/@types/node/events.d.ts:18
 
 **`deprecated`** since v4.0.0
 

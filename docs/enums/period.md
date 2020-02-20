@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [Period](period.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [Period](period.md)
 
 # Enumeration: Period
 
@@ -26,7 +26,7 @@
 
 • **12h**: = "43200"
 
-Defined in src/rest/types/data.ts:119
+Defined in src/rest/types/data.ts:113
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 • **15m**: = "900"
 
-Defined in src/rest/types/data.ts:113
+Defined in src/rest/types/data.ts:107
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **1d**: = "86400"
 
-Defined in src/rest/types/data.ts:120
+Defined in src/rest/types/data.ts:114
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **1h**: = "3600"
 
-Defined in src/rest/types/data.ts:115
+Defined in src/rest/types/data.ts:109
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **1m**: = "60"
 
-Defined in src/rest/types/data.ts:110
+Defined in src/rest/types/data.ts:104
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **1w**: = "604800_Monday"
 
-Defined in src/rest/types/data.ts:122
+Defined in src/rest/types/data.ts:116
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **2h**: = "7200"
 
-Defined in src/rest/types/data.ts:116
+Defined in src/rest/types/data.ts:110
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **30m**: = "1800"
 
-Defined in src/rest/types/data.ts:114
+Defined in src/rest/types/data.ts:108
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 • **3d**: = "259200"
 
-Defined in src/rest/types/data.ts:121
+Defined in src/rest/types/data.ts:115
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 • **3m**: = "180"
 
-Defined in src/rest/types/data.ts:111
+Defined in src/rest/types/data.ts:105
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 • **4h**: = "14400"
 
-Defined in src/rest/types/data.ts:117
+Defined in src/rest/types/data.ts:111
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 • **5m**: = "300"
 
-Defined in src/rest/types/data.ts:112
+Defined in src/rest/types/data.ts:106
 
 ___
 
@@ -122,4 +122,4 @@ ___
 
 • **6h**: = "21600"
 
-Defined in src/rest/types/data.ts:118
+Defined in src/rest/types/data.ts:112

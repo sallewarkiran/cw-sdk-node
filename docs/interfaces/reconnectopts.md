@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [ReconnectOpts](reconnectopts.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [ReconnectOpts](reconnectopts.md)
 
 # Interface: ReconnectOpts
 

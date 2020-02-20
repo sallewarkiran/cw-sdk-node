@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [PlaceOrderOpt](placeorderopt.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [PlaceOrderOpt](placeorderopt.md)
 
 # Interface: PlaceOrderOpt
 

@@ -1,4 +1,4 @@
-[cw-sdk-node](../README.md) › [Interval](interval.md)
+[cw-sdk-node - v1.0.0-beta.3](../README.md) › [Interval](interval.md)
 
 # Interface: Interval
 

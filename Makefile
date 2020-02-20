@@ -42,7 +42,7 @@ lint: node_modules ## Run linter
 test-modules: node_modules ## Test package modules
 	timeout -k 5s 20s npm run test -- test src --ci
 
-test-diff: clean build ## Tests if generated code was made properly
+test-diff: clean build docs ## Tests if generated code was made properly
 	@TMP=$$(mktemp -t checkout-diff.XXXXXX) ; \
 		git diff ./ > $$TMP ; \
 		if [ -s "$$TMP" ]; then \
@@ -76,6 +76,9 @@ test-package: build ## Tests packaged npm module
 
 node_modules:
 	yarn
+
+docs:
+	yarn run docs
 
 clean: ## Remove generated files
 	rm -rf node_modules build
