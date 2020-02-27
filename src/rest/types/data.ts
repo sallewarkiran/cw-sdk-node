@@ -132,9 +132,9 @@ export type MarketOrderBookLiquidity = {
 
 /**
  * CandleData is an array of numbers in this order:
- * [ CloseTime, OpenPrice, HighPrice, LowPrice, ClosePrice, Volume ]
+ * [ CloseTime, OpenPrice, HighPrice, LowPrice, ClosePrice, Volume, QuoteVolume ]
  */
-export type CandleDataRaw = [number, number, number, number, number, number];
+export type CandleDataRaw = [number, number, number, number, number, number, number];
 export type CandleData = {
   closeTime: number;
   openPrice: string;
@@ -142,6 +142,7 @@ export type CandleData = {
   lowPrice: string;
   closePrice: string;
   volume: string;
+  quoteVolume: string;
 };
 
 export type MarketOHLCRaw = {
