@@ -14,7 +14,8 @@ import {
   Trade,
   MarketOHLC,
   Period,
-  CandleData
+  CandleData,
+  OHLCOptions
 } from './types/data';
 import { RESTResponse, RESTOpts, RESTAllowance } from './types/client';
 import superagent from 'superagent';
@@ -225,11 +226,13 @@ export class RESTClient {
    * Returns a market's OHLC candlestick data.
    * @param exchangeSymbol string (Example: 'kraken')
    * @param pairSymbol string (Example: 'btcusd')
+   * @param {OHLCOptions} options Optional - see API documentation
    * @see https://cryptowat.ch/docs/api#market-ohlc
    */
-  async getOHLC(exchangeSymbol: string, pairSymbol: string): Promise<MarketOHLC> {
+  async getOHLC(exchangeSymbol: string, pairSymbol: string, options: OHLCOptions = {}): Promise<MarketOHLC> {
     return await this.getRestData<MarketOHLCRaw>(
-      `/markets/${exchangeSymbol}/${pairSymbol}/ohlc`
+      `/markets/${exchangeSymbol}/${pairSymbol}/ohlc`,
+      options
     ).then<MarketOHLC>((marketOHLC) => {
       const result: Partial<MarketOHLC> = {};
       for (const key in marketOHLC) {

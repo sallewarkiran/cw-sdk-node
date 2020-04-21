@@ -159,3 +159,9 @@ export type Prices = {
 export type Summaries = {
   [marketSymbol: string]: Summary;
 };
+
+export type OHLCOptions = {
+  before?: string,
+  after?: string,
+  periods?: string
+};
