@@ -9,9 +9,9 @@ import {
   Interval,
   OHLC
 } from '../types/markets';
-import { sideFromProto } from './sideFromProto';
+import { publicTradeSideFromProto } from './sideFromProto';
 import { getDateFromSecs, getDateFromNs, getNumber } from '../../util/helpers';
-import { periodFromInt } from './constants';
+import { periodNames } from './constants';
 import { PublicOrder, OrderBookSnapshot, OrderBookDelta } from 'util/types/shared';
 import { Period } from '../../rest/types/data';
 
@@ -40,16 +40,16 @@ function publicOrdersFromProto(
   return orders;
 }
 
-function getPeriod(period: number): Period | null {
-  if (periodFromInt[period]) {
-    return periodFromInt[period];
+function periodFromProto(period: string): Period | null {
+  if (periodNames[period]) {
+    return periodNames[period];
   }
   return null;
 }
 
 function intervalFromProto(intervalUpdate: ProtobufMarkets.IInterval): Interval | null {
   if (
-    !intervalUpdate.period ||
+    !intervalUpdate.periodName ||
     !intervalUpdate.closetime ||
     !intervalUpdate.ohlc ||
     !intervalUpdate.ohlc.openStr ||
@@ -62,7 +62,7 @@ function intervalFromProto(intervalUpdate: ProtobufMarkets.IInterval): Interval 
     return null;
   }
 
-  const period = getPeriod(intervalUpdate.period);
+  const period = periodFromProto(intervalUpdate.periodName);
   if (!period) {
     return null;
   }
@@ -151,7 +151,7 @@ function publicTradesFromProto(tradesUpdate: ProtobufMarkets.ITradesUpdate): Pub
       return;
     }
 
-    const side = sideFromProto(trade.orderSide);
+    const side = publicTradeSideFromProto(trade.orderSide);
     if (!side) {
       return;
     }

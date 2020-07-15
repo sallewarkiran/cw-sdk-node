@@ -11,6 +11,857 @@ var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.ut
 // Exported root namespace
 var $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
 
+$root.google = (function() {
+
+    /**
+     * Namespace google.
+     * @exports google
+     * @namespace
+     */
+    var google = {};
+
+    google.protobuf = (function() {
+
+        /**
+         * Namespace protobuf.
+         * @memberof google
+         * @namespace
+         */
+        var protobuf = {};
+
+        protobuf.Any = (function() {
+
+            /**
+             * Properties of an Any.
+             * @memberof google.protobuf
+             * @interface IAny
+             * @property {string|null} [type_url] Any type_url
+             * @property {Uint8Array|null} [value] Any value
+             */
+
+            /**
+             * Constructs a new Any.
+             * @memberof google.protobuf
+             * @classdesc Represents an Any.
+             * @implements IAny
+             * @constructor
+             * @param {google.protobuf.IAny=} [properties] Properties to set
+             */
+            function Any(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Any type_url.
+             * @member {string} type_url
+             * @memberof google.protobuf.Any
+             * @instance
+             */
+            Any.prototype.type_url = "";
+
+            /**
+             * Any value.
+             * @member {Uint8Array} value
+             * @memberof google.protobuf.Any
+             * @instance
+             */
+            Any.prototype.value = $util.newBuffer([]);
+
+            /**
+             * Creates a new Any instance using the specified properties.
+             * @function create
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {google.protobuf.IAny=} [properties] Properties to set
+             * @returns {google.protobuf.Any} Any instance
+             */
+            Any.create = function create(properties) {
+                return new Any(properties);
+            };
+
+            /**
+             * Encodes the specified Any message. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
+             * @function encode
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {google.protobuf.IAny} message Any message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Any.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.type_url != null && message.hasOwnProperty("type_url"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.type_url);
+                if (message.value != null && message.hasOwnProperty("value"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.value);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Any message, length delimited. Does not implicitly {@link google.protobuf.Any.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {google.protobuf.IAny} message Any message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Any.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an Any message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.protobuf.Any} Any
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Any.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Any();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.type_url = reader.string();
+                        break;
+                    case 2:
+                        message.value = reader.bytes();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an Any message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.protobuf.Any} Any
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Any.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an Any message.
+             * @function verify
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Any.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.type_url != null && message.hasOwnProperty("type_url"))
+                    if (!$util.isString(message.type_url))
+                        return "type_url: string expected";
+                if (message.value != null && message.hasOwnProperty("value"))
+                    if (!(message.value && typeof message.value.length === "number" || $util.isString(message.value)))
+                        return "value: buffer expected";
+                return null;
+            };
+
+            /**
+             * Creates an Any message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.protobuf.Any} Any
+             */
+            Any.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.protobuf.Any)
+                    return object;
+                var message = new $root.google.protobuf.Any();
+                if (object.type_url != null)
+                    message.type_url = String(object.type_url);
+                if (object.value != null)
+                    if (typeof object.value === "string")
+                        $util.base64.decode(object.value, message.value = $util.newBuffer($util.base64.length(object.value)), 0);
+                    else if (object.value.length)
+                        message.value = object.value;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an Any message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.protobuf.Any
+             * @static
+             * @param {google.protobuf.Any} message Any
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Any.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults) {
+                    object.type_url = "";
+                    if (options.bytes === String)
+                        object.value = "";
+                    else {
+                        object.value = [];
+                        if (options.bytes !== Array)
+                            object.value = $util.newBuffer(object.value);
+                    }
+                }
+                if (message.type_url != null && message.hasOwnProperty("type_url"))
+                    object.type_url = message.type_url;
+                if (message.value != null && message.hasOwnProperty("value"))
+                    object.value = options.bytes === String ? $util.base64.encode(message.value, 0, message.value.length) : options.bytes === Array ? Array.prototype.slice.call(message.value) : message.value;
+                return object;
+            };
+
+            /**
+             * Converts this Any to JSON.
+             * @function toJSON
+             * @memberof google.protobuf.Any
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Any.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Any;
+        })();
+
+        protobuf.Duration = (function() {
+
+            /**
+             * Properties of a Duration.
+             * @memberof google.protobuf
+             * @interface IDuration
+             * @property {number|Long|null} [seconds] Duration seconds
+             * @property {number|null} [nanos] Duration nanos
+             */
+
+            /**
+             * Constructs a new Duration.
+             * @memberof google.protobuf
+             * @classdesc Represents a Duration.
+             * @implements IDuration
+             * @constructor
+             * @param {google.protobuf.IDuration=} [properties] Properties to set
+             */
+            function Duration(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Duration seconds.
+             * @member {number|Long} seconds
+             * @memberof google.protobuf.Duration
+             * @instance
+             */
+            Duration.prototype.seconds = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * Duration nanos.
+             * @member {number} nanos
+             * @memberof google.protobuf.Duration
+             * @instance
+             */
+            Duration.prototype.nanos = 0;
+
+            /**
+             * Creates a new Duration instance using the specified properties.
+             * @function create
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {google.protobuf.IDuration=} [properties] Properties to set
+             * @returns {google.protobuf.Duration} Duration instance
+             */
+            Duration.create = function create(properties) {
+                return new Duration(properties);
+            };
+
+            /**
+             * Encodes the specified Duration message. Does not implicitly {@link google.protobuf.Duration.verify|verify} messages.
+             * @function encode
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {google.protobuf.IDuration} message Duration message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Duration.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
+                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Duration message, length delimited. Does not implicitly {@link google.protobuf.Duration.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {google.protobuf.IDuration} message Duration message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Duration.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Duration message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.protobuf.Duration} Duration
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Duration.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Duration();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.seconds = reader.int64();
+                        break;
+                    case 2:
+                        message.nanos = reader.int32();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Duration message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.protobuf.Duration} Duration
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Duration.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Duration message.
+             * @function verify
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Duration.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    if (!$util.isInteger(message.seconds) && !(message.seconds && $util.isInteger(message.seconds.low) && $util.isInteger(message.seconds.high)))
+                        return "seconds: integer|Long expected";
+                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    if (!$util.isInteger(message.nanos))
+                        return "nanos: integer expected";
+                return null;
+            };
+
+            /**
+             * Creates a Duration message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.protobuf.Duration} Duration
+             */
+            Duration.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.protobuf.Duration)
+                    return object;
+                var message = new $root.google.protobuf.Duration();
+                if (object.seconds != null)
+                    if ($util.Long)
+                        (message.seconds = $util.Long.fromValue(object.seconds)).unsigned = false;
+                    else if (typeof object.seconds === "string")
+                        message.seconds = parseInt(object.seconds, 10);
+                    else if (typeof object.seconds === "number")
+                        message.seconds = object.seconds;
+                    else if (typeof object.seconds === "object")
+                        message.seconds = new $util.LongBits(object.seconds.low >>> 0, object.seconds.high >>> 0).toNumber();
+                if (object.nanos != null)
+                    message.nanos = object.nanos | 0;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Duration message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.protobuf.Duration
+             * @static
+             * @param {google.protobuf.Duration} message Duration
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Duration.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults) {
+                    if ($util.Long) {
+                        var long = new $util.Long(0, 0, false);
+                        object.seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.seconds = options.longs === String ? "0" : 0;
+                    object.nanos = 0;
+                }
+                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    if (typeof message.seconds === "number")
+                        object.seconds = options.longs === String ? String(message.seconds) : message.seconds;
+                    else
+                        object.seconds = options.longs === String ? $util.Long.prototype.toString.call(message.seconds) : options.longs === Number ? new $util.LongBits(message.seconds.low >>> 0, message.seconds.high >>> 0).toNumber() : message.seconds;
+                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    object.nanos = message.nanos;
+                return object;
+            };
+
+            /**
+             * Converts this Duration to JSON.
+             * @function toJSON
+             * @memberof google.protobuf.Duration
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Duration.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Duration;
+        })();
+
+        protobuf.Empty = (function() {
+
+            /**
+             * Properties of an Empty.
+             * @memberof google.protobuf
+             * @interface IEmpty
+             */
+
+            /**
+             * Constructs a new Empty.
+             * @memberof google.protobuf
+             * @classdesc Represents an Empty.
+             * @implements IEmpty
+             * @constructor
+             * @param {google.protobuf.IEmpty=} [properties] Properties to set
+             */
+            function Empty(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Creates a new Empty instance using the specified properties.
+             * @function create
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {google.protobuf.IEmpty=} [properties] Properties to set
+             * @returns {google.protobuf.Empty} Empty instance
+             */
+            Empty.create = function create(properties) {
+                return new Empty(properties);
+            };
+
+            /**
+             * Encodes the specified Empty message. Does not implicitly {@link google.protobuf.Empty.verify|verify} messages.
+             * @function encode
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {google.protobuf.IEmpty} message Empty message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Empty.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Empty message, length delimited. Does not implicitly {@link google.protobuf.Empty.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {google.protobuf.IEmpty} message Empty message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Empty.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an Empty message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.protobuf.Empty} Empty
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Empty.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Empty();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an Empty message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.protobuf.Empty} Empty
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Empty.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an Empty message.
+             * @function verify
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Empty.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                return null;
+            };
+
+            /**
+             * Creates an Empty message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.protobuf.Empty} Empty
+             */
+            Empty.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.protobuf.Empty)
+                    return object;
+                return new $root.google.protobuf.Empty();
+            };
+
+            /**
+             * Creates a plain object from an Empty message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.protobuf.Empty
+             * @static
+             * @param {google.protobuf.Empty} message Empty
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Empty.toObject = function toObject() {
+                return {};
+            };
+
+            /**
+             * Converts this Empty to JSON.
+             * @function toJSON
+             * @memberof google.protobuf.Empty
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Empty.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Empty;
+        })();
+
+        protobuf.Timestamp = (function() {
+
+            /**
+             * Properties of a Timestamp.
+             * @memberof google.protobuf
+             * @interface ITimestamp
+             * @property {number|Long|null} [seconds] Timestamp seconds
+             * @property {number|null} [nanos] Timestamp nanos
+             */
+
+            /**
+             * Constructs a new Timestamp.
+             * @memberof google.protobuf
+             * @classdesc Represents a Timestamp.
+             * @implements ITimestamp
+             * @constructor
+             * @param {google.protobuf.ITimestamp=} [properties] Properties to set
+             */
+            function Timestamp(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * Timestamp seconds.
+             * @member {number|Long} seconds
+             * @memberof google.protobuf.Timestamp
+             * @instance
+             */
+            Timestamp.prototype.seconds = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+
+            /**
+             * Timestamp nanos.
+             * @member {number} nanos
+             * @memberof google.protobuf.Timestamp
+             * @instance
+             */
+            Timestamp.prototype.nanos = 0;
+
+            /**
+             * Creates a new Timestamp instance using the specified properties.
+             * @function create
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {google.protobuf.ITimestamp=} [properties] Properties to set
+             * @returns {google.protobuf.Timestamp} Timestamp instance
+             */
+            Timestamp.create = function create(properties) {
+                return new Timestamp(properties);
+            };
+
+            /**
+             * Encodes the specified Timestamp message. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
+             * @function encode
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {google.protobuf.ITimestamp} message Timestamp message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Timestamp.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
+                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified Timestamp message, length delimited. Does not implicitly {@link google.protobuf.Timestamp.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {google.protobuf.ITimestamp} message Timestamp message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            Timestamp.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a Timestamp message from the specified reader or buffer.
+             * @function decode
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {google.protobuf.Timestamp} Timestamp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Timestamp.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.google.protobuf.Timestamp();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.seconds = reader.int64();
+                        break;
+                    case 2:
+                        message.nanos = reader.int32();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a Timestamp message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {google.protobuf.Timestamp} Timestamp
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            Timestamp.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a Timestamp message.
+             * @function verify
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            Timestamp.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    if (!$util.isInteger(message.seconds) && !(message.seconds && $util.isInteger(message.seconds.low) && $util.isInteger(message.seconds.high)))
+                        return "seconds: integer|Long expected";
+                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    if (!$util.isInteger(message.nanos))
+                        return "nanos: integer expected";
+                return null;
+            };
+
+            /**
+             * Creates a Timestamp message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {google.protobuf.Timestamp} Timestamp
+             */
+            Timestamp.fromObject = function fromObject(object) {
+                if (object instanceof $root.google.protobuf.Timestamp)
+                    return object;
+                var message = new $root.google.protobuf.Timestamp();
+                if (object.seconds != null)
+                    if ($util.Long)
+                        (message.seconds = $util.Long.fromValue(object.seconds)).unsigned = false;
+                    else if (typeof object.seconds === "string")
+                        message.seconds = parseInt(object.seconds, 10);
+                    else if (typeof object.seconds === "number")
+                        message.seconds = object.seconds;
+                    else if (typeof object.seconds === "object")
+                        message.seconds = new $util.LongBits(object.seconds.low >>> 0, object.seconds.high >>> 0).toNumber();
+                if (object.nanos != null)
+                    message.nanos = object.nanos | 0;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a Timestamp message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof google.protobuf.Timestamp
+             * @static
+             * @param {google.protobuf.Timestamp} message Timestamp
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            Timestamp.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults) {
+                    if ($util.Long) {
+                        var long = new $util.Long(0, 0, false);
+                        object.seconds = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                    } else
+                        object.seconds = options.longs === String ? "0" : 0;
+                    object.nanos = 0;
+                }
+                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                    if (typeof message.seconds === "number")
+                        object.seconds = options.longs === String ? String(message.seconds) : message.seconds;
+                    else
+                        object.seconds = options.longs === String ? $util.Long.prototype.toString.call(message.seconds) : options.longs === Number ? new $util.LongBits(message.seconds.low >>> 0, message.seconds.high >>> 0).toNumber() : message.seconds;
+                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                    object.nanos = message.nanos;
+                return object;
+            };
+
+            /**
+             * Converts this Timestamp to JSON.
+             * @function toJSON
+             * @memberof google.protobuf.Timestamp
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            Timestamp.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return Timestamp;
+        })();
+
+        return protobuf;
+    })();
+
+    return google;
+})();
+
 $root.ProtobufBroker = (function() {
 
     /**
@@ -2054,6 +2905,193 @@ $root.ProtobufBroker = (function() {
         return ClosePositionRequest;
     })();
 
+    ProtobufBroker.SettlePositionRequest = (function() {
+
+        /**
+         * Properties of a SettlePositionRequest.
+         * @memberof ProtobufBroker
+         * @interface ISettlePositionRequest
+         * @property {string|null} [positionId] SettlePositionRequest positionId
+         */
+
+        /**
+         * Constructs a new SettlePositionRequest.
+         * @memberof ProtobufBroker
+         * @classdesc Represents a SettlePositionRequest.
+         * @implements ISettlePositionRequest
+         * @constructor
+         * @param {ProtobufBroker.ISettlePositionRequest=} [properties] Properties to set
+         */
+        function SettlePositionRequest(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * SettlePositionRequest positionId.
+         * @member {string} positionId
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @instance
+         */
+        SettlePositionRequest.prototype.positionId = "";
+
+        /**
+         * Creates a new SettlePositionRequest instance using the specified properties.
+         * @function create
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {ProtobufBroker.ISettlePositionRequest=} [properties] Properties to set
+         * @returns {ProtobufBroker.SettlePositionRequest} SettlePositionRequest instance
+         */
+        SettlePositionRequest.create = function create(properties) {
+            return new SettlePositionRequest(properties);
+        };
+
+        /**
+         * Encodes the specified SettlePositionRequest message. Does not implicitly {@link ProtobufBroker.SettlePositionRequest.verify|verify} messages.
+         * @function encode
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {ProtobufBroker.ISettlePositionRequest} message SettlePositionRequest message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        SettlePositionRequest.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.positionId != null && message.hasOwnProperty("positionId"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.positionId);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified SettlePositionRequest message, length delimited. Does not implicitly {@link ProtobufBroker.SettlePositionRequest.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {ProtobufBroker.ISettlePositionRequest} message SettlePositionRequest message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        SettlePositionRequest.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a SettlePositionRequest message from the specified reader or buffer.
+         * @function decode
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ProtobufBroker.SettlePositionRequest} SettlePositionRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        SettlePositionRequest.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ProtobufBroker.SettlePositionRequest();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1:
+                    message.positionId = reader.string();
+                    break;
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a SettlePositionRequest message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ProtobufBroker.SettlePositionRequest} SettlePositionRequest
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        SettlePositionRequest.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a SettlePositionRequest message.
+         * @function verify
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        SettlePositionRequest.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.positionId != null && message.hasOwnProperty("positionId"))
+                if (!$util.isString(message.positionId))
+                    return "positionId: string expected";
+            return null;
+        };
+
+        /**
+         * Creates a SettlePositionRequest message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ProtobufBroker.SettlePositionRequest} SettlePositionRequest
+         */
+        SettlePositionRequest.fromObject = function fromObject(object) {
+            if (object instanceof $root.ProtobufBroker.SettlePositionRequest)
+                return object;
+            var message = new $root.ProtobufBroker.SettlePositionRequest();
+            if (object.positionId != null)
+                message.positionId = String(object.positionId);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a SettlePositionRequest message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @static
+         * @param {ProtobufBroker.SettlePositionRequest} message SettlePositionRequest
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        SettlePositionRequest.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.defaults)
+                object.positionId = "";
+            if (message.positionId != null && message.hasOwnProperty("positionId"))
+                object.positionId = message.positionId;
+            return object;
+        };
+
+        /**
+         * Converts this SettlePositionRequest to JSON.
+         * @function toJSON
+         * @memberof ProtobufBroker.SettlePositionRequest
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        SettlePositionRequest.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return SettlePositionRequest;
+    })();
+
     ProtobufBroker.SyncRequest = (function() {
 
         /**
@@ -2227,6 +3265,7 @@ $root.ProtobufBroker = (function() {
          * @property {ProtobufBroker.IReplaceOrderRequest|null} [replaceOrderRequest] BrokerRequest replaceOrderRequest
          * @property {ProtobufBroker.ISyncRequest|null} [syncRequest] BrokerRequest syncRequest
          * @property {ProtobufBroker.IClosePositionRequest|null} [closePositionRequest] BrokerRequest closePositionRequest
+         * @property {ProtobufBroker.ISettlePositionRequest|null} [settlePositionRequest] BrokerRequest settlePositionRequest
          */
 
         /**
@@ -2300,17 +3339,25 @@ $root.ProtobufBroker = (function() {
          */
         BrokerRequest.prototype.closePositionRequest = null;
 
+        /**
+         * BrokerRequest settlePositionRequest.
+         * @member {ProtobufBroker.ISettlePositionRequest|null|undefined} settlePositionRequest
+         * @memberof ProtobufBroker.BrokerRequest
+         * @instance
+         */
+        BrokerRequest.prototype.settlePositionRequest = null;
+
         // OneOf field names bound to virtual getters and setters
         var $oneOfFields;
 
         /**
          * BrokerRequest Request.
-         * @member {"placeOrderRequest"|"cancelOrderRequest"|"replaceOrderRequest"|"syncRequest"|"closePositionRequest"|undefined} Request
+         * @member {"placeOrderRequest"|"cancelOrderRequest"|"replaceOrderRequest"|"syncRequest"|"closePositionRequest"|"settlePositionRequest"|undefined} Request
          * @memberof ProtobufBroker.BrokerRequest
          * @instance
          */
         Object.defineProperty(BrokerRequest.prototype, "Request", {
-            get: $util.oneOfGetter($oneOfFields = ["placeOrderRequest", "cancelOrderRequest", "replaceOrderRequest", "syncRequest", "closePositionRequest"]),
+            get: $util.oneOfGetter($oneOfFields = ["placeOrderRequest", "cancelOrderRequest", "replaceOrderRequest", "syncRequest", "closePositionRequest", "settlePositionRequest"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -2352,6 +3399,8 @@ $root.ProtobufBroker = (function() {
                 $root.ProtobufBroker.ReplaceOrderRequest.encode(message.replaceOrderRequest, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             if (message.marketId != null && message.hasOwnProperty("marketId"))
                 writer.uint32(/* id 7, wireType 0 =*/56).int64(message.marketId);
+            if (message.settlePositionRequest != null && message.hasOwnProperty("settlePositionRequest"))
+                $root.ProtobufBroker.SettlePositionRequest.encode(message.settlePositionRequest, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
             return writer;
         };
 
@@ -2406,6 +3455,9 @@ $root.ProtobufBroker = (function() {
                     break;
                 case 5:
                     message.closePositionRequest = $root.ProtobufBroker.ClosePositionRequest.decode(reader, reader.uint32());
+                    break;
+                case 9:
+                    message.settlePositionRequest = $root.ProtobufBroker.SettlePositionRequest.decode(reader, reader.uint32());
                     break;
                 default:
                     reader.skipType(tag & 7);
@@ -2497,6 +3549,16 @@ $root.ProtobufBroker = (function() {
                         return "closePositionRequest." + error;
                 }
             }
+            if (message.settlePositionRequest != null && message.hasOwnProperty("settlePositionRequest")) {
+                if (properties.Request === 1)
+                    return "Request: multiple values";
+                properties.Request = 1;
+                {
+                    var error = $root.ProtobufBroker.SettlePositionRequest.verify(message.settlePositionRequest);
+                    if (error)
+                        return "settlePositionRequest." + error;
+                }
+            }
             return null;
         };
 
@@ -2547,6 +3609,11 @@ $root.ProtobufBroker = (function() {
                 if (typeof object.closePositionRequest !== "object")
                     throw TypeError(".ProtobufBroker.BrokerRequest.closePositionRequest: object expected");
                 message.closePositionRequest = $root.ProtobufBroker.ClosePositionRequest.fromObject(object.closePositionRequest);
+            }
+            if (object.settlePositionRequest != null) {
+                if (typeof object.settlePositionRequest !== "object")
+                    throw TypeError(".ProtobufBroker.BrokerRequest.settlePositionRequest: object expected");
+                message.settlePositionRequest = $root.ProtobufBroker.SettlePositionRequest.fromObject(object.settlePositionRequest);
             }
             return message;
         };
@@ -2604,6 +3671,11 @@ $root.ProtobufBroker = (function() {
                     object.marketId = options.longs === String ? String(message.marketId) : message.marketId;
                 else
                     object.marketId = options.longs === String ? $util.Long.prototype.toString.call(message.marketId) : options.longs === Number ? new $util.LongBits(message.marketId.low >>> 0, message.marketId.high >>> 0).toNumber() : message.marketId;
+            if (message.settlePositionRequest != null && message.hasOwnProperty("settlePositionRequest")) {
+                object.settlePositionRequest = $root.ProtobufBroker.SettlePositionRequest.toObject(message.settlePositionRequest, options);
+                if (options.oneofs)
+                    object.Request = "settlePositionRequest";
+            }
             return object;
         };
 
@@ -3497,6 +4569,214 @@ $root.ProtobufBroker = (function() {
         return BalancesUpdate;
     })();
 
+    ProtobufBroker.LedgersUpdate = (function() {
+
+        /**
+         * Properties of a LedgersUpdate.
+         * @memberof ProtobufBroker
+         * @interface ILedgersUpdate
+         * @property {Array.<ProtobufBroker.IPrivateLedger>|null} [ledgers] LedgersUpdate ledgers
+         */
+
+        /**
+         * Constructs a new LedgersUpdate.
+         * @memberof ProtobufBroker
+         * @classdesc Represents a LedgersUpdate.
+         * @implements ILedgersUpdate
+         * @constructor
+         * @param {ProtobufBroker.ILedgersUpdate=} [properties] Properties to set
+         */
+        function LedgersUpdate(properties) {
+            this.ledgers = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * LedgersUpdate ledgers.
+         * @member {Array.<ProtobufBroker.IPrivateLedger>} ledgers
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @instance
+         */
+        LedgersUpdate.prototype.ledgers = $util.emptyArray;
+
+        /**
+         * Creates a new LedgersUpdate instance using the specified properties.
+         * @function create
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {ProtobufBroker.ILedgersUpdate=} [properties] Properties to set
+         * @returns {ProtobufBroker.LedgersUpdate} LedgersUpdate instance
+         */
+        LedgersUpdate.create = function create(properties) {
+            return new LedgersUpdate(properties);
+        };
+
+        /**
+         * Encodes the specified LedgersUpdate message. Does not implicitly {@link ProtobufBroker.LedgersUpdate.verify|verify} messages.
+         * @function encode
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {ProtobufBroker.ILedgersUpdate} message LedgersUpdate message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        LedgersUpdate.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.ledgers != null && message.ledgers.length)
+                for (var i = 0; i < message.ledgers.length; ++i)
+                    $root.ProtobufBroker.PrivateLedger.encode(message.ledgers[i], writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified LedgersUpdate message, length delimited. Does not implicitly {@link ProtobufBroker.LedgersUpdate.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {ProtobufBroker.ILedgersUpdate} message LedgersUpdate message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        LedgersUpdate.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a LedgersUpdate message from the specified reader or buffer.
+         * @function decode
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ProtobufBroker.LedgersUpdate} LedgersUpdate
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        LedgersUpdate.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ProtobufBroker.LedgersUpdate();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1:
+                    if (!(message.ledgers && message.ledgers.length))
+                        message.ledgers = [];
+                    message.ledgers.push($root.ProtobufBroker.PrivateLedger.decode(reader, reader.uint32()));
+                    break;
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a LedgersUpdate message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ProtobufBroker.LedgersUpdate} LedgersUpdate
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        LedgersUpdate.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a LedgersUpdate message.
+         * @function verify
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        LedgersUpdate.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.ledgers != null && message.hasOwnProperty("ledgers")) {
+                if (!Array.isArray(message.ledgers))
+                    return "ledgers: array expected";
+                for (var i = 0; i < message.ledgers.length; ++i) {
+                    var error = $root.ProtobufBroker.PrivateLedger.verify(message.ledgers[i]);
+                    if (error)
+                        return "ledgers." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates a LedgersUpdate message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ProtobufBroker.LedgersUpdate} LedgersUpdate
+         */
+        LedgersUpdate.fromObject = function fromObject(object) {
+            if (object instanceof $root.ProtobufBroker.LedgersUpdate)
+                return object;
+            var message = new $root.ProtobufBroker.LedgersUpdate();
+            if (object.ledgers) {
+                if (!Array.isArray(object.ledgers))
+                    throw TypeError(".ProtobufBroker.LedgersUpdate.ledgers: array expected");
+                message.ledgers = [];
+                for (var i = 0; i < object.ledgers.length; ++i) {
+                    if (typeof object.ledgers[i] !== "object")
+                        throw TypeError(".ProtobufBroker.LedgersUpdate.ledgers: object expected");
+                    message.ledgers[i] = $root.ProtobufBroker.PrivateLedger.fromObject(object.ledgers[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a LedgersUpdate message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @static
+         * @param {ProtobufBroker.LedgersUpdate} message LedgersUpdate
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        LedgersUpdate.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults)
+                object.ledgers = [];
+            if (message.ledgers && message.ledgers.length) {
+                object.ledgers = [];
+                for (var j = 0; j < message.ledgers.length; ++j)
+                    object.ledgers[j] = $root.ProtobufBroker.PrivateLedger.toObject(message.ledgers[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this LedgersUpdate to JSON.
+         * @function toJSON
+         * @memberof ProtobufBroker.LedgersUpdate
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        LedgersUpdate.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        return LedgersUpdate;
+    })();
+
     ProtobufBroker.RequestResolutionUpdate = (function() {
 
         /**
@@ -3506,6 +4786,7 @@ $root.ProtobufBroker = (function() {
          * @property {string|null} [id] RequestResolutionUpdate id
          * @property {number|null} [error] RequestResolutionUpdate error
          * @property {string|null} [message] RequestResolutionUpdate message
+         * @property {ProtobufBroker.IError|null} [errorV2] RequestResolutionUpdate errorV2
          * @property {ProtobufBroker.IPlaceOrderResult|null} [placeOrderResult] RequestResolutionUpdate placeOrderResult
          * @property {ProtobufBroker.ICancelOrderResult|null} [cancelOrderResult] RequestResolutionUpdate cancelOrderResult
          */
@@ -3548,6 +4829,14 @@ $root.ProtobufBroker = (function() {
          * @instance
          */
         RequestResolutionUpdate.prototype.message = "";
+
+        /**
+         * RequestResolutionUpdate errorV2.
+         * @member {ProtobufBroker.IError|null|undefined} errorV2
+         * @memberof ProtobufBroker.RequestResolutionUpdate
+         * @instance
+         */
+        RequestResolutionUpdate.prototype.errorV2 = null;
 
         /**
          * RequestResolutionUpdate placeOrderResult.
@@ -3613,6 +4902,8 @@ $root.ProtobufBroker = (function() {
                 $root.ProtobufBroker.PlaceOrderResult.encode(message.placeOrderResult, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             if (message.cancelOrderResult != null && message.hasOwnProperty("cancelOrderResult"))
                 $root.ProtobufBroker.CancelOrderResult.encode(message.cancelOrderResult, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+            if (message.errorV2 != null && message.hasOwnProperty("errorV2"))
+                $root.ProtobufBroker.Error.encode(message.errorV2, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             return writer;
         };
 
@@ -3655,6 +4946,9 @@ $root.ProtobufBroker = (function() {
                     break;
                 case 3:
                     message.message = reader.string();
+                    break;
+                case 6:
+                    message.errorV2 = $root.ProtobufBroker.Error.decode(reader, reader.uint32());
                     break;
                 case 4:
                     message.placeOrderResult = $root.ProtobufBroker.PlaceOrderResult.decode(reader, reader.uint32());
@@ -3707,6 +5001,11 @@ $root.ProtobufBroker = (function() {
             if (message.message != null && message.hasOwnProperty("message"))
                 if (!$util.isString(message.message))
                     return "message: string expected";
+            if (message.errorV2 != null && message.hasOwnProperty("errorV2")) {
+                var error = $root.ProtobufBroker.Error.verify(message.errorV2);
+                if (error)
+                    return "errorV2." + error;
+            }
             if (message.placeOrderResult != null && message.hasOwnProperty("placeOrderResult")) {
                 properties.Result = 1;
                 {
@@ -3746,6 +5045,11 @@ $root.ProtobufBroker = (function() {
                 message.error = object.error | 0;
             if (object.message != null)
                 message.message = String(object.message);
+            if (object.errorV2 != null) {
+                if (typeof object.errorV2 !== "object")
+                    throw TypeError(".ProtobufBroker.RequestResolutionUpdate.errorV2: object expected");
+                message.errorV2 = $root.ProtobufBroker.Error.fromObject(object.errorV2);
+            }
             if (object.placeOrderResult != null) {
                 if (typeof object.placeOrderResult !== "object")
                     throw TypeError(".ProtobufBroker.RequestResolutionUpdate.placeOrderResult: object expected");
@@ -3776,6 +5080,7 @@ $root.ProtobufBroker = (function() {
                 object.id = "";
                 object.error = 0;
                 object.message = "";
+                object.errorV2 = null;
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -3793,6 +5098,8 @@ $root.ProtobufBroker = (function() {
                 if (options.oneofs)
                     object.Result = "cancelOrderResult";
             }
+            if (message.errorV2 != null && message.hasOwnProperty("errorV2"))
+                object.errorV2 = $root.ProtobufBroker.Error.toObject(message.errorV2, options);
             return object;
         };
 
@@ -4542,6 +5849,7 @@ $root.ProtobufBroker = (function() {
                         return "fundingTypes: enum value[] expected";
                     case 0:
                     case 1:
+                    case 2:
                         break;
                     }
             }
@@ -4652,6 +5960,10 @@ $root.ProtobufBroker = (function() {
                     case "Margin":
                     case 1:
                         message.fundingTypes[i] = 1;
+                        break;
+                    case "Staking":
+                    case 2:
+                        message.fundingTypes[i] = 2;
                         break;
                     }
             }
@@ -5428,6 +6740,7 @@ $root.ProtobufBroker = (function() {
          * @property {ProtobufBroker.ITradesUpdate|null} [tradesUpdate] BrokerUpdateMessage tradesUpdate
          * @property {ProtobufBroker.IBalancesUpdate|null} [balancesUpdate] BrokerUpdateMessage balancesUpdate
          * @property {ProtobufBroker.IPositionsUpdate|null} [positionsUpdate] BrokerUpdateMessage positionsUpdate
+         * @property {ProtobufBroker.ILedgersUpdate|null} [ledgersUpdate] BrokerUpdateMessage ledgersUpdate
          * @property {ProtobufBroker.IRequestResolutionUpdate|null} [requestResolutionUpdate] BrokerUpdateMessage requestResolutionUpdate
          * @property {ProtobufBroker.IAnonymousSessionStatusUpdate|null} [anonymousSessionStatusUpdate] BrokerUpdateMessage anonymousSessionStatusUpdate
          * @property {ProtobufBroker.IPermissionsUpdate|null} [permissionsUpdate] BrokerUpdateMessage permissionsUpdate
@@ -5492,6 +6805,14 @@ $root.ProtobufBroker = (function() {
          * @instance
          */
         BrokerUpdateMessage.prototype.positionsUpdate = null;
+
+        /**
+         * BrokerUpdateMessage ledgersUpdate.
+         * @member {ProtobufBroker.ILedgersUpdate|null|undefined} ledgersUpdate
+         * @memberof ProtobufBroker.BrokerUpdateMessage
+         * @instance
+         */
+        BrokerUpdateMessage.prototype.ledgersUpdate = null;
 
         /**
          * BrokerUpdateMessage requestResolutionUpdate.
@@ -5562,12 +6883,12 @@ $root.ProtobufBroker = (function() {
 
         /**
          * BrokerUpdateMessage Update.
-         * @member {"ordersUpdate"|"tradesUpdate"|"balancesUpdate"|"positionsUpdate"|"requestResolutionUpdate"|"anonymousSessionStatusUpdate"|"permissionsUpdate"|"sessionStatusUpdate"|"apiAccessorStatusUpdate"|"authenticationResult"|"subscriptionResult"|"webAuthenticationResult"|undefined} Update
+         * @member {"ordersUpdate"|"tradesUpdate"|"balancesUpdate"|"positionsUpdate"|"ledgersUpdate"|"requestResolutionUpdate"|"anonymousSessionStatusUpdate"|"permissionsUpdate"|"sessionStatusUpdate"|"apiAccessorStatusUpdate"|"authenticationResult"|"subscriptionResult"|"webAuthenticationResult"|undefined} Update
          * @memberof ProtobufBroker.BrokerUpdateMessage
          * @instance
          */
         Object.defineProperty(BrokerUpdateMessage.prototype, "Update", {
-            get: $util.oneOfGetter($oneOfFields = ["ordersUpdate", "tradesUpdate", "balancesUpdate", "positionsUpdate", "requestResolutionUpdate", "anonymousSessionStatusUpdate", "permissionsUpdate", "sessionStatusUpdate", "apiAccessorStatusUpdate", "authenticationResult", "subscriptionResult", "webAuthenticationResult"]),
+            get: $util.oneOfGetter($oneOfFields = ["ordersUpdate", "tradesUpdate", "balancesUpdate", "positionsUpdate", "ledgersUpdate", "requestResolutionUpdate", "anonymousSessionStatusUpdate", "permissionsUpdate", "sessionStatusUpdate", "apiAccessorStatusUpdate", "authenticationResult", "subscriptionResult", "webAuthenticationResult"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -5621,6 +6942,8 @@ $root.ProtobufBroker = (function() {
                 $root.ProtobufStream.SubscriptionResult.encode(message.subscriptionResult, writer.uint32(/* id 12, wireType 2 =*/98).fork()).ldelim();
             if (message.webAuthenticationResult != null && message.hasOwnProperty("webAuthenticationResult"))
                 $root.ProtobufClient.WebAuthenticationResult.encode(message.webAuthenticationResult, writer.uint32(/* id 14, wireType 2 =*/114).fork()).ldelim();
+            if (message.ledgersUpdate != null && message.hasOwnProperty("ledgersUpdate"))
+                $root.ProtobufBroker.LedgersUpdate.encode(message.ledgersUpdate, writer.uint32(/* id 15, wireType 2 =*/122).fork()).ldelim();
             return writer;
         };
 
@@ -5669,6 +6992,9 @@ $root.ProtobufBroker = (function() {
                     break;
                 case 8:
                     message.positionsUpdate = $root.ProtobufBroker.PositionsUpdate.decode(reader, reader.uint32());
+                    break;
+                case 15:
+                    message.ledgersUpdate = $root.ProtobufBroker.LedgersUpdate.decode(reader, reader.uint32());
                     break;
                 case 4:
                     message.requestResolutionUpdate = $root.ProtobufBroker.RequestResolutionUpdate.decode(reader, reader.uint32());
@@ -5769,6 +7095,16 @@ $root.ProtobufBroker = (function() {
                     var error = $root.ProtobufBroker.PositionsUpdate.verify(message.positionsUpdate);
                     if (error)
                         return "positionsUpdate." + error;
+                }
+            }
+            if (message.ledgersUpdate != null && message.hasOwnProperty("ledgersUpdate")) {
+                if (properties.Update === 1)
+                    return "Update: multiple values";
+                properties.Update = 1;
+                {
+                    var error = $root.ProtobufBroker.LedgersUpdate.verify(message.ledgersUpdate);
+                    if (error)
+                        return "ledgersUpdate." + error;
                 }
             }
             if (message.requestResolutionUpdate != null && message.hasOwnProperty("requestResolutionUpdate")) {
@@ -5894,6 +7230,11 @@ $root.ProtobufBroker = (function() {
                 if (typeof object.positionsUpdate !== "object")
                     throw TypeError(".ProtobufBroker.BrokerUpdateMessage.positionsUpdate: object expected");
                 message.positionsUpdate = $root.ProtobufBroker.PositionsUpdate.fromObject(object.positionsUpdate);
+            }
+            if (object.ledgersUpdate != null) {
+                if (typeof object.ledgersUpdate !== "object")
+                    throw TypeError(".ProtobufBroker.BrokerUpdateMessage.ledgersUpdate: object expected");
+                message.ledgersUpdate = $root.ProtobufBroker.LedgersUpdate.fromObject(object.ledgersUpdate);
             }
             if (object.requestResolutionUpdate != null) {
                 if (typeof object.requestResolutionUpdate !== "object")
@@ -6022,6 +7363,11 @@ $root.ProtobufBroker = (function() {
                 if (options.oneofs)
                     object.Update = "webAuthenticationResult";
             }
+            if (message.ledgersUpdate != null && message.hasOwnProperty("ledgersUpdate")) {
+                object.ledgersUpdate = $root.ProtobufBroker.LedgersUpdate.toObject(message.ledgersUpdate, options);
+                if (options.oneofs)
+                    object.Update = "ledgersUpdate";
+            }
             return object;
         };
 
@@ -6039,17 +7385,385 @@ $root.ProtobufBroker = (function() {
         return BrokerUpdateMessage;
     })();
 
+    ProtobufBroker.Error = (function() {
+
+        /**
+         * Properties of an Error.
+         * @memberof ProtobufBroker
+         * @interface IError
+         * @property {ProtobufBroker.Error.Kind|null} [kind] Error kind
+         * @property {number|Long|null} [code] Error code
+         * @property {string|null} [message] Error message
+         * @property {Array.<google.protobuf.IAny>|null} [details] Error details
+         */
+
+        /**
+         * Constructs a new Error.
+         * @memberof ProtobufBroker
+         * @classdesc Represents an Error.
+         * @implements IError
+         * @constructor
+         * @param {ProtobufBroker.IError=} [properties] Properties to set
+         */
+        function Error(properties) {
+            this.details = [];
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * Error kind.
+         * @member {ProtobufBroker.Error.Kind} kind
+         * @memberof ProtobufBroker.Error
+         * @instance
+         */
+        Error.prototype.kind = 0;
+
+        /**
+         * Error code.
+         * @member {number|Long} code
+         * @memberof ProtobufBroker.Error
+         * @instance
+         */
+        Error.prototype.code = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+        /**
+         * Error message.
+         * @member {string} message
+         * @memberof ProtobufBroker.Error
+         * @instance
+         */
+        Error.prototype.message = "";
+
+        /**
+         * Error details.
+         * @member {Array.<google.protobuf.IAny>} details
+         * @memberof ProtobufBroker.Error
+         * @instance
+         */
+        Error.prototype.details = $util.emptyArray;
+
+        /**
+         * Creates a new Error instance using the specified properties.
+         * @function create
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {ProtobufBroker.IError=} [properties] Properties to set
+         * @returns {ProtobufBroker.Error} Error instance
+         */
+        Error.create = function create(properties) {
+            return new Error(properties);
+        };
+
+        /**
+         * Encodes the specified Error message. Does not implicitly {@link ProtobufBroker.Error.verify|verify} messages.
+         * @function encode
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {ProtobufBroker.IError} message Error message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        Error.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.kind != null && message.hasOwnProperty("kind"))
+                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
+            if (message.code != null && message.hasOwnProperty("code"))
+                writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.code);
+            if (message.message != null && message.hasOwnProperty("message"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.message);
+            if (message.details != null && message.details.length)
+                for (var i = 0; i < message.details.length; ++i)
+                    $root.google.protobuf.Any.encode(message.details[i], writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
+            return writer;
+        };
+
+        /**
+         * Encodes the specified Error message, length delimited. Does not implicitly {@link ProtobufBroker.Error.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {ProtobufBroker.IError} message Error message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        Error.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes an Error message from the specified reader or buffer.
+         * @function decode
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ProtobufBroker.Error} Error
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        Error.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ProtobufBroker.Error();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1:
+                    message.kind = reader.int32();
+                    break;
+                case 2:
+                    message.code = reader.uint64();
+                    break;
+                case 4:
+                    message.message = reader.string();
+                    break;
+                case 5:
+                    if (!(message.details && message.details.length))
+                        message.details = [];
+                    message.details.push($root.google.protobuf.Any.decode(reader, reader.uint32()));
+                    break;
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes an Error message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ProtobufBroker.Error} Error
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        Error.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies an Error message.
+         * @function verify
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        Error.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.kind != null && message.hasOwnProperty("kind"))
+                switch (message.kind) {
+                default:
+                    return "kind: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 7:
+                case 8:
+                    break;
+                }
+            if (message.code != null && message.hasOwnProperty("code"))
+                if (!$util.isInteger(message.code) && !(message.code && $util.isInteger(message.code.low) && $util.isInteger(message.code.high)))
+                    return "code: integer|Long expected";
+            if (message.message != null && message.hasOwnProperty("message"))
+                if (!$util.isString(message.message))
+                    return "message: string expected";
+            if (message.details != null && message.hasOwnProperty("details")) {
+                if (!Array.isArray(message.details))
+                    return "details: array expected";
+                for (var i = 0; i < message.details.length; ++i) {
+                    var error = $root.google.protobuf.Any.verify(message.details[i]);
+                    if (error)
+                        return "details." + error;
+                }
+            }
+            return null;
+        };
+
+        /**
+         * Creates an Error message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ProtobufBroker.Error} Error
+         */
+        Error.fromObject = function fromObject(object) {
+            if (object instanceof $root.ProtobufBroker.Error)
+                return object;
+            var message = new $root.ProtobufBroker.Error();
+            switch (object.kind) {
+            case "KIND_UNKNOWN":
+            case 0:
+                message.kind = 0;
+                break;
+            case "KIND_INTERNAL":
+            case 1:
+                message.kind = 1;
+                break;
+            case "KIND_TRANSIENT":
+            case 2:
+                message.kind = 2;
+                break;
+            case "KIND_ABORTED":
+            case 3:
+                message.kind = 3;
+                break;
+            case "KIND_IO":
+            case 4:
+                message.kind = 4;
+                break;
+            case "KIND_PERMISSION_DENIED":
+            case 5:
+                message.kind = 5;
+                break;
+            case "KIND_INVALID_OPERATION":
+            case 6:
+                message.kind = 6;
+                break;
+            case "KIND_INVALID_ARGUMENT":
+            case 7:
+                message.kind = 7;
+                break;
+            case "KIND_INVALID_REQUEST":
+            case 8:
+                message.kind = 8;
+                break;
+            }
+            if (object.code != null)
+                if ($util.Long)
+                    (message.code = $util.Long.fromValue(object.code)).unsigned = true;
+                else if (typeof object.code === "string")
+                    message.code = parseInt(object.code, 10);
+                else if (typeof object.code === "number")
+                    message.code = object.code;
+                else if (typeof object.code === "object")
+                    message.code = new $util.LongBits(object.code.low >>> 0, object.code.high >>> 0).toNumber(true);
+            if (object.message != null)
+                message.message = String(object.message);
+            if (object.details) {
+                if (!Array.isArray(object.details))
+                    throw TypeError(".ProtobufBroker.Error.details: array expected");
+                message.details = [];
+                for (var i = 0; i < object.details.length; ++i) {
+                    if (typeof object.details[i] !== "object")
+                        throw TypeError(".ProtobufBroker.Error.details: object expected");
+                    message.details[i] = $root.google.protobuf.Any.fromObject(object.details[i]);
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Creates a plain object from an Error message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ProtobufBroker.Error
+         * @static
+         * @param {ProtobufBroker.Error} message Error
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        Error.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.arrays || options.defaults)
+                object.details = [];
+            if (options.defaults) {
+                object.kind = options.enums === String ? "KIND_UNKNOWN" : 0;
+                if ($util.Long) {
+                    var long = new $util.Long(0, 0, true);
+                    object.code = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+                } else
+                    object.code = options.longs === String ? "0" : 0;
+                object.message = "";
+            }
+            if (message.kind != null && message.hasOwnProperty("kind"))
+                object.kind = options.enums === String ? $root.ProtobufBroker.Error.Kind[message.kind] : message.kind;
+            if (message.code != null && message.hasOwnProperty("code"))
+                if (typeof message.code === "number")
+                    object.code = options.longs === String ? String(message.code) : message.code;
+                else
+                    object.code = options.longs === String ? $util.Long.prototype.toString.call(message.code) : options.longs === Number ? new $util.LongBits(message.code.low >>> 0, message.code.high >>> 0).toNumber(true) : message.code;
+            if (message.message != null && message.hasOwnProperty("message"))
+                object.message = message.message;
+            if (message.details && message.details.length) {
+                object.details = [];
+                for (var j = 0; j < message.details.length; ++j)
+                    object.details[j] = $root.google.protobuf.Any.toObject(message.details[j], options);
+            }
+            return object;
+        };
+
+        /**
+         * Converts this Error to JSON.
+         * @function toJSON
+         * @memberof ProtobufBroker.Error
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        Error.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Kind enum.
+         * @name ProtobufBroker.Error.Kind
+         * @enum {string}
+         * @property {number} KIND_UNKNOWN=0 KIND_UNKNOWN value
+         * @property {number} KIND_INTERNAL=1 KIND_INTERNAL value
+         * @property {number} KIND_TRANSIENT=2 KIND_TRANSIENT value
+         * @property {number} KIND_ABORTED=3 KIND_ABORTED value
+         * @property {number} KIND_IO=4 KIND_IO value
+         * @property {number} KIND_PERMISSION_DENIED=5 KIND_PERMISSION_DENIED value
+         * @property {number} KIND_INVALID_OPERATION=6 KIND_INVALID_OPERATION value
+         * @property {number} KIND_INVALID_ARGUMENT=7 KIND_INVALID_ARGUMENT value
+         * @property {number} KIND_INVALID_REQUEST=8 KIND_INVALID_REQUEST value
+         */
+        Error.Kind = (function() {
+            var valuesById = {}, values = Object.create(valuesById);
+            values[valuesById[0] = "KIND_UNKNOWN"] = 0;
+            values[valuesById[1] = "KIND_INTERNAL"] = 1;
+            values[valuesById[2] = "KIND_TRANSIENT"] = 2;
+            values[valuesById[3] = "KIND_ABORTED"] = 3;
+            values[valuesById[4] = "KIND_IO"] = 4;
+            values[valuesById[5] = "KIND_PERMISSION_DENIED"] = 5;
+            values[valuesById[6] = "KIND_INVALID_OPERATION"] = 6;
+            values[valuesById[7] = "KIND_INVALID_ARGUMENT"] = 7;
+            values[valuesById[8] = "KIND_INVALID_REQUEST"] = 8;
+            return values;
+        })();
+
+        return Error;
+    })();
+
     /**
      * FundingType enum.
      * @name ProtobufBroker.FundingType
      * @enum {string}
      * @property {number} Spot=0 Spot value
      * @property {number} Margin=1 Margin value
+     * @property {number} Staking=2 Staking value
      */
     ProtobufBroker.FundingType = (function() {
         var valuesById = {}, values = Object.create(valuesById);
         values[valuesById[0] = "Spot"] = 0;
         values[valuesById[1] = "Margin"] = 1;
+        values[valuesById[2] = "Staking"] = 2;
         return values;
     })();
 
@@ -6076,6 +7790,11 @@ $root.ProtobufBroker = (function() {
          * @property {boolean|null} [hasClosingOrder] PrivateOrder hasClosingOrder
          * @property {ProtobufBroker.PrivateOrder.Type|null} [closingOrderType] PrivateOrder closingOrderType
          * @property {Array.<ProtobufBroker.PrivateOrder.IPriceParam>|null} [closingOrderPriceParams] PrivateOrder closingOrderPriceParams
+         * @property {ProtobufBroker.PrivateOrder.CurrencyPairSide|null} [feeCurrency] PrivateOrder feeCurrency
+         * @property {boolean|null} [postOnly] PrivateOrder postOnly
+         * @property {string|null} [groupId] PrivateOrder groupId
+         * @property {boolean|null} [fillOrKill] PrivateOrder fillOrKill
+         * @property {boolean|null} [immediateOrCancel] PrivateOrder immediateOrCancel
          */
 
         /**
@@ -6232,6 +7951,46 @@ $root.ProtobufBroker = (function() {
         PrivateOrder.prototype.closingOrderPriceParams = $util.emptyArray;
 
         /**
+         * PrivateOrder feeCurrency.
+         * @member {ProtobufBroker.PrivateOrder.CurrencyPairSide} feeCurrency
+         * @memberof ProtobufBroker.PrivateOrder
+         * @instance
+         */
+        PrivateOrder.prototype.feeCurrency = 0;
+
+        /**
+         * PrivateOrder postOnly.
+         * @member {boolean} postOnly
+         * @memberof ProtobufBroker.PrivateOrder
+         * @instance
+         */
+        PrivateOrder.prototype.postOnly = false;
+
+        /**
+         * PrivateOrder groupId.
+         * @member {string} groupId
+         * @memberof ProtobufBroker.PrivateOrder
+         * @instance
+         */
+        PrivateOrder.prototype.groupId = "";
+
+        /**
+         * PrivateOrder fillOrKill.
+         * @member {boolean} fillOrKill
+         * @memberof ProtobufBroker.PrivateOrder
+         * @instance
+         */
+        PrivateOrder.prototype.fillOrKill = false;
+
+        /**
+         * PrivateOrder immediateOrCancel.
+         * @member {boolean} immediateOrCancel
+         * @memberof ProtobufBroker.PrivateOrder
+         * @instance
+         */
+        PrivateOrder.prototype.immediateOrCancel = false;
+
+        /**
          * Creates a new PrivateOrder instance using the specified properties.
          * @function create
          * @memberof ProtobufBroker.PrivateOrder
@@ -6291,6 +8050,16 @@ $root.ProtobufBroker = (function() {
             if (message.closingOrderPriceParams != null && message.closingOrderPriceParams.length)
                 for (var i = 0; i < message.closingOrderPriceParams.length; ++i)
                     $root.ProtobufBroker.PrivateOrder.PriceParam.encode(message.closingOrderPriceParams[i], writer.uint32(/* id 22, wireType 2 =*/178).fork()).ldelim();
+            if (message.feeCurrency != null && message.hasOwnProperty("feeCurrency"))
+                writer.uint32(/* id 23, wireType 0 =*/184).int32(message.feeCurrency);
+            if (message.postOnly != null && message.hasOwnProperty("postOnly"))
+                writer.uint32(/* id 24, wireType 0 =*/192).bool(message.postOnly);
+            if (message.groupId != null && message.hasOwnProperty("groupId"))
+                writer.uint32(/* id 25, wireType 2 =*/202).string(message.groupId);
+            if (message.fillOrKill != null && message.hasOwnProperty("fillOrKill"))
+                writer.uint32(/* id 26, wireType 0 =*/208).bool(message.fillOrKill);
+            if (message.immediateOrCancel != null && message.hasOwnProperty("immediateOrCancel"))
+                writer.uint32(/* id 27, wireType 0 =*/216).bool(message.immediateOrCancel);
             return writer;
         };
 
@@ -6380,6 +8149,21 @@ $root.ProtobufBroker = (function() {
                         message.closingOrderPriceParams = [];
                     message.closingOrderPriceParams.push($root.ProtobufBroker.PrivateOrder.PriceParam.decode(reader, reader.uint32()));
                     break;
+                case 23:
+                    message.feeCurrency = reader.int32();
+                    break;
+                case 24:
+                    message.postOnly = reader.bool();
+                    break;
+                case 25:
+                    message.groupId = reader.string();
+                    break;
+                case 26:
+                    message.fillOrKill = reader.bool();
+                    break;
+                case 27:
+                    message.immediateOrCancel = reader.bool();
+                    break;
                 default:
                     reader.skipType(tag & 7);
                     break;
@@ -6449,6 +8233,7 @@ $root.ProtobufBroker = (function() {
                     return "fundingType: enum value expected";
                 case 0:
                 case 1:
+                case 2:
                     break;
                 }
             if (message.priceParams != null && message.hasOwnProperty("priceParams")) {
@@ -6515,6 +8300,27 @@ $root.ProtobufBroker = (function() {
                         return "closingOrderPriceParams." + error;
                 }
             }
+            if (message.feeCurrency != null && message.hasOwnProperty("feeCurrency"))
+                switch (message.feeCurrency) {
+                default:
+                    return "feeCurrency: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                    break;
+                }
+            if (message.postOnly != null && message.hasOwnProperty("postOnly"))
+                if (typeof message.postOnly !== "boolean")
+                    return "postOnly: boolean expected";
+            if (message.groupId != null && message.hasOwnProperty("groupId"))
+                if (!$util.isString(message.groupId))
+                    return "groupId: string expected";
+            if (message.fillOrKill != null && message.hasOwnProperty("fillOrKill"))
+                if (typeof message.fillOrKill !== "boolean")
+                    return "fillOrKill: boolean expected";
+            if (message.immediateOrCancel != null && message.hasOwnProperty("immediateOrCancel"))
+                if (typeof message.immediateOrCancel !== "boolean")
+                    return "immediateOrCancel: boolean expected";
             return null;
         };
 
@@ -6605,6 +8411,10 @@ $root.ProtobufBroker = (function() {
             case "Margin":
             case 1:
                 message.fundingType = 1;
+                break;
+            case "Staking":
+            case 2:
+                message.fundingType = 2;
                 break;
             }
             if (object.priceParams) {
@@ -6713,6 +8523,28 @@ $root.ProtobufBroker = (function() {
                     message.closingOrderPriceParams[i] = $root.ProtobufBroker.PrivateOrder.PriceParam.fromObject(object.closingOrderPriceParams[i]);
                 }
             }
+            switch (object.feeCurrency) {
+            case "CURRENCY_PAIR_SIDE_UNKNOWN":
+            case 0:
+                message.feeCurrency = 0;
+                break;
+            case "CURRENCY_PAIR_SIDE_BASE":
+            case 1:
+                message.feeCurrency = 1;
+                break;
+            case "CURRENCY_PAIR_SIDE_QUOTE":
+            case 2:
+                message.feeCurrency = 2;
+                break;
+            }
+            if (object.postOnly != null)
+                message.postOnly = Boolean(object.postOnly);
+            if (object.groupId != null)
+                message.groupId = String(object.groupId);
+            if (object.fillOrKill != null)
+                message.fillOrKill = Boolean(object.fillOrKill);
+            if (object.immediateOrCancel != null)
+                message.immediateOrCancel = Boolean(object.immediateOrCancel);
             return message;
         };
 
@@ -6761,6 +8593,11 @@ $root.ProtobufBroker = (function() {
                 object.initialStopString = "";
                 object.hasClosingOrder = false;
                 object.closingOrderType = options.enums === String ? "Market" : 0;
+                object.feeCurrency = options.enums === String ? "CURRENCY_PAIR_SIDE_UNKNOWN" : 0;
+                object.postOnly = false;
+                object.groupId = "";
+                object.fillOrKill = false;
+                object.immediateOrCancel = false;
             }
             if (message.id != null && message.hasOwnProperty("id"))
                 object.id = message.id;
@@ -6811,6 +8648,16 @@ $root.ProtobufBroker = (function() {
                 for (var j = 0; j < message.closingOrderPriceParams.length; ++j)
                     object.closingOrderPriceParams[j] = $root.ProtobufBroker.PrivateOrder.PriceParam.toObject(message.closingOrderPriceParams[j], options);
             }
+            if (message.feeCurrency != null && message.hasOwnProperty("feeCurrency"))
+                object.feeCurrency = options.enums === String ? $root.ProtobufBroker.PrivateOrder.CurrencyPairSide[message.feeCurrency] : message.feeCurrency;
+            if (message.postOnly != null && message.hasOwnProperty("postOnly"))
+                object.postOnly = message.postOnly;
+            if (message.groupId != null && message.hasOwnProperty("groupId"))
+                object.groupId = message.groupId;
+            if (message.fillOrKill != null && message.hasOwnProperty("fillOrKill"))
+                object.fillOrKill = message.fillOrKill;
+            if (message.immediateOrCancel != null && message.hasOwnProperty("immediateOrCancel"))
+                object.immediateOrCancel = message.immediateOrCancel;
             return object;
         };
 
@@ -7103,6 +8950,22 @@ $root.ProtobufBroker = (function() {
             };
 
             return PriceParam;
+        })();
+
+        /**
+         * CurrencyPairSide enum.
+         * @name ProtobufBroker.PrivateOrder.CurrencyPairSide
+         * @enum {string}
+         * @property {number} CURRENCY_PAIR_SIDE_UNKNOWN=0 CURRENCY_PAIR_SIDE_UNKNOWN value
+         * @property {number} CURRENCY_PAIR_SIDE_BASE=1 CURRENCY_PAIR_SIDE_BASE value
+         * @property {number} CURRENCY_PAIR_SIDE_QUOTE=2 CURRENCY_PAIR_SIDE_QUOTE value
+         */
+        PrivateOrder.CurrencyPairSide = (function() {
+            var valuesById = {}, values = Object.create(valuesById);
+            values[valuesById[0] = "CURRENCY_PAIR_SIDE_UNKNOWN"] = 0;
+            values[valuesById[1] = "CURRENCY_PAIR_SIDE_BASE"] = 1;
+            values[valuesById[2] = "CURRENCY_PAIR_SIDE_QUOTE"] = 2;
+            return values;
         })();
 
         return PrivateOrder;
@@ -8268,6 +10131,7 @@ $root.ProtobufBroker = (function() {
                     return "fundingType: enum value expected";
                 case 0:
                 case 1:
+                case 2:
                     break;
                 }
             if (message.balances != null && message.hasOwnProperty("balances")) {
@@ -8302,6 +10166,10 @@ $root.ProtobufBroker = (function() {
             case "Margin":
             case 1:
                 message.fundingType = 1;
+                break;
+            case "Staking":
+            case 2:
+                message.fundingType = 2;
                 break;
             }
             if (object.balances) {
@@ -8356,6 +10224,393 @@ $root.ProtobufBroker = (function() {
         };
 
         return Balances;
+    })();
+
+    ProtobufBroker.PrivateLedger = (function() {
+
+        /**
+         * Properties of a PrivateLedger.
+         * @memberof ProtobufBroker
+         * @interface IPrivateLedger
+         * @property {string|null} [externalId] PrivateLedger externalId
+         * @property {google.protobuf.ITimestamp|null} [time] PrivateLedger time
+         * @property {ProtobufBroker.PrivateLedger.Type|null} [type] PrivateLedger type
+         * @property {string|null} [symbol] PrivateLedger symbol
+         * @property {string|null} [amountString] PrivateLedger amountString
+         * @property {string|null} [feeAmountString] PrivateLedger feeAmountString
+         * @property {string|null} [balanceString] PrivateLedger balanceString
+         */
+
+        /**
+         * Constructs a new PrivateLedger.
+         * @memberof ProtobufBroker
+         * @classdesc Represents a PrivateLedger.
+         * @implements IPrivateLedger
+         * @constructor
+         * @param {ProtobufBroker.IPrivateLedger=} [properties] Properties to set
+         */
+        function PrivateLedger(properties) {
+            if (properties)
+                for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                    if (properties[keys[i]] != null)
+                        this[keys[i]] = properties[keys[i]];
+        }
+
+        /**
+         * PrivateLedger externalId.
+         * @member {string} externalId
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         */
+        PrivateLedger.prototype.externalId = "";
+
+        /**
+         * PrivateLedger time.
+         * @member {google.protobuf.ITimestamp|null|undefined} time
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         */
+        PrivateLedger.prototype.time = null;
+
+        /**
+         * PrivateLedger type.
+         * @member {ProtobufBroker.PrivateLedger.Type} type
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         */
+        PrivateLedger.prototype.type = 0;
+
+        /**
+         * PrivateLedger symbol.
+         * @member {string} symbol
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         */
+        PrivateLedger.prototype.symbol = "";
+
+        /**
+         * PrivateLedger amountString.
+         * @member {string} amountString
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         */
+        PrivateLedger.prototype.amountString = "";
+
+        /**
+         * PrivateLedger feeAmountString.
+         * @member {string} feeAmountString
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         */
+        PrivateLedger.prototype.feeAmountString = "";
+
+        /**
+         * PrivateLedger balanceString.
+         * @member {string} balanceString
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         */
+        PrivateLedger.prototype.balanceString = "";
+
+        /**
+         * Creates a new PrivateLedger instance using the specified properties.
+         * @function create
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {ProtobufBroker.IPrivateLedger=} [properties] Properties to set
+         * @returns {ProtobufBroker.PrivateLedger} PrivateLedger instance
+         */
+        PrivateLedger.create = function create(properties) {
+            return new PrivateLedger(properties);
+        };
+
+        /**
+         * Encodes the specified PrivateLedger message. Does not implicitly {@link ProtobufBroker.PrivateLedger.verify|verify} messages.
+         * @function encode
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {ProtobufBroker.IPrivateLedger} message PrivateLedger message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        PrivateLedger.encode = function encode(message, writer) {
+            if (!writer)
+                writer = $Writer.create();
+            if (message.externalId != null && message.hasOwnProperty("externalId"))
+                writer.uint32(/* id 1, wireType 2 =*/10).string(message.externalId);
+            if (message.time != null && message.hasOwnProperty("time"))
+                $root.google.protobuf.Timestamp.encode(message.time, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+            if (message.type != null && message.hasOwnProperty("type"))
+                writer.uint32(/* id 3, wireType 0 =*/24).int32(message.type);
+            if (message.symbol != null && message.hasOwnProperty("symbol"))
+                writer.uint32(/* id 4, wireType 2 =*/34).string(message.symbol);
+            if (message.amountString != null && message.hasOwnProperty("amountString"))
+                writer.uint32(/* id 5, wireType 2 =*/42).string(message.amountString);
+            if (message.feeAmountString != null && message.hasOwnProperty("feeAmountString"))
+                writer.uint32(/* id 6, wireType 2 =*/50).string(message.feeAmountString);
+            if (message.balanceString != null && message.hasOwnProperty("balanceString"))
+                writer.uint32(/* id 7, wireType 2 =*/58).string(message.balanceString);
+            return writer;
+        };
+
+        /**
+         * Encodes the specified PrivateLedger message, length delimited. Does not implicitly {@link ProtobufBroker.PrivateLedger.verify|verify} messages.
+         * @function encodeDelimited
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {ProtobufBroker.IPrivateLedger} message PrivateLedger message or plain object to encode
+         * @param {$protobuf.Writer} [writer] Writer to encode to
+         * @returns {$protobuf.Writer} Writer
+         */
+        PrivateLedger.encodeDelimited = function encodeDelimited(message, writer) {
+            return this.encode(message, writer).ldelim();
+        };
+
+        /**
+         * Decodes a PrivateLedger message from the specified reader or buffer.
+         * @function decode
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @param {number} [length] Message length if known beforehand
+         * @returns {ProtobufBroker.PrivateLedger} PrivateLedger
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        PrivateLedger.decode = function decode(reader, length) {
+            if (!(reader instanceof $Reader))
+                reader = $Reader.create(reader);
+            var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ProtobufBroker.PrivateLedger();
+            while (reader.pos < end) {
+                var tag = reader.uint32();
+                switch (tag >>> 3) {
+                case 1:
+                    message.externalId = reader.string();
+                    break;
+                case 2:
+                    message.time = $root.google.protobuf.Timestamp.decode(reader, reader.uint32());
+                    break;
+                case 3:
+                    message.type = reader.int32();
+                    break;
+                case 4:
+                    message.symbol = reader.string();
+                    break;
+                case 5:
+                    message.amountString = reader.string();
+                    break;
+                case 6:
+                    message.feeAmountString = reader.string();
+                    break;
+                case 7:
+                    message.balanceString = reader.string();
+                    break;
+                default:
+                    reader.skipType(tag & 7);
+                    break;
+                }
+            }
+            return message;
+        };
+
+        /**
+         * Decodes a PrivateLedger message from the specified reader or buffer, length delimited.
+         * @function decodeDelimited
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+         * @returns {ProtobufBroker.PrivateLedger} PrivateLedger
+         * @throws {Error} If the payload is not a reader or valid buffer
+         * @throws {$protobuf.util.ProtocolError} If required fields are missing
+         */
+        PrivateLedger.decodeDelimited = function decodeDelimited(reader) {
+            if (!(reader instanceof $Reader))
+                reader = new $Reader(reader);
+            return this.decode(reader, reader.uint32());
+        };
+
+        /**
+         * Verifies a PrivateLedger message.
+         * @function verify
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {Object.<string,*>} message Plain object to verify
+         * @returns {string|null} `null` if valid, otherwise the reason why it is not
+         */
+        PrivateLedger.verify = function verify(message) {
+            if (typeof message !== "object" || message === null)
+                return "object expected";
+            if (message.externalId != null && message.hasOwnProperty("externalId"))
+                if (!$util.isString(message.externalId))
+                    return "externalId: string expected";
+            if (message.time != null && message.hasOwnProperty("time")) {
+                var error = $root.google.protobuf.Timestamp.verify(message.time);
+                if (error)
+                    return "time." + error;
+            }
+            if (message.type != null && message.hasOwnProperty("type"))
+                switch (message.type) {
+                default:
+                    return "type: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                    break;
+                }
+            if (message.symbol != null && message.hasOwnProperty("symbol"))
+                if (!$util.isString(message.symbol))
+                    return "symbol: string expected";
+            if (message.amountString != null && message.hasOwnProperty("amountString"))
+                if (!$util.isString(message.amountString))
+                    return "amountString: string expected";
+            if (message.feeAmountString != null && message.hasOwnProperty("feeAmountString"))
+                if (!$util.isString(message.feeAmountString))
+                    return "feeAmountString: string expected";
+            if (message.balanceString != null && message.hasOwnProperty("balanceString"))
+                if (!$util.isString(message.balanceString))
+                    return "balanceString: string expected";
+            return null;
+        };
+
+        /**
+         * Creates a PrivateLedger message from a plain object. Also converts values to their respective internal types.
+         * @function fromObject
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {Object.<string,*>} object Plain object
+         * @returns {ProtobufBroker.PrivateLedger} PrivateLedger
+         */
+        PrivateLedger.fromObject = function fromObject(object) {
+            if (object instanceof $root.ProtobufBroker.PrivateLedger)
+                return object;
+            var message = new $root.ProtobufBroker.PrivateLedger();
+            if (object.externalId != null)
+                message.externalId = String(object.externalId);
+            if (object.time != null) {
+                if (typeof object.time !== "object")
+                    throw TypeError(".ProtobufBroker.PrivateLedger.time: object expected");
+                message.time = $root.google.protobuf.Timestamp.fromObject(object.time);
+            }
+            switch (object.type) {
+            case "All":
+            case 0:
+                message.type = 0;
+                break;
+            case "Deposit":
+            case 1:
+                message.type = 1;
+                break;
+            case "Withdrawal":
+            case 2:
+                message.type = 2;
+                break;
+            case "Trade":
+            case 3:
+                message.type = 3;
+                break;
+            case "Margin":
+            case 4:
+                message.type = 4;
+                break;
+            case "Spend":
+            case 5:
+                message.type = 5;
+                break;
+            case "Receive":
+            case 6:
+                message.type = 6;
+                break;
+            }
+            if (object.symbol != null)
+                message.symbol = String(object.symbol);
+            if (object.amountString != null)
+                message.amountString = String(object.amountString);
+            if (object.feeAmountString != null)
+                message.feeAmountString = String(object.feeAmountString);
+            if (object.balanceString != null)
+                message.balanceString = String(object.balanceString);
+            return message;
+        };
+
+        /**
+         * Creates a plain object from a PrivateLedger message. Also converts values to other types if specified.
+         * @function toObject
+         * @memberof ProtobufBroker.PrivateLedger
+         * @static
+         * @param {ProtobufBroker.PrivateLedger} message PrivateLedger
+         * @param {$protobuf.IConversionOptions} [options] Conversion options
+         * @returns {Object.<string,*>} Plain object
+         */
+        PrivateLedger.toObject = function toObject(message, options) {
+            if (!options)
+                options = {};
+            var object = {};
+            if (options.defaults) {
+                object.externalId = "";
+                object.time = null;
+                object.type = options.enums === String ? "All" : 0;
+                object.symbol = "";
+                object.amountString = "";
+                object.feeAmountString = "";
+                object.balanceString = "";
+            }
+            if (message.externalId != null && message.hasOwnProperty("externalId"))
+                object.externalId = message.externalId;
+            if (message.time != null && message.hasOwnProperty("time"))
+                object.time = $root.google.protobuf.Timestamp.toObject(message.time, options);
+            if (message.type != null && message.hasOwnProperty("type"))
+                object.type = options.enums === String ? $root.ProtobufBroker.PrivateLedger.Type[message.type] : message.type;
+            if (message.symbol != null && message.hasOwnProperty("symbol"))
+                object.symbol = message.symbol;
+            if (message.amountString != null && message.hasOwnProperty("amountString"))
+                object.amountString = message.amountString;
+            if (message.feeAmountString != null && message.hasOwnProperty("feeAmountString"))
+                object.feeAmountString = message.feeAmountString;
+            if (message.balanceString != null && message.hasOwnProperty("balanceString"))
+                object.balanceString = message.balanceString;
+            return object;
+        };
+
+        /**
+         * Converts this PrivateLedger to JSON.
+         * @function toJSON
+         * @memberof ProtobufBroker.PrivateLedger
+         * @instance
+         * @returns {Object.<string,*>} JSON object
+         */
+        PrivateLedger.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        /**
+         * Type enum.
+         * @name ProtobufBroker.PrivateLedger.Type
+         * @enum {string}
+         * @property {number} All=0 All value
+         * @property {number} Deposit=1 Deposit value
+         * @property {number} Withdrawal=2 Withdrawal value
+         * @property {number} Trade=3 Trade value
+         * @property {number} Margin=4 Margin value
+         * @property {number} Spend=5 Spend value
+         * @property {number} Receive=6 Receive value
+         */
+        PrivateLedger.Type = (function() {
+            var valuesById = {}, values = Object.create(valuesById);
+            values[valuesById[0] = "All"] = 0;
+            values[valuesById[1] = "Deposit"] = 1;
+            values[valuesById[2] = "Withdrawal"] = 2;
+            values[valuesById[3] = "Trade"] = 3;
+            values[valuesById[4] = "Margin"] = 4;
+            values[valuesById[5] = "Spend"] = 5;
+            values[valuesById[6] = "Receive"] = 6;
+            return values;
+        })();
+
+        return PrivateLedger;
     })();
 
     return ProtobufBroker;
@@ -11708,6 +13963,7 @@ $root.ProtobufClient = (function() {
          * @interface IClientSessionMessage
          * @property {ProtobufClient.ClientSessionMessage.ISession|null} [session] ClientSessionMessage session
          * @property {ProtobufClient.ClientSessionMessage.IAnonymousTradingSession|null} [anonymousTradingSession] ClientSessionMessage anonymousTradingSession
+         * @property {ProtobufClient.ClientSessionMessage.IAnonymousUserSession|null} [anonymousUserSession] ClientSessionMessage anonymousUserSession
          * @property {ProtobufClient.IClientIdentificationMessage|null} [identification] ClientSessionMessage identification
          */
 
@@ -11743,6 +13999,14 @@ $root.ProtobufClient = (function() {
         ClientSessionMessage.prototype.anonymousTradingSession = null;
 
         /**
+         * ClientSessionMessage anonymousUserSession.
+         * @member {ProtobufClient.ClientSessionMessage.IAnonymousUserSession|null|undefined} anonymousUserSession
+         * @memberof ProtobufClient.ClientSessionMessage
+         * @instance
+         */
+        ClientSessionMessage.prototype.anonymousUserSession = null;
+
+        /**
          * ClientSessionMessage identification.
          * @member {ProtobufClient.IClientIdentificationMessage|null|undefined} identification
          * @memberof ProtobufClient.ClientSessionMessage
@@ -11755,12 +14019,12 @@ $root.ProtobufClient = (function() {
 
         /**
          * ClientSessionMessage SessionConfig.
-         * @member {"session"|"anonymousTradingSession"|undefined} SessionConfig
+         * @member {"session"|"anonymousTradingSession"|"anonymousUserSession"|undefined} SessionConfig
          * @memberof ProtobufClient.ClientSessionMessage
          * @instance
          */
         Object.defineProperty(ClientSessionMessage.prototype, "SessionConfig", {
-            get: $util.oneOfGetter($oneOfFields = ["session", "anonymousTradingSession"]),
+            get: $util.oneOfGetter($oneOfFields = ["session", "anonymousTradingSession", "anonymousUserSession"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -11794,6 +14058,8 @@ $root.ProtobufClient = (function() {
                 $root.ProtobufClient.ClientSessionMessage.AnonymousTradingSession.encode(message.anonymousTradingSession, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             if (message.identification != null && message.hasOwnProperty("identification"))
                 $root.ProtobufClient.ClientIdentificationMessage.encode(message.identification, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+            if (message.anonymousUserSession != null && message.hasOwnProperty("anonymousUserSession"))
+                $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession.encode(message.anonymousUserSession, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             return writer;
         };
 
@@ -11833,6 +14099,9 @@ $root.ProtobufClient = (function() {
                     break;
                 case 2:
                     message.anonymousTradingSession = $root.ProtobufClient.ClientSessionMessage.AnonymousTradingSession.decode(reader, reader.uint32());
+                    break;
+                case 4:
+                    message.anonymousUserSession = $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession.decode(reader, reader.uint32());
                     break;
                 case 3:
                     message.identification = $root.ProtobufClient.ClientIdentificationMessage.decode(reader, reader.uint32());
@@ -11891,6 +14160,16 @@ $root.ProtobufClient = (function() {
                         return "anonymousTradingSession." + error;
                 }
             }
+            if (message.anonymousUserSession != null && message.hasOwnProperty("anonymousUserSession")) {
+                if (properties.SessionConfig === 1)
+                    return "SessionConfig: multiple values";
+                properties.SessionConfig = 1;
+                {
+                    var error = $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession.verify(message.anonymousUserSession);
+                    if (error)
+                        return "anonymousUserSession." + error;
+                }
+            }
             if (message.identification != null && message.hasOwnProperty("identification")) {
                 var error = $root.ProtobufClient.ClientIdentificationMessage.verify(message.identification);
                 if (error)
@@ -11920,6 +14199,11 @@ $root.ProtobufClient = (function() {
                 if (typeof object.anonymousTradingSession !== "object")
                     throw TypeError(".ProtobufClient.ClientSessionMessage.anonymousTradingSession: object expected");
                 message.anonymousTradingSession = $root.ProtobufClient.ClientSessionMessage.AnonymousTradingSession.fromObject(object.anonymousTradingSession);
+            }
+            if (object.anonymousUserSession != null) {
+                if (typeof object.anonymousUserSession !== "object")
+                    throw TypeError(".ProtobufClient.ClientSessionMessage.anonymousUserSession: object expected");
+                message.anonymousUserSession = $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession.fromObject(object.anonymousUserSession);
             }
             if (object.identification != null) {
                 if (typeof object.identification !== "object")
@@ -11956,6 +14240,11 @@ $root.ProtobufClient = (function() {
             }
             if (message.identification != null && message.hasOwnProperty("identification"))
                 object.identification = $root.ProtobufClient.ClientIdentificationMessage.toObject(message.identification, options);
+            if (message.anonymousUserSession != null && message.hasOwnProperty("anonymousUserSession")) {
+                object.anonymousUserSession = $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession.toObject(message.anonymousUserSession, options);
+                if (options.oneofs)
+                    object.SessionConfig = "anonymousUserSession";
+            }
             return object;
         };
 
@@ -12482,6 +14771,193 @@ $root.ProtobufClient = (function() {
             };
 
             return AnonymousTradingSession;
+        })();
+
+        ClientSessionMessage.AnonymousUserSession = (function() {
+
+            /**
+             * Properties of an AnonymousUserSession.
+             * @memberof ProtobufClient.ClientSessionMessage
+             * @interface IAnonymousUserSession
+             * @property {string|null} [token] AnonymousUserSession token
+             */
+
+            /**
+             * Constructs a new AnonymousUserSession.
+             * @memberof ProtobufClient.ClientSessionMessage
+             * @classdesc Represents an AnonymousUserSession.
+             * @implements IAnonymousUserSession
+             * @constructor
+             * @param {ProtobufClient.ClientSessionMessage.IAnonymousUserSession=} [properties] Properties to set
+             */
+            function AnonymousUserSession(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AnonymousUserSession token.
+             * @member {string} token
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @instance
+             */
+            AnonymousUserSession.prototype.token = "";
+
+            /**
+             * Creates a new AnonymousUserSession instance using the specified properties.
+             * @function create
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {ProtobufClient.ClientSessionMessage.IAnonymousUserSession=} [properties] Properties to set
+             * @returns {ProtobufClient.ClientSessionMessage.AnonymousUserSession} AnonymousUserSession instance
+             */
+            AnonymousUserSession.create = function create(properties) {
+                return new AnonymousUserSession(properties);
+            };
+
+            /**
+             * Encodes the specified AnonymousUserSession message. Does not implicitly {@link ProtobufClient.ClientSessionMessage.AnonymousUserSession.verify|verify} messages.
+             * @function encode
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {ProtobufClient.ClientSessionMessage.IAnonymousUserSession} message AnonymousUserSession message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AnonymousUserSession.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.token != null && message.hasOwnProperty("token"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.token);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AnonymousUserSession message, length delimited. Does not implicitly {@link ProtobufClient.ClientSessionMessage.AnonymousUserSession.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {ProtobufClient.ClientSessionMessage.IAnonymousUserSession} message AnonymousUserSession message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AnonymousUserSession.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AnonymousUserSession message from the specified reader or buffer.
+             * @function decode
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {ProtobufClient.ClientSessionMessage.AnonymousUserSession} AnonymousUserSession
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AnonymousUserSession.decode = function decode(reader, length) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    switch (tag >>> 3) {
+                    case 1:
+                        message.token = reader.string();
+                        break;
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AnonymousUserSession message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {ProtobufClient.ClientSessionMessage.AnonymousUserSession} AnonymousUserSession
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AnonymousUserSession.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AnonymousUserSession message.
+             * @function verify
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AnonymousUserSession.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                if (message.token != null && message.hasOwnProperty("token"))
+                    if (!$util.isString(message.token))
+                        return "token: string expected";
+                return null;
+            };
+
+            /**
+             * Creates an AnonymousUserSession message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {ProtobufClient.ClientSessionMessage.AnonymousUserSession} AnonymousUserSession
+             */
+            AnonymousUserSession.fromObject = function fromObject(object) {
+                if (object instanceof $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession)
+                    return object;
+                var message = new $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession();
+                if (object.token != null)
+                    message.token = String(object.token);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AnonymousUserSession message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @static
+             * @param {ProtobufClient.ClientSessionMessage.AnonymousUserSession} message AnonymousUserSession
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AnonymousUserSession.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.defaults)
+                    object.token = "";
+                if (message.token != null && message.hasOwnProperty("token"))
+                    object.token = message.token;
+                return object;
+            };
+
+            /**
+             * Converts this AnonymousUserSession to JSON.
+             * @function toJSON
+             * @memberof ProtobufClient.ClientSessionMessage.AnonymousUserSession
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AnonymousUserSession.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            return AnonymousUserSession;
         })();
 
         return ClientSessionMessage;

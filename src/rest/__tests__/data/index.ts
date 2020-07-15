@@ -525,56 +525,56 @@ export const MARKETS_SUMMARY = {
 export const EXCHANGE_MARKETS = {
   result: [
     {
-      id: 86,
+      id: 16,
       exchange: 'kraken',
       pair: 'btceur',
       active: true,
       route: 'https://api.cryptowat.ch/markets/kraken/btceur'
     },
     {
-      id: 87,
+      id: 4,
       exchange: 'kraken',
       pair: 'btcusd',
       active: true,
       route: 'https://api.cryptowat.ch/markets/kraken/btcusd'
     },
     {
-      id: 88,
+      id: 83,
       exchange: 'kraken',
       pair: 'btcgbp',
       active: true,
       route: 'https://api.cryptowat.ch/markets/kraken/btcgbp'
     },
     {
-      id: 89,
+      id: 84,
       exchange: 'kraken',
       pair: 'btcjpy',
       active: true,
       route: 'https://api.cryptowat.ch/markets/kraken/btcjpy'
     },
     {
-      id: 90,
+      id: 40,
       exchange: 'kraken',
       pair: 'btccad',
       active: true,
       route: 'https://api.cryptowat.ch/markets/kraken/btccad'
     },
     {
-      id: 91,
+      id: 93,
       exchange: 'kraken',
       pair: 'ltceur',
       active: true,
       route: 'https://api.cryptowat.ch/markets/kraken/ltceur'
     },
     {
-      id: 92,
+      id: 32,
       exchange: 'kraken',
       pair: 'ltcbtc',
       active: true,
       route: 'https://api.cryptowat.ch/markets/kraken/ltcbtc'
     },
     {
-      id: 93,
+      id: 23,
       exchange: 'kraken',
       pair: 'ltccad',
       active: false,
@@ -592,7 +592,7 @@ export const EXCHANGE_MARKETS = {
 
 export const MARKET_DESCRIPTION = {
   result: {
-    id: 87,
+    id: 57,
     exchange: 'kraken',
     pair: 'btcusd',
     active: true,
@@ -616,19 +616,19 @@ export const MARKET_DESCRIPTION = {
 export const MARKET_V2 = {
   result: [
     {
-      id: 87,
+      id: 82,
       exchange: {
         id: 4,
         symbol: 'kraken'
       },
       instrument: {
-        id: 9,
+        id: 4,
         base: {
           id: 60,
           symbol: 'btc'
         },
         quote: {
-          id: 98,
+          id: 38,
           symbol: 'usd'
         },
         type: 'pair'
@@ -647,7 +647,7 @@ export const MARKET_V2 = {
 
 export const ASSET_V2 = {
   result: {
-    id: 60,
+    id: 61,
     symbol: 'btc'
   },
   allowance: {

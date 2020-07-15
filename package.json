@@ -19,8 +19,8 @@
     "test": "jest",
     "build": "tsc -p tsconfig.release.json",
     "prepare": "npm run build",
-    "pbjs:static-module": "pbjs -t static-module -w commonjs -o index.tmp.js proto/{client,markets,stream,broker}/*.proto",
-    "pbjs:definitions": "pbjs -t static-module proto/{client,markets,stream,broker}/*.proto | pbts -o proto.d.ts -",
+    "pbjs:static-module": "pbjs -t static-module -w commonjs -o index.tmp.js 'google/protobuf/*.proto' 'proto/{client,markets,stream,broker}/*.proto'",
+    "pbjs:definitions": "pbjs -t static-module 'google/protobuf/*.proto' 'proto/{client,markets,stream,broker}/*.proto' | pbts -o proto.d.ts -",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
     "docs": "rm -rf ./docs && typedoc --options ./typedoc.js ./src"
@@ -60,12 +60,13 @@
     "get-port": "^5.1.0",
     "in-series": "^0.0.4",
     "jest": "^24.9.0",
+    "minimist": "1.2.0",
     "prettier": "^1.19.1",
     "superagent-mocker": "^0.5.2",
     "ts-jest": "^24.3.0",
     "typedoc": "^0.15.6",
     "typedoc-plugin-markdown": "^2.2.16",
-    "typescript": "^3.7.4"
+    "typescript": "^3.8.3"
   },
   "keywords": [
     "cryptowatch",

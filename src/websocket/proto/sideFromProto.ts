@@ -1,15 +1,7 @@
 import { ProtobufMarkets } from '../modules/proto';
 import { OrderSide } from '../types/trading';
-import { privateOrderSideFromProto } from './constants';
 
-export function sideFromProto(side: number | ProtobufMarkets.Trade.OrderSide): OrderSide | null {
-  if (typeof side === 'number') {
-    if (privateOrderSideFromProto[side]) {
-      return privateOrderSideFromProto[side];
-    }
-    return null;
-  }
-
+export function publicTradeSideFromProto(side: ProtobufMarkets.Trade.OrderSide): OrderSide | null {
   if (side === ProtobufMarkets.Trade.OrderSide.BUYSIDE) {
     return 'buy';
   } else if (side === ProtobufMarkets.Trade.OrderSide.SELLSIDE) {
@@ -17,4 +9,26 @@ export function sideFromProto(side: number | ProtobufMarkets.Trade.OrderSide): O
   }
 
   return 'unknown';
+}
+
+export function privateTradeSideFromProto(side: number): OrderSide {
+  if (side == 0) {
+    return 'sell'
+  }
+  if (side == 1) {
+    return 'buy'
+  }
+
+  return 'unknown'
+}
+
+export function privatePositionSideFromProto(side: number): OrderSide {
+  if (side == 0) {
+    return 'sell'
+  }
+  if (side == 1) {
+    return 'buy'
+  }
+
+  return 'unknown'
 }

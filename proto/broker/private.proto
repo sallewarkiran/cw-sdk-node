@@ -1,10 +1,13 @@
 syntax = "proto3";
 
+import "google/protobuf/timestamp.proto";
+
 package ProtobufBroker;
 
 enum FundingType {
   Spot = 0;
   Margin = 1;
+  Staking = 2;
 }
 
 message PrivateOrder {
@@ -72,6 +75,33 @@ message PrivateOrder {
 
   reserved "price", "amount", "currentStop", "initialStop", "amountParam";
   reserved 3, 4, 9, 11, 12;
+
+  enum CurrencyPairSide {
+    CURRENCY_PAIR_SIDE_UNKNOWN = 0;
+    CURRENCY_PAIR_SIDE_BASE = 1;
+    CURRENCY_PAIR_SIDE_QUOTE = 2;
+  }
+  CurrencyPairSide fee_currency = 23;
+
+  // PostOnly ensures that a limit order has to be posted on the books (or canceled) entailing maker fees.
+  // On the other hand, this feature prevents placing a limit buy order that matches
+  // against the sell side of the order book (and vice versa for sell orders) which would result in taker fees.
+  bool post_only = 24;
+
+  // GroupID is used to group different orders together (i.e. for One-Cancel-Other orders)
+  string group_id = 25;
+
+  // Fill or kill (FOK) is a conditional type of time-in-force order used in securities trading that instructs
+  // a brokerage to execute a transaction immediately and completely or not at all. This type of order is most
+  // often used by active traders and is usually for a large quantity of stock. The order must be filled in its
+  // entirety or else canceled (killed).
+  bool fill_or_kill = 26;
+
+  // An immediate or cancel order (IOC) is an order to buy or sell a security that attempts to execute all
+  // or part immediately and then cancels any unfilled portion of the order. An IOC order is one of several
+  // "duration", or time in force orders, that investors can use to specify how long the order remains active
+  // in the market and under what conditions the order is canceled.
+  bool immediate_or_cancel = 27;
 }
 
 message PrivateTrade {
@@ -142,4 +172,24 @@ message Balances {
 
   reserved 3;
   reserved 4;
+}
+message PrivateLedger {
+  string externalId = 1;
+  google.protobuf.Timestamp time = 2;
+
+  enum Type {
+    All = 0;
+    Deposit = 1;
+    Withdrawal = 2;
+    Trade = 3;
+    Margin = 4;
+    Spend = 5;
+    Receive = 6;
+  }
+
+  Type type = 3;
+  string symbol = 4;
+  string amountString = 5;
+  string feeAmountString = 6;
+  string balanceString = 7;
 }

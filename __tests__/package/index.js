@@ -23,4 +23,6 @@ const sc = new StreamClient({
 
 const rc = new RESTClient({ creds: { apiKey: 'xxx' } });
 
-createOrderBookWatcher(1, sc, rc).then();
+if (createOrderBookWatcher === null || createOrderBookWatcher === undefined) {
+  throw new Error('Could not import createOrderBookWatcher');
+}
