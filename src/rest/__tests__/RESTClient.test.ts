@@ -148,7 +148,7 @@ describe('RESTClient Tests', () => {
   });
 
   it('can get market by symbol', async (done) => {
-    mock.get(REST_API_ROUTE + '/v2/markets?exchange=kraken&base=btc&quote=usd', () => ({
+    mock.get(REST_API_ROUTE + '/v2/markets', () => ({
       body: MARKET_V2
     }));
     const response = await client.getMarket({
@@ -170,7 +170,7 @@ describe('RESTClient Tests', () => {
   });
 
   it('can get asset by symbol', async (done) => {
-    mock.get(REST_API_ROUTE + '/v2/assets?symbol=btc', () => ({
+    mock.get(REST_API_ROUTE + '/v2/assets', () => ({
       body: ASSET_V2
     }));
     const response = await client.getAsset('btc');

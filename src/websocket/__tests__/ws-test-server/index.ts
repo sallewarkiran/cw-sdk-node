@@ -16,7 +16,7 @@ export function getConnOpts(extra?: object): WebSocketOpts {
   }
   const defaultOpts: WebSocketOpts = {
     creds: {
-      url: 'ws://1.1.1.1',
+      url: 'ws://localhost',
       apiKey: 'foo',
       secretKey: 'YmFy'
     },

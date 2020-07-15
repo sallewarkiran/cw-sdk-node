@@ -4,7 +4,7 @@ import {
 } from '../modules/proto';
 import { PrivateTrade } from '../types/trading';
 import { getDateFromMs, getDateFromSecs } from '../../util/helpers';
-import { sideFromProto } from './sideFromProto';
+import { privateTradeSideFromProto } from './sideFromProto';
 
 export function privateTradeFromProto(trade: ProtobufBroker.IPrivateTrade): PrivateTrade | null {
   if (
@@ -25,7 +25,7 @@ export function privateTradeFromProto(trade: ProtobufBroker.IPrivateTrade): Priv
   } else {
     return null;
   }
-  const side = sideFromProto(trade.side);
+  const side = privateTradeSideFromProto(trade.side);
   if (!side) {
     return null;
   }

@@ -22,16 +22,18 @@ async function run() {
   // Listen for received trades and print them
   streamClient.onMarketUpdate((marketData) => {
     const tradesUpdate = marketData.tradesUpdate;
-    tradesUpdate.forEach((tradeUpdate) => {
-      console.log(
-        marketCache[marketData.market.id], // access market info from cache
-        tradeUpdate.side,
-        'Price: ',
-        tradeUpdate.price,
-        'Amount: ',
-        tradeUpdate.amount
-      );
-    });
+    if (tradesUpdate) {
+      tradesUpdate.trades.forEach((tradeUpdate) => {
+        console.log(
+          marketCache[marketData.market.id], // access market info from cache
+          tradeUpdate.side,
+          'Price: ',
+          tradeUpdate.price,
+          'Amount: ',
+          tradeUpdate.amount
+        );
+      });
+    }
   });
 
   // Connect to stream
