@@ -25,7 +25,7 @@
 
 • **changeAbsolute**: *string*
 
-*Defined in [src/websocket/types/markets.ts:61](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L61)*
+*Defined in [src/websocket/types/markets.ts:61](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L61)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **changePercent**: *string*
 
-*Defined in [src/websocket/types/markets.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L62)*
+*Defined in [src/websocket/types/markets.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L62)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **high**: *string*
 
-*Defined in [src/websocket/types/markets.ts:57](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L57)*
+*Defined in [src/websocket/types/markets.ts:57](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L57)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **last**: *string*
 
-*Defined in [src/websocket/types/markets.ts:56](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L56)*
+*Defined in [src/websocket/types/markets.ts:56](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L56)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **low**: *string*
 
-*Defined in [src/websocket/types/markets.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L58)*
+*Defined in [src/websocket/types/markets.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L58)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **numTrades**: *number*
 
-*Defined in [src/websocket/types/markets.ts:63](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L63)*
+*Defined in [src/websocket/types/markets.ts:63](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L63)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **volumeBase**: *string*
 
-*Defined in [src/websocket/types/markets.ts:59](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L59)*
+*Defined in [src/websocket/types/markets.ts:59](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L59)*
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 • **volumeQuote**: *string*
 
-*Defined in [src/websocket/types/markets.ts:60](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L60)*
+*Defined in [src/websocket/types/markets.ts:60](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L60)*

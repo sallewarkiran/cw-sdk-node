@@ -19,7 +19,7 @@
 
 • **amount**: *string*
 
-*Defined in [src/util/types/shared.ts:27](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L27)*
+*Defined in [src/util/types/shared.ts:27](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/util/types/shared.ts#L27)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **price**: *string*
 
-*Defined in [src/util/types/shared.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L26)*
+*Defined in [src/util/types/shared.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/util/types/shared.ts#L26)*

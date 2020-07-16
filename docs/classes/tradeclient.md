@@ -66,7 +66,7 @@
 
 *Overrides [WebSocketClient](websocketclient.md).[constructor](websocketclient.md#constructor)*
 
-*Defined in [src/websocket/TradeClient.ts:53](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L53)*
+*Defined in [src/websocket/TradeClient.ts:53](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L53)*
 
 **Parameters:**
 
@@ -84,7 +84,7 @@ Name | Type |
 
 *Inherited from [WebSocketClient](websocketclient.md).[connState](websocketclient.md#protected-connstate)*
 
-*Defined in [src/websocket/WebSocketClient.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L58)*
+*Defined in [src/websocket/WebSocketClient.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L58)*
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 • **orders**: *object*
 
-*Defined in [src/websocket/TradeClient.ts:36](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L36)*
+*Defined in [src/websocket/TradeClient.ts:36](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L36)*
 
 #### Type declaration:
 
@@ -104,7 +104,7 @@ ___
 
 • **positions**: *object*
 
-*Defined in [src/websocket/TradeClient.ts:46](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L46)*
+*Defined in [src/websocket/TradeClient.ts:46](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L46)*
 
 #### Type declaration:
 
@@ -118,7 +118,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[subscriptions](websocketclient.md#subscriptions)*
 
-*Defined in [src/websocket/WebSocketClient.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L47)*
+*Defined in [src/websocket/WebSocketClient.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L47)*
 
 #### Type declaration:
 
@@ -130,7 +130,7 @@ ___
 
 • **trades**: *object*
 
-*Defined in [src/websocket/TradeClient.ts:41](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L41)*
+*Defined in [src/websocket/TradeClient.ts:41](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L41)*
 
 #### Type declaration:
 
@@ -180,7 +180,7 @@ ___
 
 ▸ **cancelOrder**(`opts`: [CancelOrderOpts](../interfaces/cancelorderopts.md)): *Promise‹void›*
 
-*Defined in [src/websocket/TradeClient.ts:156](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L156)*
+*Defined in [src/websocket/TradeClient.ts:156](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L156)*
 
 **Parameters:**
 
@@ -198,7 +198,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[connect](websocketclient.md#connect)*
 
-*Defined in [src/websocket/WebSocketClient.ts:101](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L101)*
+*Defined in [src/websocket/WebSocketClient.ts:101](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L101)*
 
 **Returns:** *void*
 
@@ -210,7 +210,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[disconnect](websocketclient.md#disconnect)*
 
-*Defined in [src/websocket/WebSocketClient.ts:161](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L161)*
+*Defined in [src/websocket/WebSocketClient.ts:161](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L161)*
 
 **Returns:** *void*
 
@@ -243,7 +243,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[error](websocketclient.md#error)*
 
-*Defined in [src/websocket/WebSocketClient.ts:133](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L133)*
+*Defined in [src/websocket/WebSocketClient.ts:133](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L133)*
 
 **Parameters:**
 
@@ -289,7 +289,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[getSubscriptions](websocketclient.md#getsubscriptions)*
 
-*Defined in [src/websocket/WebSocketClient.ts:173](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L173)*
+*Defined in [src/websocket/WebSocketClient.ts:173](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L173)*
 
 **Returns:** *ClientSubscription[]*
 
@@ -397,7 +397,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onConnect](websocketclient.md#onconnect)*
 
-*Defined in [src/websocket/WebSocketClient.ts:138](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L138)*
+*Defined in [src/websocket/WebSocketClient.ts:138](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L138)*
 
 **Parameters:**
 
@@ -415,7 +415,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onDisconnect](websocketclient.md#ondisconnect)*
 
-*Defined in [src/websocket/WebSocketClient.ts:142](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L142)*
+*Defined in [src/websocket/WebSocketClient.ts:142](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L142)*
 
 **Parameters:**
 
@@ -433,7 +433,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onError](websocketclient.md#onerror)*
 
-*Defined in [src/websocket/WebSocketClient.ts:150](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L150)*
+*Defined in [src/websocket/WebSocketClient.ts:150](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L150)*
 
 **Parameters:**
 
@@ -455,7 +455,7 @@ ___
 
 ▸ **onOrdersUpdate**(`fn`: function): *void*
 
-*Defined in [src/websocket/TradeClient.ts:103](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L103)*
+*Defined in [src/websocket/TradeClient.ts:103](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L103)*
 
 **Parameters:**
 
@@ -477,7 +477,7 @@ ___
 
 ▸ **onPositionsUpdate**(`fn`: function): *void*
 
-*Defined in [src/websocket/TradeClient.ts:115](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L115)*
+*Defined in [src/websocket/TradeClient.ts:115](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L115)*
 
 **Parameters:**
 
@@ -499,7 +499,7 @@ ___
 
 ▸ **onReady**(`fn`: function): *void*
 
-*Defined in [src/websocket/TradeClient.ts:97](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L97)*
+*Defined in [src/websocket/TradeClient.ts:97](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L97)*
 
 **Parameters:**
 
@@ -517,7 +517,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onStateChange](websocketclient.md#onstatechange)*
 
-*Defined in [src/websocket/WebSocketClient.ts:146](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L146)*
+*Defined in [src/websocket/WebSocketClient.ts:146](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L146)*
 
 **Parameters:**
 
@@ -539,7 +539,7 @@ ___
 
 ▸ **onTradesUpdate**(`fn`: function): *void*
 
-*Defined in [src/websocket/TradeClient.ts:109](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L109)*
+*Defined in [src/websocket/TradeClient.ts:109](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L109)*
 
 **Parameters:**
 
@@ -589,7 +589,7 @@ ___
 
 ▸ **placeOrder**(`opts`: Partial‹[PlaceOrderOpt](../interfaces/placeorderopt.md)›): *Promise‹[PrivateOrder](../interfaces/privateorder.md)›*
 
-*Defined in [src/websocket/TradeClient.ts:121](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/TradeClient.ts#L121)*
+*Defined in [src/websocket/TradeClient.ts:121](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/TradeClient.ts#L121)*
 
 **Parameters:**
 
@@ -731,7 +731,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[send](websocketclient.md#send)*
 
-*Defined in [src/websocket/WebSocketClient.ts:154](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L154)*
+*Defined in [src/websocket/WebSocketClient.ts:154](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L154)*
 
 **Parameters:**
 
@@ -769,7 +769,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[state](websocketclient.md#state)*
 
-*Defined in [src/websocket/WebSocketClient.ts:169](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L169)*
+*Defined in [src/websocket/WebSocketClient.ts:169](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/WebSocketClient.ts#L169)*
 
 **Returns:** *symbol*
 

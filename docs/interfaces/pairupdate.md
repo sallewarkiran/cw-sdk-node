@@ -21,7 +21,7 @@
 
 • **pair**: *[Pair](pair.md)*
 
-*Defined in [src/websocket/types/pairs.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L2)*
+*Defined in [src/websocket/types/pairs.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L2)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **performanceUpdate**? : *[PerformanceUpdate](performanceupdate.md)*
 
-*Defined in [src/websocket/types/pairs.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L4)*
+*Defined in [src/websocket/types/pairs.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L4)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **trendlineUpdate**? : *[TrendlineUpdate](trendlineupdate.md)*
 
-*Defined in [src/websocket/types/pairs.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L5)*
+*Defined in [src/websocket/types/pairs.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L5)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **vwapUpdate**? : *[VWAPUpdate](vwapupdate.md)*
 
-*Defined in [src/websocket/types/pairs.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L3)*
+*Defined in [src/websocket/types/pairs.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L3)*

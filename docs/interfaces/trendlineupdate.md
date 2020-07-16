@@ -21,7 +21,7 @@
 
 • **price**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L25)*
+*Defined in [src/websocket/types/pairs.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L25)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **timestamp**: *Date*
 
-*Defined in [src/websocket/types/pairs.ts:24](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L24)*
+*Defined in [src/websocket/types/pairs.ts:24](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L24)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **volume**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L26)*
+*Defined in [src/websocket/types/pairs.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L26)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **window**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:23](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/pairs.ts#L23)*
+*Defined in [src/websocket/types/pairs.ts:23](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L23)*

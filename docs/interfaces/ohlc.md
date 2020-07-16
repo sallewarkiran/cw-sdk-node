@@ -21,7 +21,7 @@
 
 • **close**: *string*
 
-*Defined in [src/websocket/types/markets.ts:33](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L33)*
+*Defined in [src/websocket/types/markets.ts:33](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L33)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **high**: *string*
 
-*Defined in [src/websocket/types/markets.ts:31](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L31)*
+*Defined in [src/websocket/types/markets.ts:31](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L31)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **low**: *string*
 
-*Defined in [src/websocket/types/markets.ts:32](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L32)*
+*Defined in [src/websocket/types/markets.ts:32](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L32)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **open**: *string*
 
-*Defined in [src/websocket/types/markets.ts:30](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L30)*
+*Defined in [src/websocket/types/markets.ts:30](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L30)*

@@ -26,7 +26,7 @@
 
 • **amount**: *string*
 
-*Defined in [src/websocket/types/trading.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L6)*
+*Defined in [src/websocket/types/trading.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L6)*
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 • **amountFilled**: *string*
 
-*Defined in [src/websocket/types/trading.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L16)*
+*Defined in [src/websocket/types/trading.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L16)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 • **expireTime**? : *Date*
 
-*Defined in [src/websocket/types/trading.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L10)*
+*Defined in [src/websocket/types/trading.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L10)*
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 • **fundingType**: *[FundingType](../README.md#fundingtype)*
 
-*Defined in [src/websocket/types/trading.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L9)*
+*Defined in [src/websocket/types/trading.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L9)*
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 • **id**: *string*
 
-*Defined in [src/websocket/types/trading.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L14)*
+*Defined in [src/websocket/types/trading.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L14)*
 
 ___
 
@@ -66,7 +66,7 @@ ___
 
 • **price**: *string*
 
-*Defined in [src/websocket/types/trading.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L5)*
+*Defined in [src/websocket/types/trading.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L5)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-*Defined in [src/websocket/types/trading.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L7)*
+*Defined in [src/websocket/types/trading.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L7)*
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 • **timestamp**: *Date*
 
-*Defined in [src/websocket/types/trading.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L15)*
+*Defined in [src/websocket/types/trading.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L15)*
 
 ___
 
@@ -90,4 +90,4 @@ ___
 
 • **type**: *[OrderType](../README.md#ordertype)*
 
-*Defined in [src/websocket/types/trading.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L8)*
+*Defined in [src/websocket/types/trading.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L8)*

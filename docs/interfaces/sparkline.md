@@ -19,7 +19,7 @@
 
 • **price**: *string*
 
-*Defined in [src/websocket/types/markets.ts:68](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L68)*
+*Defined in [src/websocket/types/markets.ts:68](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L68)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **timestamp**: *Date*
 
-*Defined in [src/websocket/types/markets.ts:67](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L67)*
+*Defined in [src/websocket/types/markets.ts:67](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L67)*

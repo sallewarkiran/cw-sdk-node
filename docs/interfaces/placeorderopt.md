@@ -23,7 +23,7 @@
 
 • **amount**: *string*
 
-*Defined in [src/websocket/types/trading.ts:46](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L46)*
+*Defined in [src/websocket/types/trading.ts:46](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L46)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **marketID**: *number*
 
-*Defined in [src/websocket/types/trading.ts:44](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L44)*
+*Defined in [src/websocket/types/trading.ts:44](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L44)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **price**? : *string*
 
-*Defined in [src/websocket/types/trading.ts:45](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L45)*
+*Defined in [src/websocket/types/trading.ts:45](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L45)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **requestID**? : *string*
 
-*Defined in [src/websocket/types/trading.ts:54](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L54)*
+*Defined in [src/websocket/types/trading.ts:54](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L54)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-*Defined in [src/websocket/types/trading.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L47)*
+*Defined in [src/websocket/types/trading.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L47)*
 
 ___
 
@@ -63,4 +63,4 @@ ___
 
 • **type**: *[OrderType](../README.md#ordertype)*
 
-*Defined in [src/websocket/types/trading.ts:48](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L48)*
+*Defined in [src/websocket/types/trading.ts:48](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L48)*

@@ -23,7 +23,7 @@
 
 • **allowance**: *[RESTAllowance](restallowance.md)*
 
-*Defined in [src/rest/types/client.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/client.ts#L9)*
+*Defined in [src/rest/types/client.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/types/client.ts#L9)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **result**: *T*
 
-*Defined in [src/rest/types/client.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/client.ts#L8)*
+*Defined in [src/rest/types/client.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/types/client.ts#L8)*

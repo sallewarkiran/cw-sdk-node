@@ -19,7 +19,7 @@
 
 • **error**: *string*
 
-*Defined in [src/websocket/types/client.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L62)*
+*Defined in [src/websocket/types/client.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L62)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **subscription**: *string*
 
-*Defined in [src/websocket/types/client.ts:61](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L61)*
+*Defined in [src/websocket/types/client.ts:61](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L61)*
