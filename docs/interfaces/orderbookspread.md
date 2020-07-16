@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [OrderBookSpread](orderbookspread.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [OrderBookSpread](orderbookspread.md)
 
 # Interface: OrderBookSpread
 
@@ -20,7 +20,7 @@
 
 • **ask**: *[PublicOrder](publicorder.md)*
 
-Defined in src/websocket/types/markets.ts:52
+*Defined in [src/websocket/types/markets.ts:52](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L52)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **bid**: *[PublicOrder](publicorder.md)*
 
-Defined in src/websocket/types/markets.ts:51
+*Defined in [src/websocket/types/markets.ts:51](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L51)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in src/websocket/types/markets.ts:50
+*Defined in [src/websocket/types/markets.ts:50](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L50)*

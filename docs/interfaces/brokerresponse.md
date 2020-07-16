@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [BrokerResponse](brokerresponse.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [BrokerResponse](brokerresponse.md)
 
 # Interface: BrokerResponse
 
@@ -19,7 +19,7 @@
 
 • **error**? : *Error*
 
-Defined in src/websocket/types/trading.ts:74
+*Defined in [src/websocket/types/trading.ts:74](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L74)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **resolution**? : *RequestResolutionUpdate*
 
-Defined in src/websocket/types/trading.ts:73
+*Defined in [src/websocket/types/trading.ts:73](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L73)*

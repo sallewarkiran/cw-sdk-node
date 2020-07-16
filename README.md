@@ -3,6 +3,11 @@
 The Cryptowatch NodeJS SDK enables you to stream, trade, and access data using the Cryptowatch WebSocket and REST APIs. 
 Trading over WebSockets is in beta, and not available to the public yet.
 
+## API documentation:
+
+- REST API: https://cryptowat.ch/docs/api
+- WebSocket API: https://cryptowat.ch/docs/websocket-api
+
 ## Install
 ```
 npm i cw-sdk-node

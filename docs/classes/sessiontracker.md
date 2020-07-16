@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [SessionTracker](sessiontracker.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [SessionTracker](sessiontracker.md)
 
 # Class: SessionTracker
 
@@ -50,7 +50,7 @@ can trade.
 
 \+ **new SessionTracker**(`tradeSubs`: [TradeSubscription](../interfaces/tradesubscription.md)[]): *[SessionTracker](sessiontracker.md)*
 
-Defined in src/websocket/SessionTracker.ts:25
+*Defined in [src/websocket/SessionTracker.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/SessionTracker.ts#L25)*
 
 **Parameters:**
 
@@ -153,7 +153,7 @@ ___
 
 ▸ **isModuleReady**(`mID`: number, `m`: Module): *boolean*
 
-Defined in src/websocket/SessionTracker.ts:56
+*Defined in [src/websocket/SessionTracker.ts:56](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/SessionTracker.ts#L56)*
 
 **Parameters:**
 
@@ -170,7 +170,7 @@ ___
 
 ▸ **isReady**(): *boolean*
 
-Defined in src/websocket/SessionTracker.ts:41
+*Defined in [src/websocket/SessionTracker.ts:41](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/SessionTracker.ts#L41)*
 
 **Returns:** *boolean*
 
@@ -428,7 +428,7 @@ ___
 
 ▸ **reset**(): *void*
 
-Defined in src/websocket/SessionTracker.ts:60
+*Defined in [src/websocket/SessionTracker.ts:60](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/SessionTracker.ts#L60)*
 
 **Returns:** *void*
 
@@ -458,7 +458,7 @@ ___
 
 ▸ **setModuleReady**(`mID`: number, `m`: Module): *void*
 
-Defined in src/websocket/SessionTracker.ts:45
+*Defined in [src/websocket/SessionTracker.ts:45](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/SessionTracker.ts#L45)*
 
 **Parameters:**
 

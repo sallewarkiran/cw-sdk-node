@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [Updater](updater.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [Updater](updater.md)
 
 # Class: Updater
 
@@ -28,7 +28,7 @@ Internal class for handling orderbook update events and delta cache
 
 \+ **new Updater**(`snapshotRetriever`: [SnapshotRetriever](snapshotretriever.md)): *[Updater](updater.md)*
 
-Defined in src/orderbook/Updater.ts:47
+*Defined in [src/orderbook/Updater.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/orderbook/Updater.ts#L47)*
 
 **Parameters:**
 
@@ -44,7 +44,7 @@ Name | Type |
 
 ▸ **applyDelta**(`orderBookDelta`: [OrderBookDelta](../interfaces/orderbookdelta.md)): *void*
 
-Defined in src/orderbook/Updater.ts:65
+*Defined in [src/orderbook/Updater.ts:65](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/orderbook/Updater.ts#L65)*
 
 Triggers event to add new delta to the cache and attempt to apply
 it and any other cached deltas.
@@ -63,7 +63,7 @@ ___
 
 ▸ **destroy**(): *void*
 
-Defined in src/orderbook/Updater.ts:96
+*Defined in [src/orderbook/Updater.ts:96](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/orderbook/Updater.ts#L96)*
 
 Tears down all set timeouts and event listeners.
 
@@ -75,7 +75,7 @@ ___
 
 ▸ **onError**(`callback`: function): *void*
 
-Defined in src/orderbook/Updater.ts:89
+*Defined in [src/orderbook/Updater.ts:89](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/orderbook/Updater.ts#L89)*
 
 Adds an event listener that triggers the supplied callback on any error caught
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **onOrderBookUpdate**(`callback`: function): *void*
 
-Defined in src/orderbook/Updater.ts:73
+*Defined in [src/orderbook/Updater.ts:73](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/orderbook/Updater.ts#L73)*
 
 Adds an event listener that triggers the supplied callback on each new update from an OrderBook snapshot and/or delta
 
@@ -127,7 +127,7 @@ ___
 
 ▸ **onStateUpdate**(`callback`: function): *void*
 
-Defined in src/orderbook/Updater.ts:81
+*Defined in [src/orderbook/Updater.ts:81](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/orderbook/Updater.ts#L81)*
 
 Adds an event listener that triggers the supplied callback on each change to the state of cached deltas and sync status
 

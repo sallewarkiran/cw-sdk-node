@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [OrderBookSnapshot](orderbooksnapshot.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [OrderBookSnapshot](orderbooksnapshot.md)
 
 # Interface: OrderBookSnapshot
 
@@ -24,7 +24,7 @@
 
 • **asks**: *[PublicOrder](publicorder.md)[]*
 
-Defined in src/util/types/shared.ts:4
+*Defined in [src/util/types/shared.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L4)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **bids**: *[PublicOrder](publicorder.md)[]*
 
-Defined in src/util/types/shared.ts:3
+*Defined in [src/util/types/shared.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L3)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 • **seqNum**: *number*
 
-Defined in src/util/types/shared.ts:2
+*Defined in [src/util/types/shared.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L2)*

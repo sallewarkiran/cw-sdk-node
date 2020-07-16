@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [OHLC](ohlc.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [OHLC](ohlc.md)
 
 # Interface: OHLC
 
@@ -21,7 +21,7 @@
 
 • **close**: *string*
 
-Defined in src/websocket/types/markets.ts:33
+*Defined in [src/websocket/types/markets.ts:33](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L33)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **high**: *string*
 
-Defined in src/websocket/types/markets.ts:31
+*Defined in [src/websocket/types/markets.ts:31](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L31)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **low**: *string*
 
-Defined in src/websocket/types/markets.ts:32
+*Defined in [src/websocket/types/markets.ts:32](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L32)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **open**: *string*
 
-Defined in src/websocket/types/markets.ts:30
+*Defined in [src/websocket/types/markets.ts:30](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L30)*

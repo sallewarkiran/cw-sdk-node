@@ -1,12 +1,8 @@
-[cw-sdk-node - v1.0.0-beta.3](README.md)
+[cw-sdk-node - v1.0.0-beta.4](README.md)
 
-# cw-sdk-node - v1.0.0-beta.3
+# cw-sdk-node - v1.0.0-beta.4
 
 ## Index
-
-### Enumerations
-
-* [Period](enums/period.md)
 
 ### Classes
 
@@ -93,6 +89,7 @@
 * [OrderType](README.md#ordertype)
 * [PairBrief](README.md#pairbrief)
 * [PairDetails](README.md#pairdetails)
+* [Period](README.md#period)
 * [Price](README.md#price)
 * [PriceSummary](README.md#pricesummary)
 * [Prices](README.md#prices)
@@ -125,6 +122,13 @@
 * [errConnNotReady](README.md#const-errconnnotready)
 * [errNotInitialized](README.md#const-errnotinitialized)
 * [errPlaceOrderBadResponse](README.md#const-errplaceorderbadresponse)
+* [fundingTypeFromProto](README.md#const-fundingtypefromproto)
+* [fundingTypeToProto](README.md#const-fundingtypetoproto)
+* [orderTypeFromProto](README.md#const-ordertypefromproto)
+* [orderTypeToProto](README.md#const-ordertypetoproto)
+* [periodNames](README.md#const-periodnames)
+* [privateOrderSideFromProto](README.md#const-privateordersidefromproto)
+* [privateOrderSideToProto](README.md#const-privateordersidetoproto)
 
 ### Functions
 
@@ -145,8 +149,10 @@
 * [placeOrderOptToProto](README.md#placeorderopttoproto)
 * [privateOrderFromProto](README.md#privateorderfromproto)
 * [privatePositionFromProto](README.md#privatepositionfromproto)
+* [privatePositionSideFromProto](README.md#privatepositionsidefromproto)
 * [privateTradeFromProto](README.md#privatetradefromproto)
-* [sideFromProto](README.md#sidefromproto)
+* [privateTradeSideFromProto](README.md#privatetradesidefromproto)
+* [publicTradeSideFromProto](README.md#publictradesidefromproto)
 * [sortDeltaItems](README.md#sortdeltaitems)
 * [subscriptionResultFromProto](README.md#subscriptionresultfromproto)
 * [symbolString](README.md#symbolstring)
@@ -158,25 +164,13 @@
 * [validateOrderType](README.md#validateordertype)
 * [validateOrderTypeProto](README.md#validateordertypeproto)
 
-### Object literals
-
-* [fundingTypeFromProto](README.md#const-fundingtypefromproto)
-* [fundingTypeToProto](README.md#const-fundingtypetoproto)
-* [orderTypeFromProto](README.md#const-ordertypefromproto)
-* [orderTypeToProto](README.md#const-ordertypetoproto)
-* [periodFromInt](README.md#const-periodfromint)
-* [privateOrderSideFromProto](README.md#const-privateordersidefromproto)
-* [privateOrderSideToProto](README.md#const-privateordersidetoproto)
-* [publicOrderSideFromProto](README.md#const-publicordersidefromproto)
-* [publicOrderSideToProto](README.md#const-publicordersidetoproto)
-
 ## Type aliases
 
 ###  Asset
 
 Ƭ **Asset**: *object*
 
-Defined in src/util/types/shared.ts:47
+*Defined in [src/util/types/shared.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L47)*
 
 #### Type declaration:
 
@@ -186,7 +180,7 @@ ___
 
 Ƭ **AssetBrief**: *Brief‹AssetBase›*
 
-Defined in src/rest/types/data.ts:32
+*Defined in [src/rest/types/data.ts:32](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L32)*
 
 ___
 
@@ -194,7 +188,7 @@ ___
 
 Ƭ **AssetDetails**: *AssetBase & object*
 
-Defined in src/rest/types/data.ts:33
+*Defined in [src/rest/types/data.ts:33](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L33)*
 
 ___
 
@@ -202,7 +196,7 @@ ___
 
 Ƭ **BrokerRequest**: *PlaceOrderRequest | CancelOrderRequest*
 
-Defined in src/websocket/types/trading.ts:70
+*Defined in [src/websocket/types/trading.ts:70](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L70)*
 
 ___
 
@@ -210,7 +204,7 @@ ___
 
 Ƭ **CandleData**: *object*
 
-Defined in src/rest/types/data.ts:138
+*Defined in [src/rest/types/data.ts:138](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L138)*
 
 #### Type declaration:
 
@@ -220,7 +214,7 @@ ___
 
 Ƭ **CandleDataRaw**: *[number, number, number, number, number, number]*
 
-Defined in src/rest/types/data.ts:137
+*Defined in [src/rest/types/data.ts:137](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L137)*
 
 CandleData is an array of numbers in this order:
 [ CloseTime, OpenPrice, HighPrice, LowPrice, ClosePrice, Volume ]
@@ -231,7 +225,7 @@ ___
 
 Ƭ **ChangeSummary**: *object*
 
-Defined in src/rest/types/data.ts:61
+*Defined in [src/rest/types/data.ts:61](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L61)*
 
 #### Type declaration:
 
@@ -241,7 +235,7 @@ ___
 
 Ƭ **CredentialsType**: *"stream" | "trade" | "REST"*
 
-Defined in src/util/types/credentials.ts:11
+*Defined in [src/util/types/credentials.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/credentials.ts#L11)*
 
 ___
 
@@ -249,7 +243,7 @@ ___
 
 Ƭ **DeltaItem**: *object*
 
-Defined in src/util/types/shared.ts:52
+*Defined in [src/util/types/shared.ts:52](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L52)*
 
 #### Type declaration:
 
@@ -259,7 +253,7 @@ ___
 
 Ƭ **Exchange**: *object*
 
-Defined in src/util/types/shared.ts:36
+*Defined in [src/util/types/shared.ts:36](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L36)*
 
 #### Type declaration:
 
@@ -269,7 +263,7 @@ ___
 
 Ƭ **ExchangeBrief**: *Brief‹ExchangeBase›*
 
-Defined in src/rest/types/data.ts:52
+*Defined in [src/rest/types/data.ts:52](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L52)*
 
 ___
 
@@ -277,7 +271,7 @@ ___
 
 Ƭ **ExchangeDescription**: *Description‹ExchangeBase›*
 
-Defined in src/rest/types/data.ts:51
+*Defined in [src/rest/types/data.ts:51](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L51)*
 
 ___
 
@@ -285,7 +279,7 @@ ___
 
 Ƭ **FundingType**: *"spot" | "margin"*
 
-Defined in src/websocket/types/trading.ts:28
+*Defined in [src/websocket/types/trading.ts:28](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L28)*
 
 ___
 
@@ -293,7 +287,7 @@ ___
 
 Ƭ **Instrument**: *object*
 
-Defined in src/util/types/shared.ts:30
+*Defined in [src/util/types/shared.ts:30](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L30)*
 
 #### Type declaration:
 
@@ -303,7 +297,7 @@ ___
 
 Ƭ **LiquiditySide**: *object*
 
-Defined in src/rest/types/data.ts:119
+*Defined in [src/rest/types/data.ts:119](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L119)*
 
 #### Type declaration:
 
@@ -313,7 +307,7 @@ ___
 
 Ƭ **LogLevel**: *"debug" | "info" | "warn" | "error" | "disabled"*
 
-Defined in src/util/logger.ts:4
+*Defined in [src/util/logger.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/logger.ts#L4)*
 
 ___
 
@@ -321,9 +315,9 @@ ___
 
 Ƭ **Market**: *object*
 
-Defined in src/util/types/shared.ts:41
+*Defined in [src/util/types/shared.ts:41](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L41)*
 
-Defined in src/websocket/types/markets.ts:15
+*Defined in [src/websocket/types/markets.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L15)*
 
 #### Type declaration:
 
@@ -331,19 +325,19 @@ Defined in src/websocket/types/markets.ts:15
 
 • **currencyPairID**: *number*
 
-Defined in src/websocket/types/markets.ts:18
+*Defined in [src/websocket/types/markets.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L18)*
 
 ###  exchangeID
 
 • **exchangeID**: *number*
 
-Defined in src/websocket/types/markets.ts:17
+*Defined in [src/websocket/types/markets.ts:17](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L17)*
 
 ###  id
 
 • **id**: *number*
 
-Defined in src/websocket/types/markets.ts:16
+*Defined in [src/websocket/types/markets.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/markets.ts#L16)*
 
 ___
 
@@ -351,7 +345,7 @@ ___
 
 Ƭ **MarketBrief**: *Brief‹MarketBase›*
 
-Defined in src/rest/types/data.ts:55
+*Defined in [src/rest/types/data.ts:55](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L55)*
 
 ___
 
@@ -359,7 +353,7 @@ ___
 
 Ƭ **MarketDescription**: *Description‹MarketBase›*
 
-Defined in src/rest/types/data.ts:54
+*Defined in [src/rest/types/data.ts:54](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L54)*
 
 ___
 
@@ -367,7 +361,7 @@ ___
 
 Ƭ **MarketOHLC**: *object*
 
-Defined in src/rest/types/data.ts:151
+*Defined in [src/rest/types/data.ts:151](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L151)*
 
 #### Type declaration:
 
@@ -377,7 +371,7 @@ ___
 
 Ƭ **MarketOHLCRaw**: *object*
 
-Defined in src/rest/types/data.ts:147
+*Defined in [src/rest/types/data.ts:147](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L147)*
 
 #### Type declaration:
 
@@ -387,7 +381,7 @@ ___
 
 Ƭ **MarketOrderBookLiquidity**: *object*
 
-Defined in src/rest/types/data.ts:128
+*Defined in [src/rest/types/data.ts:128](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L128)*
 
 #### Type declaration:
 
@@ -397,7 +391,7 @@ ___
 
 Ƭ **MarketSelector**: *[MarketSymbol](README.md#marketsymbol) | number*
 
-Defined in src/util/types/shared.ts:65
+*Defined in [src/util/types/shared.ts:65](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L65)*
 
 ___
 
@@ -405,7 +399,7 @@ ___
 
 Ƭ **MarketSymbol**: *object*
 
-Defined in src/util/types/shared.ts:59
+*Defined in [src/util/types/shared.ts:59](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L59)*
 
 #### Type declaration:
 
@@ -415,7 +409,7 @@ ___
 
 Ƭ **OrderBookSnapshotRaw**: *object*
 
-Defined in src/rest/types/data.ts:85
+*Defined in [src/rest/types/data.ts:85](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L85)*
 
 #### Type declaration:
 
@@ -425,7 +419,7 @@ ___
 
 Ƭ **OrderBookState**: *object*
 
-Defined in src/util/types/shared.ts:7
+*Defined in [src/util/types/shared.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/types/shared.ts#L7)*
 
 #### Type declaration:
 
@@ -435,7 +429,7 @@ ___
 
 Ƭ **OrderSide**: *"buy" | "sell" | "unknown"*
 
-Defined in src/websocket/types/trading.ts:26
+*Defined in [src/websocket/types/trading.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L26)*
 
 ___
 
@@ -443,7 +437,7 @@ ___
 
 Ƭ **OrderType**: *"market" | "limit"*
 
-Defined in src/websocket/types/trading.ts:30
+*Defined in [src/websocket/types/trading.ts:30](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L30)*
 
 ___
 
@@ -451,7 +445,7 @@ ___
 
 Ƭ **PairBrief**: *object*
 
-Defined in src/rest/types/data.ts:40
+*Defined in [src/rest/types/data.ts:40](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L40)*
 
 #### Type declaration:
 
@@ -461,7 +455,15 @@ ___
 
 Ƭ **PairDetails**: *[PairBrief](README.md#pairbrief) & object*
 
-Defined in src/rest/types/data.ts:47
+*Defined in [src/rest/types/data.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L47)*
+
+___
+
+###  Period
+
+Ƭ **Period**: *"1m" | "3m" | "5m" | "15m" | "30m" | "1h" | "2h" | "4h" | "6h" | "12h" | "1d" | "3d" | "1w_Thursday" | "1w_Monday"*
+
+*Defined in [src/rest/types/data.ts:103](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L103)*
 
 ___
 
@@ -469,7 +471,7 @@ ___
 
 Ƭ **Price**: *object*
 
-Defined in src/rest/types/data.ts:57
+*Defined in [src/rest/types/data.ts:57](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L57)*
 
 #### Type declaration:
 
@@ -479,7 +481,7 @@ ___
 
 Ƭ **PriceSummary**: *object*
 
-Defined in src/rest/types/data.ts:66
+*Defined in [src/rest/types/data.ts:66](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L66)*
 
 #### Type declaration:
 
@@ -489,7 +491,7 @@ ___
 
 Ƭ **Prices**: *object*
 
-Defined in src/rest/types/data.ts:155
+*Defined in [src/rest/types/data.ts:155](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L155)*
 
 #### Type declaration:
 
@@ -501,7 +503,7 @@ ___
 
 Ƭ **PublicOrderRaw**: *[number, number]*
 
-Defined in src/rest/types/data.ts:83
+*Defined in [src/rest/types/data.ts:83](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L83)*
 
 PublicOrders are arrays of numbers in this order:
 [ Price, Amount ]
@@ -512,7 +514,7 @@ ___
 
 Ƭ **Summaries**: *object*
 
-Defined in src/rest/types/data.ts:159
+*Defined in [src/rest/types/data.ts:159](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L159)*
 
 #### Type declaration:
 
@@ -524,7 +526,7 @@ ___
 
 Ƭ **Trade**: *object*
 
-Defined in src/rest/types/data.ts:96
+*Defined in [src/rest/types/data.ts:96](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L96)*
 
 #### Type declaration:
 
@@ -534,7 +536,7 @@ ___
 
 Ƭ **TradeRaw**: *[number, number, number, number]*
 
-Defined in src/rest/types/data.ts:95
+*Defined in [src/rest/types/data.ts:95](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/types/data.ts#L95)*
 
 Trades are arrays of numbers in this order:
 [ ID, Timestamp, Price, Amount ]
@@ -545,7 +547,7 @@ Trades are arrays of numbers in this order:
 
 • **DataPerformanceUpdate**: *unique symbol* =  Symbol('performance update')
 
-Defined in src/websocket/constants.ts:19
+*Defined in [src/websocket/constants.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L19)*
 
 ___
 
@@ -553,7 +555,7 @@ ___
 
 • **DataVWAPUpdate**: *unique symbol* =  Symbol('vwap update')
 
-Defined in src/websocket/constants.ts:18
+*Defined in [src/websocket/constants.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L18)*
 
 ___
 
@@ -561,7 +563,7 @@ ___
 
 • **EventBalancesUpdate**: *unique symbol* =  Symbol('balances update')
 
-Defined in src/websocket/constants.ts:25
+*Defined in [src/websocket/constants.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L25)*
 
 ___
 
@@ -569,7 +571,7 @@ ___
 
 • **EventClientError**: *unique symbol* =  Symbol('client error')
 
-Defined in src/websocket/constants.ts:8
+*Defined in [src/websocket/constants.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L8)*
 
 ___
 
@@ -577,7 +579,7 @@ ___
 
 • **EventMarketUpdate**: *unique symbol* =  Symbol('market update')
 
-Defined in src/websocket/constants.ts:14
+*Defined in [src/websocket/constants.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L14)*
 
 ___
 
@@ -585,7 +587,7 @@ ___
 
 • **EventOrdersUpdate**: *unique symbol* =  Symbol('orders update')
 
-Defined in src/websocket/constants.ts:22
+*Defined in [src/websocket/constants.ts:22](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L22)*
 
 ___
 
@@ -593,7 +595,7 @@ ___
 
 • **EventPairUpdate**: *unique symbol* =  Symbol('pair update')
 
-Defined in src/websocket/constants.ts:15
+*Defined in [src/websocket/constants.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L15)*
 
 ___
 
@@ -601,7 +603,7 @@ ___
 
 • **EventPositionsUpdate**: *unique symbol* =  Symbol('positions update')
 
-Defined in src/websocket/constants.ts:24
+*Defined in [src/websocket/constants.ts:24](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L24)*
 
 ___
 
@@ -609,7 +611,7 @@ ___
 
 • **EventStateChange**: *unique symbol* =  Symbol('state change')
 
-Defined in src/websocket/constants.ts:9
+*Defined in [src/websocket/constants.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L9)*
 
 ___
 
@@ -617,7 +619,7 @@ ___
 
 • **EventSubscriptionResult**: *unique symbol* =  Symbol('subscription result')
 
-Defined in src/websocket/constants.ts:17
+*Defined in [src/websocket/constants.ts:17](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L17)*
 
 ___
 
@@ -625,7 +627,7 @@ ___
 
 • **EventTradesUpdate**: *unique symbol* =  Symbol('trades update')
 
-Defined in src/websocket/constants.ts:23
+*Defined in [src/websocket/constants.ts:23](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L23)*
 
 ___
 
@@ -633,7 +635,7 @@ ___
 
 • **EventUnsubscriptionResult**: *unique symbol* =  Symbol('unsubscription result')
 
-Defined in src/websocket/constants.ts:16
+*Defined in [src/websocket/constants.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L16)*
 
 ___
 
@@ -641,7 +643,7 @@ ___
 
 • **EventWSAuthResult**: *unique symbol* =  Symbol('auth result')
 
-Defined in src/websocket/constants.ts:11
+*Defined in [src/websocket/constants.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L11)*
 
 ___
 
@@ -649,7 +651,7 @@ ___
 
 • **EventWSData**: *unique symbol* =  Symbol('websocket data')
 
-Defined in src/websocket/constants.ts:10
+*Defined in [src/websocket/constants.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L10)*
 
 ___
 
@@ -657,7 +659,7 @@ ___
 
 • **StateConnected**: *unique symbol* =  Symbol('connected')
 
-Defined in src/websocket/constants.ts:4
+*Defined in [src/websocket/constants.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L4)*
 
 ___
 
@@ -665,7 +667,7 @@ ___
 
 • **StateConnecting**: *unique symbol* =  Symbol('connecting')
 
-Defined in src/websocket/constants.ts:3
+*Defined in [src/websocket/constants.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L3)*
 
 ___
 
@@ -673,7 +675,7 @@ ___
 
 • **StateDisconnected**: *unique symbol* =  Symbol('disconnected')
 
-Defined in src/websocket/constants.ts:2
+*Defined in [src/websocket/constants.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L2)*
 
 ___
 
@@ -681,7 +683,7 @@ ___
 
 • **StateWaitingToReconnect**: *unique symbol* =  Symbol('disconnected: waiting to reconnect')
 
-Defined in src/websocket/constants.ts:5
+*Defined in [src/websocket/constants.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/constants.ts#L5)*
 
 ___
 
@@ -689,7 +691,7 @@ ___
 
 • **errCancelOrderBadResponse**: *Error* =  new Error('cancel order failed: bad response')
 
-Defined in src/websocket/errors.ts:5
+*Defined in [src/websocket/errors.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/errors.ts#L5)*
 
 ___
 
@@ -699,7 +701,7 @@ ___
   "Connection not ready. Did you forget to call 'connect()'?"
 )
 
-Defined in src/websocket/errors.ts:8
+*Defined in [src/websocket/errors.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/errors.ts#L8)*
 
 ___
 
@@ -709,7 +711,7 @@ ___
   'Trading is not yet initialized. Did you wait for onReady()?'
 )
 
-Defined in src/websocket/errors.ts:1
+*Defined in [src/websocket/errors.ts:1](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/errors.ts#L1)*
 
 ___
 
@@ -717,7 +719,146 @@ ___
 
 • **errPlaceOrderBadResponse**: *Error* =  new Error('place order failed: bad response')
 
-Defined in src/websocket/errors.ts:4
+*Defined in [src/websocket/errors.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/errors.ts#L4)*
+
+___
+
+### `Const` fundingTypeFromProto
+
+• **fundingTypeFromProto**: *object* =  {
+  0: 'spot',
+  1: 'margin'
+} as const
+
+*Defined in [src/websocket/proto/constants.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/constants.ts#L15)*
+
+#### Type declaration:
+
+* \[ **key**: *number*\]: [FundingType](README.md#fundingtype)
+
+___
+
+### `Const` fundingTypeToProto
+
+• **fundingTypeToProto**: *object* =  {
+  spot: 0,
+  margin: 1
+} as const
+
+*Defined in [src/websocket/proto/constants.ts:20](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/constants.ts#L20)*
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: number
+
+___
+
+### `Const` orderTypeFromProto
+
+• **orderTypeFromProto**: *object* =  {
+  0: 'market',
+  1: 'limit'
+  // 2: "stoploss",
+  // 3: "stoplosslimit",
+  // 4: "takeprofit",
+  // 5: "takeprofitlimit",
+  // 6: "stoplosstakeprofit",
+  // 7: "stoplosstakeprofitlimit",
+  // 8: "trailingstoploss",
+  // 9: "trailingstoplosslimit",
+  // 10: "stoplossandlimit",
+  // 11: "fillorkill",
+  // 12: "settleposition"
+} as const
+
+*Defined in [src/websocket/proto/constants.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/constants.ts#L25)*
+
+#### Type declaration:
+
+* \[ **key**: *number*\]: [OrderType](README.md#ordertype)
+
+___
+
+### `Const` orderTypeToProto
+
+• **orderTypeToProto**: *object* =  {
+  market: 0,
+  limit: 1
+  // stoploss: 2,
+  // stoplosslimit: 3,
+  // takeprofit: 4,
+  // takeprofitlimit: 5,
+  // stoplosstakeprofit: 6,
+  // stoplosstakeprofitlimit: 7,
+  // trailingstoploss: 8,
+  // trailingstoplosslimit: 9,
+  // stoplossandlimit: 10,
+  // fillorkill: 11,
+  // settleposition: 12
+} as const
+
+*Defined in [src/websocket/proto/constants.ts:41](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/constants.ts#L41)*
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: number
+
+___
+
+### `Const` periodNames
+
+• **periodNames**: *object* =  {
+  '60': '1m',
+  '180': '3m',
+  '300': '5m',
+  '900': '15m',
+  '1800': '30m',
+  '3600': '1h',
+  '7200': '2h',
+  '14400': '4h',
+  '21600': '6h',
+  '43200': '12h',
+  '86400': '1d',
+  '259200': '3d',
+  '604800': '1w_Thursday',
+  '604800_Monday': '1w_Monday'
+} as const
+
+*Defined in [src/websocket/proto/constants.ts:57](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/constants.ts#L57)*
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: [Period](README.md#period)
+
+___
+
+### `Const` privateOrderSideFromProto
+
+• **privateOrderSideFromProto**: *object* =  {
+  0: 'sell',
+  1: 'buy'
+} as const
+
+*Defined in [src/websocket/proto/constants.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/constants.ts#L5)*
+
+#### Type declaration:
+
+* \[ **key**: *number*\]: [OrderSide](README.md#orderside)
+
+___
+
+### `Const` privateOrderSideToProto
+
+• **privateOrderSideToProto**: *object* =  {
+  sell: 0,
+  buy: 1
+} as const
+
+*Defined in [src/websocket/proto/constants.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/constants.ts#L10)*
+
+#### Type declaration:
+
+* \[ **key**: *string*\]: number
 
 ## Functions
 
@@ -725,7 +866,7 @@ Defined in src/websocket/errors.ts:4
 
 ▸ **binarySearchOrders**(`orders`: [PublicOrder](interfaces/publicorder.md)[], `price`: string, `startIndex`: number, `reverse`: boolean): *object*
 
-Defined in src/util/helpers.ts:68
+*Defined in [src/util/helpers.ts:68](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L68)*
 
 **Parameters:**
 
@@ -744,7 +885,7 @@ ___
 
 ▸ **createOrderBookWatcher**(`marketSelector`: [MarketSelector](README.md#marketselector), `streamClient`: [StreamClient](classes/streamclient.md), `restClient`: [RESTClient](classes/restclient.md)): *Promise‹[OrderBookWatcher](classes/orderbookwatcher.md)›*
 
-Defined in src/orderbook/index.ts:8
+*Defined in [src/orderbook/index.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/orderbook/index.ts#L8)*
 
 **Parameters:**
 
@@ -762,7 +903,7 @@ ___
 
 ▸ **getDateFromMs**(`n`: number | Long): *Date*
 
-Defined in src/util/helpers.ts:22
+*Defined in [src/util/helpers.ts:22](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L22)*
 
 **Parameters:**
 
@@ -778,7 +919,7 @@ ___
 
 ▸ **getDateFromNs**(`n`: number | Long): *Date*
 
-Defined in src/util/helpers.ts:26
+*Defined in [src/util/helpers.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L26)*
 
 **Parameters:**
 
@@ -794,7 +935,7 @@ ___
 
 ▸ **getDateFromSecs**(`n`: number | Long): *Date*
 
-Defined in src/util/helpers.ts:18
+*Defined in [src/util/helpers.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L18)*
 
 **Parameters:**
 
@@ -810,7 +951,7 @@ ___
 
 ▸ **getNumber**(`n`: number | Long): *number*
 
-Defined in src/util/helpers.ts:10
+*Defined in [src/util/helpers.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L10)*
 
 **Parameters:**
 
@@ -826,7 +967,7 @@ ___
 
 ▸ **getString**(`n`: number | Long): *string*
 
-Defined in src/util/helpers.ts:14
+*Defined in [src/util/helpers.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L14)*
 
 **Parameters:**
 
@@ -842,7 +983,7 @@ ___
 
 ▸ **guardIsLong**(`value`: number | Long): *value is Long*
 
-Defined in src/util/helpers.ts:6
+*Defined in [src/util/helpers.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L6)*
 
 **Parameters:**
 
@@ -858,7 +999,7 @@ ___
 
 ▸ **keyToStreamSubscription**(`key`: string): *ClientSubscription*
 
-Defined in src/websocket/proto/keyToStreamSubscription.ts:3
+*Defined in [src/websocket/proto/keyToStreamSubscription.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/keyToStreamSubscription.ts#L3)*
 
 **Parameters:**
 
@@ -874,7 +1015,7 @@ ___
 
 ▸ **loadRESTCredentials**(`opts?`: Partial‹[RESTOpts](interfaces/restopts.md)›): *object*
 
-Defined in src/util/credentials.ts:102
+*Defined in [src/util/credentials.ts:102](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/credentials.ts#L102)*
 
 **Parameters:**
 
@@ -890,7 +1031,7 @@ ___
 
 ▸ **loadStreamCredentials**(`opts`: Partial‹[StreamOpts](interfaces/streamopts.md)›): *[StreamOpts](interfaces/streamopts.md)*
 
-Defined in src/util/credentials.ts:58
+*Defined in [src/util/credentials.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/credentials.ts#L58)*
 
 **Parameters:**
 
@@ -906,7 +1047,7 @@ ___
 
 ▸ **loadTradeCredentials**(`opts`: Partial‹[TradeOpts](interfaces/tradeopts.md)›): *[TradeOpts](interfaces/tradeopts.md)*
 
-Defined in src/util/credentials.ts:80
+*Defined in [src/util/credentials.ts:80](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/credentials.ts#L80)*
 
 **Parameters:**
 
@@ -922,7 +1063,7 @@ ___
 
 ▸ **marketUpdateFromProto**(`marketUpdate`: MarketUpdateMessage): *[MarketUpdate](interfaces/marketupdate.md) | null*
 
-Defined in src/websocket/proto/marketUpdateFromProto.ts:276
+*Defined in [src/websocket/proto/marketUpdateFromProto.ts:276](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/marketUpdateFromProto.ts#L276)*
 
 **Parameters:**
 
@@ -938,7 +1079,7 @@ ___
 
 ▸ **pairUpdateFromProto**(`pairUpdate`: IPairUpdateMessage | null | undefined): *[PairUpdate](interfaces/pairupdate.md) | null*
 
-Defined in src/websocket/proto/pairUpdateFromProto.ts:5
+*Defined in [src/websocket/proto/pairUpdateFromProto.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/pairUpdateFromProto.ts#L5)*
 
 **Parameters:**
 
@@ -954,7 +1095,7 @@ ___
 
 ▸ **placeOrderOptToProto**(`orderOpts`: Partial‹[PlaceOrderOpt](interfaces/placeorderopt.md)›): *IPrivateOrder*
 
-Defined in src/websocket/proto/placeOrderOptToProto.ts:14
+*Defined in [src/websocket/proto/placeOrderOptToProto.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/placeOrderOptToProto.ts#L14)*
 
 **Parameters:**
 
@@ -970,7 +1111,7 @@ ___
 
 ▸ **privateOrderFromProto**(`privateOrder`: IPrivateOrder): *[PrivateOrder](interfaces/privateorder.md) | null*
 
-Defined in src/websocket/proto/privateOrderFromProto.ts:11
+*Defined in [src/websocket/proto/privateOrderFromProto.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/privateOrderFromProto.ts#L11)*
 
 **Parameters:**
 
@@ -986,7 +1127,7 @@ ___
 
 ▸ **privatePositionFromProto**(`position`: IPrivatePosition): *[PrivatePosition](interfaces/privateposition.md) | null*
 
-Defined in src/websocket/proto/privatePositionFromProto.ts:9
+*Defined in [src/websocket/proto/privatePositionFromProto.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/privatePositionFromProto.ts#L9)*
 
 **Parameters:**
 
@@ -998,11 +1139,27 @@ Name | Type |
 
 ___
 
+###  privatePositionSideFromProto
+
+▸ **privatePositionSideFromProto**(`side`: number): *[OrderSide](README.md#orderside)*
+
+*Defined in [src/websocket/proto/sideFromProto.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/sideFromProto.ts#L25)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`side` | number |
+
+**Returns:** *[OrderSide](README.md#orderside)*
+
+___
+
 ###  privateTradeFromProto
 
 ▸ **privateTradeFromProto**(`trade`: IPrivateTrade): *[PrivateTrade](interfaces/privatetrade.md) | null*
 
-Defined in src/websocket/proto/privateTradeFromProto.ts:9
+*Defined in [src/websocket/proto/privateTradeFromProto.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/privateTradeFromProto.ts#L9)*
 
 **Parameters:**
 
@@ -1014,17 +1171,33 @@ Name | Type |
 
 ___
 
-###  sideFromProto
+###  privateTradeSideFromProto
 
-▸ **sideFromProto**(`side`: number | OrderSide): *[OrderSide](README.md#orderside) | null*
+▸ **privateTradeSideFromProto**(`side`: number): *[OrderSide](README.md#orderside)*
 
-Defined in src/websocket/proto/sideFromProto.ts:5
+*Defined in [src/websocket/proto/sideFromProto.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/sideFromProto.ts#L14)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`side` | number &#124; OrderSide |
+`side` | number |
+
+**Returns:** *[OrderSide](README.md#orderside)*
+
+___
+
+###  publicTradeSideFromProto
+
+▸ **publicTradeSideFromProto**(`side`: OrderSide): *[OrderSide](README.md#orderside) | null*
+
+*Defined in [src/websocket/proto/sideFromProto.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/sideFromProto.ts#L4)*
+
+**Parameters:**
+
+Name | Type |
+------ | ------ |
+`side` | OrderSide |
 
 **Returns:** *[OrderSide](README.md#orderside) | null*
 
@@ -1034,7 +1207,7 @@ ___
 
 ▸ **sortDeltaItems**(`i`: [DeltaItem](README.md#deltaitem), `j`: [DeltaItem](README.md#deltaitem), `reverse`: boolean): *number*
 
-Defined in src/util/helpers.ts:49
+*Defined in [src/util/helpers.ts:49](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L49)*
 
 **Parameters:**
 
@@ -1052,7 +1225,7 @@ ___
 
 ▸ **subscriptionResultFromProto**(`subResult`: ISubscriptionResult | IUnsubscriptionResult): *[SubscriptionResult](interfaces/subscriptionresult.md) | null*
 
-Defined in src/websocket/proto/subscriptionResultFromProto.ts:14
+*Defined in [src/websocket/proto/subscriptionResultFromProto.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/subscriptionResultFromProto.ts#L14)*
 
 **Parameters:**
 
@@ -1068,7 +1241,7 @@ ___
 
 ▸ **symbolString**(`s`: symbol): *string*
 
-Defined in src/util/helpers.ts:31
+*Defined in [src/util/helpers.ts:31](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L31)*
 
 **Parameters:**
 
@@ -1084,7 +1257,7 @@ ___
 
 ▸ **tradeSubscriptionToProto**(`tradeSubscription`: [TradeSubscription](interfaces/tradesubscription.md)): *ClientSubscription*
 
-Defined in src/websocket/proto/tradeSubscriptionToProto.ts:4
+*Defined in [src/websocket/proto/tradeSubscriptionToProto.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/tradeSubscriptionToProto.ts#L4)*
 
 **Parameters:**
 
@@ -1100,7 +1273,7 @@ ___
 
 ▸ **transformSnapshot**(`orderBook`: [OrderBookSnapshotRaw](README.md#orderbooksnapshotraw)): *[OrderBookSnapshot](interfaces/orderbooksnapshot.md)*
 
-Defined in src/util/helpers.ts:35
+*Defined in [src/util/helpers.ts:35](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/util/helpers.ts#L35)*
 
 **Parameters:**
 
@@ -1116,7 +1289,7 @@ ___
 
 ▸ **validateMonetaryValue**(`n`: string): *boolean*
 
-Defined in src/websocket/proto/validators.ts:27
+*Defined in [src/websocket/proto/validators.ts:27](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/validators.ts#L27)*
 
 **Parameters:**
 
@@ -1132,7 +1305,7 @@ ___
 
 ▸ **validateOrderSide**(`s`: string): *boolean*
 
-Defined in src/websocket/proto/validators.ts:11
+*Defined in [src/websocket/proto/validators.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/validators.ts#L11)*
 
 **Parameters:**
 
@@ -1148,7 +1321,7 @@ ___
 
 ▸ **validateOrderSideProto**(`s`: number): *boolean*
 
-Defined in src/websocket/proto/validators.ts:15
+*Defined in [src/websocket/proto/validators.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/validators.ts#L15)*
 
 **Parameters:**
 
@@ -1164,7 +1337,7 @@ ___
 
 ▸ **validateOrderType**(`t`: string): *boolean*
 
-Defined in src/websocket/proto/validators.ts:19
+*Defined in [src/websocket/proto/validators.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/validators.ts#L19)*
 
 **Parameters:**
 
@@ -1180,7 +1353,7 @@ ___
 
 ▸ **validateOrderTypeProto**(`t`: Type): *boolean*
 
-Defined in src/websocket/proto/validators.ts:23
+*Defined in [src/websocket/proto/validators.ts:23](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/proto/validators.ts#L23)*
 
 **Parameters:**
 
@@ -1189,249 +1362,3 @@ Name | Type |
 `t` | Type |
 
 **Returns:** *boolean*
-
-## Object literals
-
-### `Const` fundingTypeFromProto
-
-### ▪ **fundingTypeFromProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:25
-
-###  0
-
-• **0**: *"spot"* = "spot"
-
-Defined in src/websocket/proto/constants.ts:26
-
-###  1
-
-• **1**: *"margin"* = "margin"
-
-Defined in src/websocket/proto/constants.ts:27
-
-___
-
-### `Const` fundingTypeToProto
-
-### ▪ **fundingTypeToProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:30
-
-###  margin
-
-• **margin**: *number* = 1
-
-Defined in src/websocket/proto/constants.ts:32
-
-###  spot
-
-• **spot**: *number* = 0
-
-Defined in src/websocket/proto/constants.ts:31
-
-___
-
-### `Const` orderTypeFromProto
-
-### ▪ **orderTypeFromProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:35
-
-###  0
-
-• **0**: *"market"* = "market"
-
-Defined in src/websocket/proto/constants.ts:36
-
-###  1
-
-• **1**: *"limit"* = "limit"
-
-Defined in src/websocket/proto/constants.ts:37
-
-___
-
-### `Const` orderTypeToProto
-
-### ▪ **orderTypeToProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:51
-
-###  limit
-
-• **limit**: *number* = 1
-
-Defined in src/websocket/proto/constants.ts:53
-
-###  market
-
-• **market**: *number* = 0
-
-Defined in src/websocket/proto/constants.ts:52
-
-___
-
-### `Const` periodFromInt
-
-### ▪ **periodFromInt**: *object*
-
-Defined in src/websocket/proto/constants.ts:67
-
-###  14400
-
-• **14400**: *[4h](enums/period.md#4h)* =  Period['4h']
-
-Defined in src/websocket/proto/constants.ts:75
-
-###  180
-
-• **180**: *[3m](enums/period.md#3m)* =  Period['3m']
-
-Defined in src/websocket/proto/constants.ts:69
-
-###  1800
-
-• **1800**: *[30m](enums/period.md#30m)* =  Period['30m']
-
-Defined in src/websocket/proto/constants.ts:72
-
-###  21600
-
-• **21600**: *[6h](enums/period.md#6h)* =  Period['6h']
-
-Defined in src/websocket/proto/constants.ts:76
-
-###  259200
-
-• **259200**: *[3d](enums/period.md#3d)* =  Period['3d']
-
-Defined in src/websocket/proto/constants.ts:79
-
-###  300
-
-• **300**: *[5m](enums/period.md#5m)* =  Period['5m']
-
-Defined in src/websocket/proto/constants.ts:70
-
-###  3600
-
-• **3600**: *[1h](enums/period.md#1h)* =  Period['1h']
-
-Defined in src/websocket/proto/constants.ts:73
-
-###  43200
-
-• **43200**: *[12h](enums/period.md#12h)* =  Period['12h']
-
-Defined in src/websocket/proto/constants.ts:77
-
-###  60
-
-• **60**: *[1m](enums/period.md#1m)* =  Period['1m']
-
-Defined in src/websocket/proto/constants.ts:68
-
-###  604800
-
-• **604800**: *[1w](enums/period.md#1w)* =  Period['1w']
-
-Defined in src/websocket/proto/constants.ts:80
-
-###  7200
-
-• **7200**: *[2h](enums/period.md#2h)* =  Period['2h']
-
-Defined in src/websocket/proto/constants.ts:74
-
-###  86400
-
-• **86400**: *[1d](enums/period.md#1d)* =  Period['1d']
-
-Defined in src/websocket/proto/constants.ts:78
-
-###  900
-
-• **900**: *[15m](enums/period.md#15m)* =  Period['15m']
-
-Defined in src/websocket/proto/constants.ts:71
-
-___
-
-### `Const` privateOrderSideFromProto
-
-### ▪ **privateOrderSideFromProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:5
-
-###  0
-
-• **0**: *"sell"* = "sell"
-
-Defined in src/websocket/proto/constants.ts:6
-
-###  1
-
-• **1**: *"buy"* = "buy"
-
-Defined in src/websocket/proto/constants.ts:7
-
-___
-
-### `Const` privateOrderSideToProto
-
-### ▪ **privateOrderSideToProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:10
-
-###  buy
-
-• **buy**: *number* = 1
-
-Defined in src/websocket/proto/constants.ts:12
-
-###  sell
-
-• **sell**: *number* = 0
-
-Defined in src/websocket/proto/constants.ts:11
-
-___
-
-### `Const` publicOrderSideFromProto
-
-### ▪ **publicOrderSideFromProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:15
-
-###  0
-
-• **0**: *"buy"* = "buy"
-
-Defined in src/websocket/proto/constants.ts:16
-
-###  1
-
-• **1**: *"sell"* = "sell"
-
-Defined in src/websocket/proto/constants.ts:17
-
-___
-
-### `Const` publicOrderSideToProto
-
-### ▪ **publicOrderSideToProto**: *object*
-
-Defined in src/websocket/proto/constants.ts:20
-
-###  buy
-
-• **buy**: *number* = 0
-
-Defined in src/websocket/proto/constants.ts:21
-
-###  sell
-
-• **sell**: *number* = 1
-
-Defined in src/websocket/proto/constants.ts:22

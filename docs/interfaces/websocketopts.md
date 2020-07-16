@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [WebSocketOpts](websocketopts.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [WebSocketOpts](websocketopts.md)
 
 # Interface: WebSocketOpts
 
@@ -25,7 +25,7 @@
 
 • **creds**: *[Credentials](credentials.md)*
 
-Defined in src/websocket/types/client.ts:6
+*Defined in [src/websocket/types/client.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L6)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **logLevel**? : *[LogLevel](../README.md#loglevel)*
 
-Defined in src/websocket/types/client.ts:12
+*Defined in [src/websocket/types/client.ts:12](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L12)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **nonce**? : *string*
 
-Defined in src/websocket/types/client.ts:16
+*Defined in [src/websocket/types/client.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L16)*
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 • **reconnect**: *[ReconnectOpts](reconnectopts.md)*
 
-Defined in src/websocket/types/client.ts:10
+*Defined in [src/websocket/types/client.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L10)*

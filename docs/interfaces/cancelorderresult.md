@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [CancelOrderResult](cancelorderresult.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [CancelOrderResult](cancelorderresult.md)
 
 # Interface: CancelOrderResult
 
@@ -19,7 +19,7 @@
 
 • **marketID**: *number*
 
-Defined in src/websocket/types/trading.ts:66
+*Defined in [src/websocket/types/trading.ts:66](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L66)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **orderID**: *string*
 
-Defined in src/websocket/types/trading.ts:67
+*Defined in [src/websocket/types/trading.ts:67](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/trading.ts#L67)*

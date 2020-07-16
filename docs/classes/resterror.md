@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [RestError](resterror.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [RestError](resterror.md)
 
 # Class: RestError
 
@@ -29,7 +29,7 @@
 
 \+ **new RestError**(`error`: RestErrrorProps): *[RestError](resterror.md)*
 
-Defined in src/rest/errors.ts:11
+*Defined in [src/rest/errors.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/errors.ts#L11)*
 
 **Parameters:**
 
@@ -47,7 +47,7 @@ Name | Type |
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:974
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:974
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:973
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:973
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **response**: *Response*
 
-Defined in src/rest/errors.ts:10
+*Defined in [src/rest/errors.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/errors.ts#L10)*
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 *Inherited from void*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:975
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:975
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **status**: *number*
 
-Defined in src/rest/errors.ts:11
+*Defined in [src/rest/errors.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/rest/errors.ts#L11)*
 
 ___
 
@@ -91,4 +91,4 @@ ___
 
 ▪ **Error**: *ErrorConstructor*
 
-Defined in node_modules/typescript/lib/lib.es5.d.ts:984
+Defined in node_modules/typedoc/node_modules/typescript/lib/lib.es5.d.ts:984

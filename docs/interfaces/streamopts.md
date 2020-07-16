@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [StreamOpts](streamopts.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [StreamOpts](streamopts.md)
 
 # Interface: StreamOpts
 
@@ -26,7 +26,7 @@
 
 *Inherited from [WebSocketOpts](websocketopts.md).[creds](websocketopts.md#creds)*
 
-Defined in src/websocket/types/client.ts:6
+*Defined in [src/websocket/types/client.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L6)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 *Inherited from [WebSocketOpts](websocketopts.md).[logLevel](websocketopts.md#optional-loglevel)*
 
-Defined in src/websocket/types/client.ts:12
+*Defined in [src/websocket/types/client.ts:12](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L12)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 *Inherited from [WebSocketOpts](websocketopts.md).[nonce](websocketopts.md#optional-nonce)*
 
-Defined in src/websocket/types/client.ts:16
+*Defined in [src/websocket/types/client.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L16)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 *Inherited from [WebSocketOpts](websocketopts.md).[reconnect](websocketopts.md#reconnect)*
 
-Defined in src/websocket/types/client.ts:10
+*Defined in [src/websocket/types/client.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L10)*
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 • **subscriptions**? : *string[]*
 
-Defined in src/websocket/types/client.ts:36
+*Defined in [src/websocket/types/client.ts:36](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/types/client.ts#L36)*

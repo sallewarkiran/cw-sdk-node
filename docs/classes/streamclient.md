@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [StreamClient](streamclient.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [StreamClient](streamclient.md)
 
 # Class: StreamClient
 
@@ -61,7 +61,7 @@
 
 *Overrides [WebSocketClient](websocketclient.md).[constructor](websocketclient.md#constructor)*
 
-Defined in src/websocket/StreamClient.ts:18
+*Defined in [src/websocket/StreamClient.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/StreamClient.ts#L18)*
 
 **Parameters:**
 
@@ -79,7 +79,7 @@ Name | Type |
 
 *Inherited from [WebSocketClient](websocketclient.md).[connState](websocketclient.md#protected-connstate)*
 
-Defined in src/websocket/WebSocketClient.ts:58
+*Defined in [src/websocket/WebSocketClient.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L58)*
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[subscriptions](websocketclient.md#subscriptions)*
 
-Defined in src/websocket/WebSocketClient.ts:47
+*Defined in [src/websocket/WebSocketClient.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L47)*
 
 #### Type declaration:
 
@@ -141,7 +141,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[connect](websocketclient.md#connect)*
 
-Defined in src/websocket/WebSocketClient.ts:101
+*Defined in [src/websocket/WebSocketClient.ts:101](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L101)*
 
 **Returns:** *void*
 
@@ -153,7 +153,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[disconnect](websocketclient.md#disconnect)*
 
-Defined in src/websocket/WebSocketClient.ts:161
+*Defined in [src/websocket/WebSocketClient.ts:161](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L161)*
 
 **Returns:** *void*
 
@@ -186,7 +186,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[error](websocketclient.md#error)*
 
-Defined in src/websocket/WebSocketClient.ts:133
+*Defined in [src/websocket/WebSocketClient.ts:133](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L133)*
 
 **Parameters:**
 
@@ -232,7 +232,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[getSubscriptions](websocketclient.md#getsubscriptions)*
 
-Defined in src/websocket/WebSocketClient.ts:173
+*Defined in [src/websocket/WebSocketClient.ts:173](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L173)*
 
 **Returns:** *ClientSubscription[]*
 
@@ -340,7 +340,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onConnect](websocketclient.md#onconnect)*
 
-Defined in src/websocket/WebSocketClient.ts:138
+*Defined in [src/websocket/WebSocketClient.ts:138](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L138)*
 
 **Parameters:**
 
@@ -358,7 +358,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onDisconnect](websocketclient.md#ondisconnect)*
 
-Defined in src/websocket/WebSocketClient.ts:142
+*Defined in [src/websocket/WebSocketClient.ts:142](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L142)*
 
 **Parameters:**
 
@@ -376,7 +376,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onError](websocketclient.md#onerror)*
 
-Defined in src/websocket/WebSocketClient.ts:150
+*Defined in [src/websocket/WebSocketClient.ts:150](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L150)*
 
 **Parameters:**
 
@@ -398,7 +398,7 @@ ___
 
 ▸ **onMarketUpdate**(`fn`: function): *void*
 
-Defined in src/websocket/StreamClient.ts:85
+*Defined in [src/websocket/StreamClient.ts:85](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/StreamClient.ts#L85)*
 
 **Parameters:**
 
@@ -420,7 +420,7 @@ ___
 
 ▸ **onPairUpdate**(`fn`: function): *void*
 
-Defined in src/websocket/StreamClient.ts:76
+*Defined in [src/websocket/StreamClient.ts:76](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/StreamClient.ts#L76)*
 
 **Parameters:**
 
@@ -444,7 +444,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[onStateChange](websocketclient.md#onstatechange)*
 
-Defined in src/websocket/WebSocketClient.ts:146
+*Defined in [src/websocket/WebSocketClient.ts:146](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L146)*
 
 **Parameters:**
 
@@ -620,7 +620,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[send](websocketclient.md#send)*
 
-Defined in src/websocket/WebSocketClient.ts:154
+*Defined in [src/websocket/WebSocketClient.ts:154](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L154)*
 
 **Parameters:**
 
@@ -658,7 +658,7 @@ ___
 
 *Inherited from [WebSocketClient](websocketclient.md).[state](websocketclient.md#state)*
 
-Defined in src/websocket/WebSocketClient.ts:169
+*Defined in [src/websocket/WebSocketClient.ts:169](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/WebSocketClient.ts#L169)*
 
 **Returns:** *symbol*
 
@@ -668,7 +668,7 @@ ___
 
 ▸ **subscribe**(`keys`: string[]): *void*
 
-Defined in src/websocket/StreamClient.ts:44
+*Defined in [src/websocket/StreamClient.ts:44](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/StreamClient.ts#L44)*
 
 **Parameters:**
 
@@ -684,7 +684,7 @@ ___
 
 ▸ **unsubscribe**(`keys`: string[]): *void*
 
-Defined in src/websocket/StreamClient.ts:60
+*Defined in [src/websocket/StreamClient.ts:60](https://github.com/cryptowatch/cw-sdk-node/blob/53b8a13/src/websocket/StreamClient.ts#L60)*
 
 **Parameters:**
 
