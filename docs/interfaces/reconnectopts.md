@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [ReconnectOpts](reconnectopts.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [ReconnectOpts](reconnectopts.md)
 
 # Interface: ReconnectOpts
 
@@ -21,7 +21,7 @@
 
 • **backoff**: *boolean*
 
-Defined in src/websocket/types/client.ts:26
+*Defined in [src/websocket/types/client.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L26)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **enabled**: *boolean*
 
-Defined in src/websocket/types/client.ts:21
+*Defined in [src/websocket/types/client.ts:21](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L21)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **maxTimeout**: *number*
 
-Defined in src/websocket/types/client.ts:32
+*Defined in [src/websocket/types/client.ts:32](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L32)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **timeout**: *number*
 
-Defined in src/websocket/types/client.ts:29
+*Defined in [src/websocket/types/client.ts:29](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L29)*

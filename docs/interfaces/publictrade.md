@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [PublicTrade](publictrade.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [PublicTrade](publictrade.md)
 
 # Interface: PublicTrade
 
@@ -22,7 +22,7 @@
 
 • **amount**: *string*
 
-Defined in src/websocket/types/markets.ts:46
+*Defined in [src/websocket/types/markets.ts:46](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L46)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **externalID**: *string*
 
-Defined in src/websocket/types/markets.ts:42
+*Defined in [src/websocket/types/markets.ts:42](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L42)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **price**: *string*
 
-Defined in src/websocket/types/markets.ts:45
+*Defined in [src/websocket/types/markets.ts:45](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L45)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-Defined in src/websocket/types/markets.ts:44
+*Defined in [src/websocket/types/markets.ts:44](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L44)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in src/websocket/types/markets.ts:43
+*Defined in [src/websocket/types/markets.ts:43](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L43)*

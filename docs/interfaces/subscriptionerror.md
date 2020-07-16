@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [SubscriptionError](subscriptionerror.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [SubscriptionError](subscriptionerror.md)
 
 # Interface: SubscriptionError
 
@@ -19,7 +19,7 @@
 
 • **error**: *string*
 
-Defined in src/websocket/types/client.ts:62
+*Defined in [src/websocket/types/client.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L62)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **subscription**: *string*
 
-Defined in src/websocket/types/client.ts:61
+*Defined in [src/websocket/types/client.ts:61](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/client.ts#L61)*

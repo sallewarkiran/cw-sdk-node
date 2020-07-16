@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [Credentials](credentials.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [Credentials](credentials.md)
 
 # Interface: Credentials
 
@@ -20,7 +20,7 @@
 
 • **apiKey**: *string*
 
-Defined in src/util/types/credentials.ts:6
+*Defined in [src/util/types/credentials.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/util/types/credentials.ts#L6)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **secretKey**: *string*
 
-Defined in src/util/types/credentials.ts:7
+*Defined in [src/util/types/credentials.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/util/types/credentials.ts#L7)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **url**? : *string*
 
-Defined in src/util/types/credentials.ts:8
+*Defined in [src/util/types/credentials.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/util/types/credentials.ts#L8)*

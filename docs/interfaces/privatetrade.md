@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.3](../README.md) › [PrivateTrade](privatetrade.md)
+[cw-sdk-node - v1.0.0-beta.4](../README.md) › [PrivateTrade](privatetrade.md)
 
 # Interface: PrivateTrade
 
@@ -23,7 +23,7 @@
 
 • **amount**: *string*
 
-Defined in src/websocket/types/trading.ts:87
+*Defined in [src/websocket/types/trading.ts:87](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L87)*
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 • **id**: *string*
 
-Defined in src/websocket/types/trading.ts:83
+*Defined in [src/websocket/types/trading.ts:83](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L83)*
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 • **orderID**: *string*
 
-Defined in src/websocket/types/trading.ts:85
+*Defined in [src/websocket/types/trading.ts:85](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L85)*
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 • **price**: *string*
 
-Defined in src/websocket/types/trading.ts:86
+*Defined in [src/websocket/types/trading.ts:86](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L86)*
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 • **side**: *[OrderSide](../README.md#orderside)*
 
-Defined in src/websocket/types/trading.ts:88
+*Defined in [src/websocket/types/trading.ts:88](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L88)*
 
 ___
 
@@ -63,4 +63,4 @@ ___
 
 • **timestamp**: *Date*
 
-Defined in src/websocket/types/trading.ts:84
+*Defined in [src/websocket/types/trading.ts:84](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/trading.ts#L84)*
