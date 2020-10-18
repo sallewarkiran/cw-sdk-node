@@ -242,7 +242,8 @@ export class RESTClient {
           highPrice: value[2].toString(),
           lowPrice: value[3].toString(),
           closePrice: value[4].toString(),
-          volume: value[5].toString()
+          volume: value[5].toString(),
+          quoteVolume: value[6].toString()
         }));
       }
       return result as MarketOHLC;
