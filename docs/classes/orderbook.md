@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.4](../README.md) › [OrderBook](orderbook.md)
+[cw-sdk-node - v1.0.0-beta.5](../README.md) › [OrderBook](orderbook.md)
 
 # Class: OrderBook
 
@@ -36,7 +36,7 @@ Internal class for handling OrderBook delta transforms
 
 \+ **new OrderBook**(`snapshot?`: [OrderBookSnapshot](../interfaces/orderbooksnapshot.md)): *[OrderBook](orderbook.md)*
 
-*Defined in [src/orderbook/OrderBook.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/orderbook/OrderBook.ts#L16)*
+*Defined in [src/orderbook/OrderBook.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBook.ts#L16)*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ Name | Type |
 
 *Implementation of [OrderBookSnapshot](../interfaces/orderbooksnapshot.md).[asks](../interfaces/orderbooksnapshot.md#asks)*
 
-*Defined in [src/orderbook/OrderBook.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/orderbook/OrderBook.ts#L16)*
+*Defined in [src/orderbook/OrderBook.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBook.ts#L16)*
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 *Implementation of [OrderBookSnapshot](../interfaces/orderbooksnapshot.md).[bids](../interfaces/orderbooksnapshot.md#bids)*
 
-*Defined in [src/orderbook/OrderBook.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/orderbook/OrderBook.ts#L15)*
+*Defined in [src/orderbook/OrderBook.ts:15](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBook.ts#L15)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 *Implementation of [OrderBookSnapshot](../interfaces/orderbooksnapshot.md).[seqNum](../interfaces/orderbooksnapshot.md#seqnum)*
 
-*Defined in [src/orderbook/OrderBook.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/orderbook/OrderBook.ts#L14)*
+*Defined in [src/orderbook/OrderBook.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBook.ts#L14)*
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 ▸ **applyDelta**(`delta`: [OrderBookDelta](../interfaces/orderbookdelta.md), `ignoreSeqNum`: boolean): *[OrderBook](orderbook.md)*
 
-*Defined in [src/orderbook/OrderBook.ts:38](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/orderbook/OrderBook.ts#L38)*
+*Defined in [src/orderbook/OrderBook.ts:38](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBook.ts#L38)*
 
 **Parameters:**
 
@@ -99,7 +99,7 @@ ___
 
 ▸ **applySnapshot**(`snapshot`: [OrderBookSnapshot](../interfaces/orderbooksnapshot.md)): *void*
 
-*Defined in [src/orderbook/OrderBook.ts:32](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/orderbook/OrderBook.ts#L32)*
+*Defined in [src/orderbook/OrderBook.ts:32](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBook.ts#L32)*
 
 **Parameters:**
 
@@ -115,6 +115,6 @@ ___
 
 ▸ **getSnapshot**(): *[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)*
 
-*Defined in [src/orderbook/OrderBook.ts:24](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/orderbook/OrderBook.ts#L24)*
+*Defined in [src/orderbook/OrderBook.ts:24](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBook.ts#L24)*
 
 **Returns:** *[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)*

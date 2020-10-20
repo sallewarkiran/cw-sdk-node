@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.4](../README.md) › [RESTClient](restclient.md)
+[cw-sdk-node - v1.0.0-beta.5](../README.md) › [RESTClient](restclient.md)
 
 # Class: RESTClient
 
@@ -41,7 +41,7 @@
 
 \+ **new RESTClient**(`options?`: [RESTOpts](../interfaces/restopts.md)): *[RESTClient](restclient.md)*
 
-*Defined in [src/rest/RESTClient.ts:36](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L36)*
+*Defined in [src/rest/RESTClient.ts:37](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L37)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ Name | Type |
 
 ▸ **getAllowance**(): *[RESTAllowance](../interfaces/restallowance.md)*
 
-*Defined in [src/rest/RESTClient.ts:76](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L76)*
+*Defined in [src/rest/RESTClient.ts:77](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L77)*
 
 Returns the most recently retrieved REST allowance data.
 
@@ -69,7 +69,7 @@ ___
 
 ▸ **getAsset**(`assetSelector`: number | string): *Promise‹[Asset](../README.md#asset)›*
 
-*Defined in [src/rest/RESTClient.ts:200](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L200)*
+*Defined in [src/rest/RESTClient.ts:201](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L201)*
 
 Returns a single asset.
 
@@ -87,7 +87,7 @@ ___
 
 ▸ **getAssetByID**(`assetId`: number): *Promise‹[Asset](../README.md#asset)›*
 
-*Defined in [src/rest/RESTClient.ts:220](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L220)*
+*Defined in [src/rest/RESTClient.ts:221](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L221)*
 
 Returns a single market, with associated routes.
 
@@ -105,7 +105,7 @@ ___
 
 ▸ **getAssetBySymbol**(`assetSymbol`: string): *Promise‹[Asset](../README.md#asset)›*
 
-*Defined in [src/rest/RESTClient.ts:212](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L212)*
+*Defined in [src/rest/RESTClient.ts:213](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L213)*
 
 Returns a single asset, with associated routes.
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **getExchange**(`exchangeSymbol`: string): *Promise‹[ExchangeDescription](../README.md#exchangedescription)›*
 
-*Defined in [src/rest/RESTClient.ts:97](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L97)*
+*Defined in [src/rest/RESTClient.ts:98](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L98)*
 
 Returns a single exchange, with associated routes.
 
@@ -143,7 +143,7 @@ ___
 
 ▸ **getExchangeMarkets**(`exchangeSymbol`: string): *Promise‹[MarketDescription](../README.md#marketdescription)[]›*
 
-*Defined in [src/rest/RESTClient.ts:149](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L149)*
+*Defined in [src/rest/RESTClient.ts:150](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L150)*
 
 Returns a list of supported markets for a specific exchange.
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **getExchanges**(): *Promise‹[ExchangeBrief](../README.md#exchangebrief)[]›*
 
-*Defined in [src/rest/RESTClient.ts:88](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L88)*
+*Defined in [src/rest/RESTClient.ts:89](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L89)*
 
 Returns a list of all supported exchanges.
 
@@ -177,7 +177,7 @@ ___
 
 ▸ **getMarket**(`marketSelector`: [MarketSelector](../README.md#marketselector)): *Promise‹[Market](../README.md#market)›*
 
-*Defined in [src/rest/RESTClient.ts:171](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L171)*
+*Defined in [src/rest/RESTClient.ts:172](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L172)*
 
 Returns a single market.
 
@@ -195,7 +195,7 @@ ___
 
 ▸ **getMarketByID**(`marketID`: number): *Promise‹[Market](../README.md#market)›*
 
-*Defined in [src/rest/RESTClient.ts:191](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L191)*
+*Defined in [src/rest/RESTClient.ts:192](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L192)*
 
 Returns a single market.
 
@@ -213,7 +213,7 @@ ___
 
 ▸ **getMarketBySymbol**(`marketSymbol`: [MarketSymbol](../README.md#marketsymbol)): *Promise‹[Market](../README.md#market)›*
 
-*Defined in [src/rest/RESTClient.ts:183](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L183)*
+*Defined in [src/rest/RESTClient.ts:184](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L184)*
 
 Returns a single market.
 
@@ -231,7 +231,7 @@ ___
 
 ▸ **getMarketDescription**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[MarketDescription](../README.md#marketdescription)›*
 
-*Defined in [src/rest/RESTClient.ts:159](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L159)*
+*Defined in [src/rest/RESTClient.ts:160](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L160)*
 
 Returns a single market, with associated routes.
 
@@ -252,7 +252,7 @@ ___
 
 ▸ **getMarkets**(): *Promise‹[MarketBrief](../README.md#marketbrief)[]›*
 
-*Defined in [src/rest/RESTClient.ts:122](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L122)*
+*Defined in [src/rest/RESTClient.ts:123](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L123)*
 
 Returns a list of all supported markets.
 
@@ -264,9 +264,9 @@ ___
 
 ###  getOHLC
 
-▸ **getOHLC**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[MarketOHLC](../README.md#marketohlc)›*
+▸ **getOHLC**(`exchangeSymbol`: string, `pairSymbol`: string, `options`: [OHLCOptions](../README.md#ohlcoptions)): *Promise‹[MarketOHLC](../README.md#marketohlc)›*
 
-*Defined in [src/rest/RESTClient.ts:230](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L230)*
+*Defined in [src/rest/RESTClient.ts:232](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L232)*
 
 Returns a market's OHLC candlestick data.
 
@@ -274,10 +274,11 @@ Returns a market's OHLC candlestick data.
 
 **Parameters:**
 
-Name | Type | Description |
------- | ------ | ------ |
-`exchangeSymbol` | string | string (Example: 'kraken') |
-`pairSymbol` | string | string (Example: 'btcusd') |
+Name | Type | Default | Description |
+------ | ------ | ------ | ------ |
+`exchangeSymbol` | string | - | string (Example: 'kraken') |
+`pairSymbol` | string | - | string (Example: 'btcusd') |
+`options` | [OHLCOptions](../README.md#ohlcoptions) |  {} | Optional - see API documentation |
 
 **Returns:** *Promise‹[MarketOHLC](../README.md#marketohlc)›*
 
@@ -287,7 +288,7 @@ ___
 
 ▸ **getOrderBookSnapshot**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)›*
 
-*Defined in [src/rest/RESTClient.ts:255](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L255)*
+*Defined in [src/rest/RESTClient.ts:259](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L259)*
 
 Returns a market's order book.
 
@@ -308,7 +309,7 @@ ___
 
 ▸ **getPair**(`pairSymbol`: string): *Promise‹[PairDetails](../README.md#pairdetails)›*
 
-*Defined in [src/rest/RESTClient.ts:114](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L114)*
+*Defined in [src/rest/RESTClient.ts:115](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L115)*
 
 Returns a single pair. Lists all markets for this pair.
 
@@ -328,7 +329,7 @@ ___
 
 ▸ **getPairsIndex**(): *Promise‹[PairBrief](../README.md#pairbrief)[]›*
 
-*Defined in [src/rest/RESTClient.ts:105](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L105)*
+*Defined in [src/rest/RESTClient.ts:106](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L106)*
 
 Returns all pairs (in no particular order).
 
@@ -342,7 +343,7 @@ ___
 
 ▸ **getPrice**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Price](../README.md#price)›*
 
-*Defined in [src/rest/RESTClient.ts:270](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L270)*
+*Defined in [src/rest/RESTClient.ts:274](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L274)*
 
 Returns a market's last price.
 
@@ -363,7 +364,7 @@ ___
 
 ▸ **getSummaries**(): *Promise‹[Summaries](../README.md#summaries)›*
 
-*Defined in [src/rest/RESTClient.ts:130](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L130)*
+*Defined in [src/rest/RESTClient.ts:131](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L131)*
 
 Returns the market summary for all supported markets. Some values may be out of date by a few seconds.
 
@@ -377,7 +378,7 @@ ___
 
 ▸ **getSummary**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Summary](../interfaces/summary.md)›*
 
-*Defined in [src/rest/RESTClient.ts:140](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L140)*
+*Defined in [src/rest/RESTClient.ts:141](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L141)*
 
 Returns a single market summary.
 
@@ -398,7 +399,7 @@ ___
 
 ▸ **getTrades**(`exchangeSymbol`: string, `pairSymbol`: string): *Promise‹[Trade](../README.md#trade)[]›*
 
-*Defined in [src/rest/RESTClient.ts:280](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/rest/RESTClient.ts#L280)*
+*Defined in [src/rest/RESTClient.ts:284](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/RESTClient.ts#L284)*
 
 Returns a market's most recent trades, incrementing chronologically.
 

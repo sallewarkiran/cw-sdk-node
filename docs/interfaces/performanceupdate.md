@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.4](../README.md) › [PerformanceUpdate](performanceupdate.md)
+[cw-sdk-node - v1.0.0-beta.5](../README.md) › [PerformanceUpdate](performanceupdate.md)
 
 # Interface: PerformanceUpdate
 
@@ -19,7 +19,7 @@
 
 • **performance**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L19)*
+*Defined in [src/websocket/types/pairs.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/pairs.ts#L19)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **window**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L18)*
+*Defined in [src/websocket/types/pairs.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/pairs.ts#L18)*
