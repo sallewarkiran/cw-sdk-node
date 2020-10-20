@@ -1,6 +1,6 @@
 {
   "name": "cw-sdk-node",
-  "version": "1.0.0-beta.5",
+  "version": "1.0.0-beta.6",
   "description": "Cryptowatch SDK for NodeJS",
   "author": "Cryptowatch <infra@cryptowatch>",
   "homepage": "https://cryptowat.ch/docs/websocket-api",
