@@ -9,13 +9,13 @@
     "url": "https://github.com/cryptowatch/cw-sdk-node.git"
   },
   "license": "BSD-2-Clause-FreeBSD",
-  "main": "build/index.js",
-  "types": "build/index.t.ds",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
   "files": [
     "build/**/*"
   ],
   "scripts": {
-    "lint": "eslint */**.ts",
+    "lint": "eslint ./src/*/**.ts",
     "test": "jest",
     "build": "tsc -p tsconfig.release.json",
     "prepare": "npm run build",
@@ -23,6 +23,8 @@
     "pbjs:definitions": "pbjs -t static-module 'google/protobuf/*.proto' 'proto/{client,markets,stream,broker}/*.proto' | pbts -o proto.d.ts -",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags",
     "docs": "rm -rf ./docs && typedoc --options ./typedoc.js ./src"
   },
   "dependencies": {
