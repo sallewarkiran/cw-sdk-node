@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.5](../README.md) › [OrderBookWatcher](orderbookwatcher.md)
+[cw-sdk-node - v1.0.0-beta.6](../README.md) › [OrderBookWatcher](orderbookwatcher.md)
 
 # Class: OrderBookWatcher
 
@@ -32,7 +32,7 @@ connected to start getting updates.
 
 \+ **new OrderBookWatcher**(`marketID`: number, `snapshotUpdater`: [Updater](updater.md), `streamClient`: [StreamClient](streamclient.md)): *[OrderBookWatcher](orderbookwatcher.md)*
 
-*Defined in [src/orderbook/OrderBookWatcher.ts:21](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBookWatcher.ts#L21)*
+*Defined in [src/orderbook/OrderBookWatcher.ts:21](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/orderbook/OrderBookWatcher.ts#L21)*
 
 **Parameters:**
 
@@ -50,7 +50,7 @@ Name | Type | Description |
 
 • **get inSync**(): *boolean*
 
-*Defined in [src/orderbook/OrderBookWatcher.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBookWatcher.ts#L19)*
+*Defined in [src/orderbook/OrderBookWatcher.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/orderbook/OrderBookWatcher.ts#L19)*
 
 true if a snpshot has been retrieved and all of the latest deltas have been applied successfully
 
@@ -62,7 +62,7 @@ true if a snpshot has been retrieved and all of the latest deltas have been appl
 
 ▸ **destroy**(): *void*
 
-*Defined in [src/orderbook/OrderBookWatcher.ts:41](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBookWatcher.ts#L41)*
+*Defined in [src/orderbook/OrderBookWatcher.ts:41](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/orderbook/OrderBookWatcher.ts#L41)*
 
 Unsubscribes from updates to the watched market from the supplied StreamClient,
 clears all snapshot retrieval timeouts, and tears down all event listeners.
@@ -77,7 +77,7 @@ ___
 
 ▸ **onError**(`callback`: function): *void*
 
-*Defined in [src/orderbook/OrderBookWatcher.ts:77](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBookWatcher.ts#L77)*
+*Defined in [src/orderbook/OrderBookWatcher.ts:77](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/orderbook/OrderBookWatcher.ts#L77)*
 
 Adds an event listener that triggers the supplied callback on any error caught
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **onSyncStatusChange**(`callback`: function): *void*
 
-*Defined in [src/orderbook/OrderBookWatcher.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBookWatcher.ts#L62)*
+*Defined in [src/orderbook/OrderBookWatcher.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/orderbook/OrderBookWatcher.ts#L62)*
 
 Adds an event listener that triggers the supplied callback any time the inSync status changes.
 
@@ -131,7 +131,7 @@ ___
 
 ▸ **onUpdate**(`callback`: function): *void*
 
-*Defined in [src/orderbook/OrderBookWatcher.ts:50](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/orderbook/OrderBookWatcher.ts#L50)*
+*Defined in [src/orderbook/OrderBookWatcher.ts:50](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/orderbook/OrderBookWatcher.ts#L50)*
 
 Adds an event listener that triggers on each new update from an OrderBook snapshot and/or delta
 

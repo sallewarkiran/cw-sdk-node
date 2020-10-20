@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.5](../README.md) › [RESTResponse](restresponse.md)
+[cw-sdk-node - v1.0.0-beta.6](../README.md) › [RESTResponse](restresponse.md)
 
 # Interface: RESTResponse <**T**>
 
@@ -23,7 +23,7 @@
 
 • **allowance**: *[RESTAllowance](restallowance.md)*
 
-*Defined in [src/rest/types/client.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/types/client.ts#L9)*
+*Defined in [src/rest/types/client.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L9)*
 
 ___
 
@@ -31,4 +31,4 @@ ___
 
 • **result**: *T*
 
-*Defined in [src/rest/types/client.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/types/client.ts#L8)*
+*Defined in [src/rest/types/client.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L8)*
