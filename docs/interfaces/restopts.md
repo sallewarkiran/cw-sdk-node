@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.5](../README.md) › [RESTOpts](restopts.md)
+[cw-sdk-node - v1.0.0-beta.6](../README.md) › [RESTOpts](restopts.md)
 
 # Interface: RESTOpts
 
@@ -18,6 +18,6 @@
 
 • **creds**: *object*
 
-*Defined in [src/rest/types/client.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/rest/types/client.ts#L18)*
+*Defined in [src/rest/types/client.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L18)*
 
 #### Type declaration:

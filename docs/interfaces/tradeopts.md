@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.5](../README.md) › [TradeOpts](tradeopts.md)
+[cw-sdk-node - v1.0.0-beta.6](../README.md) › [TradeOpts](tradeopts.md)
 
 # Interface: TradeOpts
 
@@ -26,7 +26,7 @@
 
 *Inherited from [WebSocketOpts](websocketopts.md).[creds](websocketopts.md#creds)*
 
-*Defined in [src/websocket/types/client.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/client.ts#L6)*
+*Defined in [src/websocket/types/client.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/client.ts#L6)*
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 *Inherited from [WebSocketOpts](websocketopts.md).[logLevel](websocketopts.md#optional-loglevel)*
 
-*Defined in [src/websocket/types/client.ts:12](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/client.ts#L12)*
+*Defined in [src/websocket/types/client.ts:12](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/client.ts#L12)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 *Inherited from [WebSocketOpts](websocketopts.md).[nonce](websocketopts.md#optional-nonce)*
 
-*Defined in [src/websocket/types/client.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/client.ts#L16)*
+*Defined in [src/websocket/types/client.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/client.ts#L16)*
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 *Inherited from [WebSocketOpts](websocketopts.md).[reconnect](websocketopts.md#reconnect)*
 
-*Defined in [src/websocket/types/client.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/client.ts#L10)*
+*Defined in [src/websocket/types/client.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/client.ts#L10)*
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 • **tradeSubscriptions**: *[TradeSubscription](tradesubscription.md)[]*
 
-*Defined in [src/websocket/types/client.ts:40](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/client.ts#L40)*
+*Defined in [src/websocket/types/client.ts:40](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/client.ts#L40)*
