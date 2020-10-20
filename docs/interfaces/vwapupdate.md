@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.4](../README.md) › [VWAPUpdate](vwapupdate.md)
+[cw-sdk-node - v1.0.0-beta.5](../README.md) › [VWAPUpdate](vwapupdate.md)
 
 # Interface: VWAPUpdate
 
@@ -19,7 +19,7 @@
 
 • **timestamp**: *Date*
 
-*Defined in [src/websocket/types/pairs.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L14)*
+*Defined in [src/websocket/types/pairs.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/pairs.ts#L14)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **vwap**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:13](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/pairs.ts#L13)*
+*Defined in [src/websocket/types/pairs.ts:13](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/pairs.ts#L13)*

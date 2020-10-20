@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.4](../README.md) › [Interval](interval.md)
+[cw-sdk-node - v1.0.0-beta.5](../README.md) › [Interval](interval.md)
 
 # Interface: Interval
 
@@ -22,7 +22,7 @@
 
 • **closeTime**: *Date*
 
-*Defined in [src/websocket/types/markets.ts:24](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L24)*
+*Defined in [src/websocket/types/markets.ts:24](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/markets.ts#L24)*
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 • **ohlc**: *[OHLC](ohlc.md)*
 
-*Defined in [src/websocket/types/markets.ts:23](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L23)*
+*Defined in [src/websocket/types/markets.ts:23](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/markets.ts#L23)*
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 • **period**: *string*
 
-*Defined in [src/websocket/types/markets.ts:22](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L22)*
+*Defined in [src/websocket/types/markets.ts:22](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/markets.ts#L22)*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 • **volumeBase**: *string*
 
-*Defined in [src/websocket/types/markets.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L25)*
+*Defined in [src/websocket/types/markets.ts:25](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/markets.ts#L25)*
 
 ___
 
@@ -54,4 +54,4 @@ ___
 
 • **volumeQuote**: *string*
 
-*Defined in [src/websocket/types/markets.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/4ac4429/src/websocket/types/markets.ts#L26)*
+*Defined in [src/websocket/types/markets.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/ce1c44e/src/websocket/types/markets.ts#L26)*
