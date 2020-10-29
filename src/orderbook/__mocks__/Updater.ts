@@ -1,6 +1,6 @@
-import { SnapshotRetriever } from 'orderbook/SnapshotRetriever';
+import { SnapshotRetriever } from '../SnapshotRetriever';
 import { cachedMocks } from './mockCache';
-import { OrderBookDelta } from 'util/types/shared';
+import { OrderBookDelta } from '../../util/types/shared';
 
 export class Updater {
   snapshotRetriever: SnapshotRetriever;

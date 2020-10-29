@@ -1,4 +1,4 @@
-import { OrderBookDelta } from 'util/types/shared';
+import { OrderBookDelta } from '../../../util/types/shared';
 
 export const mockDelta1: OrderBookDelta = {
   seqNum: 1012075,
