@@ -3,7 +3,7 @@ import yaml from 'js-yaml';
 import os from 'os';
 import path from 'path';
 import logger from '../util/logger';
-import { RESTOpts } from 'rest/types/client';
+import { RESTOpts } from '../rest/types/client';
 import { Credentials, CredentialsType } from './types/credentials';
 import { StreamOpts, TradeOpts } from '../websocket/types/client';
 

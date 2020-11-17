@@ -2,7 +2,7 @@ import { OrderBookWatcher } from '../OrderBookWatcher';
 import { Substitute, Arg, SubstituteOf } from '@fluffy-spoon/substitute';
 import { Updater } from '../Updater';
 import { StreamClient } from '../../websocket/StreamClient';
-import { OrderBookSnapshot, OrderBookState } from 'util/types/shared';
+import { OrderBookSnapshot, OrderBookState } from '../../util/types/shared';
 
 describe('OrderBookWatcher.js tests', () => {
   describe('constructor tests', () => {

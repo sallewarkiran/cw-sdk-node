@@ -1,4 +1,4 @@
-import { Updater } from 'orderbook/Updater';
+import { Updater } from './Updater';
 import { StreamClient } from 'websocket';
 import { cachedMocks } from './mockCache';
 

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { RESTClient } from 'rest/RESTClient';
+import { RESTClient } from '../RESTClient';
 import superagent from 'superagent';
 import superagentMocker from 'superagent-mocker';
-import { loadRESTCredentials } from 'util/credentials';
+import { loadRESTCredentials } from '../../util/credentials';
 import {
   EXCHANGES,
   EXCHANGE_KRAKEN,

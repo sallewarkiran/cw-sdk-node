@@ -1,6 +1,6 @@
 import { mockSnapshot } from '../__tests__/data/snapshot';
-import { RESTClient } from 'rest';
-import { MarketSymbol } from 'util/types/shared';
+import { RESTClient } from '../../rest';
+import { MarketSymbol } from '../../util/types/shared';
 import { cachedMocks } from './mockCache';
 
 export class SnapshotRetriever {

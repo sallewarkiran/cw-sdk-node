@@ -1,13 +1,13 @@
-import { createOrderBookWatcher } from 'orderbook';
+import { createOrderBookWatcher } from '../index';
 import Substitute, { Arg } from '@fluffy-spoon/substitute';
-import { StreamClient } from 'websocket';
-import { RESTClient } from 'rest';
-import { getLastInitializedSnapshotRetriever } from 'orderbook/__mocks__/SnapshotRetriever';
-import { resetCache } from 'orderbook/__mocks__/mockCache';
-import { getLastInitializedUpdater } from 'orderbook/__mocks__/Updater';
-import { Market } from 'util/types/shared';
-import { getLastInitializedWatcher } from 'orderbook/__mocks__/OrderBookWatcher';
-import { MarketUpdate } from 'websocket/types/markets';
+import { StreamClient } from '../../websocket';
+import { RESTClient } from '../../rest';
+import { getLastInitializedSnapshotRetriever } from '../__mocks__/SnapshotRetriever';
+import { resetCache } from '../__mocks__/mockCache';
+import { getLastInitializedUpdater } from '../__mocks__/Updater';
+import { Market } from '../../util/types/shared';
+import { getLastInitializedWatcher } from '../__mocks__/OrderBookWatcher';
+import { MarketUpdate } from '../../websocket/types/markets';
 import { mocked } from 'ts-jest/utils';
 
 jest.mock('orderbook/Updater');

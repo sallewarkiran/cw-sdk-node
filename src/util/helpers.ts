@@ -1,7 +1,7 @@
 import { isLong } from 'long';
 import { DeltaItem, PublicOrder, OrderBookSnapshot } from './types/shared';
 import { Decimal } from 'decimal.js-light';
-import { OrderBookSnapshotRaw } from 'rest/types/data';
+import { OrderBookSnapshotRaw } from '../rest/types/data';
 
 export function guardIsLong(value: number | Long): value is Long {
   return isLong(value);
