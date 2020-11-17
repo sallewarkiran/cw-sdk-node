@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.6](../README.md) › [TradeSubscription](tradesubscription.md)
+[cw-sdk-node - v1.0.0-beta.7](../README.md) › [TradeSubscription](tradesubscription.md)
 
 # Interface: TradeSubscription
 
@@ -19,7 +19,7 @@
 
 • **auth**? : *[TradeSessionAuth](tradesessionauth.md)*
 
-*Defined in [src/websocket/types/client.ts:45](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/client.ts#L45)*
+*Defined in [src/websocket/types/client.ts:45](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/client.ts#L45)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **marketID**: *number*
 
-*Defined in [src/websocket/types/client.ts:44](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/client.ts#L44)*
+*Defined in [src/websocket/types/client.ts:44](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/client.ts#L44)*
