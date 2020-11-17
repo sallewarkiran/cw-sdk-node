@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.6](../README.md) › [PublicOrder](publicorder.md)
+[cw-sdk-node - v1.0.0-beta.7](../README.md) › [PublicOrder](publicorder.md)
 
 # Interface: PublicOrder
 
@@ -19,7 +19,7 @@
 
 • **amount**: *string*
 
-*Defined in [src/util/types/shared.ts:27](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/util/types/shared.ts#L27)*
+*Defined in [src/util/types/shared.ts:27](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/shared.ts#L27)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **price**: *string*
 
-*Defined in [src/util/types/shared.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/util/types/shared.ts#L26)*
+*Defined in [src/util/types/shared.ts:26](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/shared.ts#L26)*

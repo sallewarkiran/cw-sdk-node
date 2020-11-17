@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.6](../README.md) › [RESTErrorBody](resterrorbody.md)
+[cw-sdk-node - v1.0.0-beta.7](../README.md) › [RESTErrorBody](resterrorbody.md)
 
 # Interface: RESTErrorBody
 
@@ -19,7 +19,7 @@
 
 • **allowance**: *[RESTAllowance](restallowance.md)*
 
-*Defined in [src/rest/types/client.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L14)*
+*Defined in [src/rest/types/client.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L14)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **error**: *string*
 
-*Defined in [src/rest/types/client.ts:13](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L13)*
+*Defined in [src/rest/types/client.ts:13](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L13)*

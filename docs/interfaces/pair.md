@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.6](../README.md) › [Pair](pair.md)
+[cw-sdk-node - v1.0.0-beta.7](../README.md) › [Pair](pair.md)
 
 # Interface: Pair
 
@@ -18,4 +18,4 @@
 
 • **id**: *number*
 
-*Defined in [src/websocket/types/pairs.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/websocket/types/pairs.ts#L9)*
+*Defined in [src/websocket/types/pairs.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/pairs.ts#L9)*

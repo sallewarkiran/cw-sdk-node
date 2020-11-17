@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.6](../README.md) › [RESTAllowance](restallowance.md)
+[cw-sdk-node - v1.0.0-beta.7](../README.md) › [RESTAllowance](restallowance.md)
 
 # Interface: RESTAllowance
 
@@ -20,7 +20,7 @@
 
 • **cost**: *number*
 
-*Defined in [src/rest/types/client.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L2)*
+*Defined in [src/rest/types/client.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L2)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **remaining**: *number*
 
-*Defined in [src/rest/types/client.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L3)*
+*Defined in [src/rest/types/client.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L3)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **upgrade**: *string*
 
-*Defined in [src/rest/types/client.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/bf249b1/src/rest/types/client.ts#L4)*
+*Defined in [src/rest/types/client.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L4)*
