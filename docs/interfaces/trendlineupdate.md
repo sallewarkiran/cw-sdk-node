@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.7](../README.md) › [TrendlineUpdate](trendlineupdate.md)
+[cw-sdk-node - v1.0.0-beta.8](../README.md) › [TrendlineUpdate](trendlineupdate.md)
 
 # Interface: TrendlineUpdate
 

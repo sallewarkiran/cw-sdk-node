@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.7](../README.md) › [RESTOpts](restopts.md)
+[cw-sdk-node - v1.0.0-beta.8](../README.md) › [RESTOpts](restopts.md)
 
 # Interface: RESTOpts
 

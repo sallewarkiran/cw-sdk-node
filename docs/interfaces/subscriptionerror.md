@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.7](../README.md) › [SubscriptionError](subscriptionerror.md)
+[cw-sdk-node - v1.0.0-beta.8](../README.md) › [SubscriptionError](subscriptionerror.md)
 
 # Interface: SubscriptionError
 

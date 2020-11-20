@@ -1,6 +1,6 @@
-[cw-sdk-node - v1.0.0-beta.7](README.md)
+[cw-sdk-node - v1.0.0-beta.8](README.md)
 
-# cw-sdk-node - v1.0.0-beta.7
+# cw-sdk-node - v1.0.0-beta.8
 
 ## Index
 

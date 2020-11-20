@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.7](../README.md) › [OrderBookSnapshot](orderbooksnapshot.md)
+[cw-sdk-node - v1.0.0-beta.8](../README.md) › [OrderBookSnapshot](orderbooksnapshot.md)
 
 # Interface: OrderBookSnapshot
 
