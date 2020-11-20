@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.7](../README.md) › [PrivateOrder](privateorder.md)
+[cw-sdk-node - v1.0.0-beta.8](../README.md) › [PrivateOrder](privateorder.md)
 
 # Interface: PrivateOrder
 

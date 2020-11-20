@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.7](../README.md) › [MarketUpdate](marketupdate.md)
+[cw-sdk-node - v1.0.0-beta.8](../README.md) › [MarketUpdate](marketupdate.md)
 
 # Interface: MarketUpdate
 

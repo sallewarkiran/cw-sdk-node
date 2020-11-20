@@ -1,4 +1,4 @@
-[cw-sdk-node - v1.0.0-beta.7](../README.md) › [TradeClient](tradeclient.md)
+[cw-sdk-node - v1.0.0-beta.8](../README.md) › [TradeClient](tradeclient.md)
 
 # Class: TradeClient
 
