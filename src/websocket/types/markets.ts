@@ -1,4 +1,4 @@
-import { PublicOrder, OrderBookSnapshot, OrderBookDelta } from 'util/types/shared';
+import { PublicOrder, OrderBookSnapshot, OrderBookDelta } from '../../util/types/shared';
 import { OrderSide } from './trading';
 
 export interface MarketUpdate {

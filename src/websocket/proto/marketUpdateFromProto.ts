@@ -12,7 +12,7 @@ import {
 import { publicTradeSideFromProto } from './sideFromProto';
 import { getDateFromSecs, getDateFromNs, getNumber } from '../../util/helpers';
 import { periodNames } from './constants';
-import { PublicOrder, OrderBookSnapshot, OrderBookDelta } from 'util/types/shared';
+import { PublicOrder, OrderBookSnapshot, OrderBookDelta } from '../../util/types/shared';
 import { Period } from '../../rest/types/data';
 
 function publicOrderFromProto(publicOrder: ProtobufMarkets.IOrder): PublicOrder | null {
