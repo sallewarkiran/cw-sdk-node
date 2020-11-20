@@ -1,5 +1,5 @@
-import { ProtobufClient, ProtobufStream } from 'websocket/modules/proto';
-import { StreamClient } from 'websocket/StreamClient';
+import { ProtobufClient, ProtobufStream } from '../../websocket/modules/proto';
+import { StreamClient } from '../../websocket/StreamClient';
 import {
   badAPIKey,
   badNonce,
