@@ -25,6 +25,8 @@ proto-module: node_modules
 	echo "/* tslint:disable */" >> ${proto_module}/index.d.ts
 	cat proto.d.ts >> ${proto_module}/index.d.ts
 	rm proto.d.ts
+	# Copy pre-built d.ts files to build folder
+	yarn run copy-dts
 
 # Generate a version.ts file that exports the current version of the app
 version-file:

@@ -94,9 +94,9 @@ $root.google = (function() {
             Any.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.type_url != null && message.hasOwnProperty("type_url"))
+                if (message.type_url != null && Object.hasOwnProperty.call(message, "type_url"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.type_url);
-                if (message.value != null && message.hasOwnProperty("value"))
+                if (message.value != null && Object.hasOwnProperty.call(message, "value"))
                     writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.value);
                 return writer;
             };
@@ -313,9 +313,9 @@ $root.google = (function() {
             Duration.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                if (message.seconds != null && Object.hasOwnProperty.call(message, "seconds"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
-                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                if (message.nanos != null && Object.hasOwnProperty.call(message, "nanos"))
                     writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
                 return writer;
             };
@@ -697,9 +697,9 @@ $root.google = (function() {
             Timestamp.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.seconds != null && message.hasOwnProperty("seconds"))
+                if (message.seconds != null && Object.hasOwnProperty.call(message, "seconds"))
                     writer.uint32(/* id 1, wireType 0 =*/8).int64(message.seconds);
-                if (message.nanos != null && message.hasOwnProperty("nanos"))
+                if (message.nanos != null && Object.hasOwnProperty.call(message, "nanos"))
                     writer.uint32(/* id 2, wireType 0 =*/16).int32(message.nanos);
                 return writer;
             };
@@ -959,11 +959,11 @@ $root.ProtobufBroker = (function() {
         BrokerSessionMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.session != null && message.hasOwnProperty("session"))
+            if (message.session != null && Object.hasOwnProperty.call(message, "session"))
                 $root.ProtobufBroker.BrokerSessionMessage.Session.encode(message.session, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.anonymousTradingSession != null && message.hasOwnProperty("anonymousTradingSession"))
+            if (message.anonymousTradingSession != null && Object.hasOwnProperty.call(message, "anonymousTradingSession"))
                 $root.ProtobufBroker.BrokerSessionMessage.AnonymousTradingSession.encode(message.anonymousTradingSession, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.marketId != null && message.hasOwnProperty("marketId"))
+            if (message.marketId != null && Object.hasOwnProperty.call(message, "marketId"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int64(message.marketId);
             return writer;
         };
@@ -1233,13 +1233,13 @@ $root.ProtobufBroker = (function() {
             Session.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.userId != null && message.hasOwnProperty("userId"))
+                if (message.userId != null && Object.hasOwnProperty.call(message, "userId"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.userId);
-                if (message.expires != null && message.hasOwnProperty("expires"))
+                if (message.expires != null && Object.hasOwnProperty.call(message, "expires"))
                     writer.uint32(/* id 2, wireType 0 =*/16).int64(message.expires);
-                if (message.token != null && message.hasOwnProperty("token"))
+                if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                     writer.uint32(/* id 3, wireType 2 =*/26).string(message.token);
-                if (message.mfaToken != null && message.hasOwnProperty("mfaToken"))
+                if (message.mfaToken != null && Object.hasOwnProperty.call(message, "mfaToken"))
                     writer.uint32(/* id 4, wireType 2 =*/34).string(message.mfaToken);
                 return writer;
             };
@@ -1492,11 +1492,11 @@ $root.ProtobufBroker = (function() {
             AnonymousTradingSession.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.exchange != null && message.hasOwnProperty("exchange"))
+                if (message.exchange != null && Object.hasOwnProperty.call(message, "exchange"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.exchange);
-                if (message.token != null && message.hasOwnProperty("token"))
+                if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                     writer.uint32(/* id 2, wireType 2 =*/18).string(message.token);
-                if (message.expiration != null && message.hasOwnProperty("expiration"))
+                if (message.expiration != null && Object.hasOwnProperty.call(message, "expiration"))
                     writer.uint32(/* id 3, wireType 0 =*/24).int64(message.expiration);
                 return writer;
             };
@@ -1732,9 +1732,9 @@ $root.ProtobufBroker = (function() {
         PlaceOrderRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.order != null && message.hasOwnProperty("order"))
+            if (message.order != null && Object.hasOwnProperty.call(message, "order"))
                 $root.ProtobufBroker.PrivateOrder.encode(message.order, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.closingOrder != null && message.hasOwnProperty("closingOrder"))
+            if (message.closingOrder != null && Object.hasOwnProperty.call(message, "closingOrder"))
                 $root.ProtobufBroker.PrivateOrder.encode(message.closingOrder, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
@@ -1952,9 +1952,9 @@ $root.ProtobufBroker = (function() {
         PlaceOrderResult.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.orderId != null && message.hasOwnProperty("orderId"))
+            if (message.orderId != null && Object.hasOwnProperty.call(message, "orderId"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.orderId);
-            if (message.order != null && message.hasOwnProperty("order"))
+            if (message.order != null && Object.hasOwnProperty.call(message, "order"))
                 $root.ProtobufBroker.PrivateOrder.encode(message.order, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             return writer;
         };
@@ -2158,7 +2158,7 @@ $root.ProtobufBroker = (function() {
         CancelOrderRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.orderId != null && message.hasOwnProperty("orderId"))
+            if (message.orderId != null && Object.hasOwnProperty.call(message, "orderId"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.orderId);
             return writer;
         };
@@ -2345,7 +2345,7 @@ $root.ProtobufBroker = (function() {
         CancelOrderResult.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.orderId != null && message.hasOwnProperty("orderId"))
+            if (message.orderId != null && Object.hasOwnProperty.call(message, "orderId"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.orderId);
             return writer;
         };
@@ -2550,11 +2550,11 @@ $root.ProtobufBroker = (function() {
         ReplaceOrderRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.orderId != null && message.hasOwnProperty("orderId"))
+            if (message.orderId != null && Object.hasOwnProperty.call(message, "orderId"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.orderId);
-            if (message.replacement != null && message.hasOwnProperty("replacement"))
+            if (message.replacement != null && Object.hasOwnProperty.call(message, "replacement"))
                 $root.ProtobufBroker.PrivateOrder.encode(message.replacement, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.replacementClosingOrder != null && message.hasOwnProperty("replacementClosingOrder"))
+            if (message.replacementClosingOrder != null && Object.hasOwnProperty.call(message, "replacementClosingOrder"))
                 $root.ProtobufBroker.PrivateOrder.encode(message.replacementClosingOrder, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
@@ -2774,7 +2774,7 @@ $root.ProtobufBroker = (function() {
         ClosePositionRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.positionId != null && message.hasOwnProperty("positionId"))
+            if (message.positionId != null && Object.hasOwnProperty.call(message, "positionId"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.positionId);
             return writer;
         };
@@ -2961,7 +2961,7 @@ $root.ProtobufBroker = (function() {
         SettlePositionRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.positionId != null && message.hasOwnProperty("positionId"))
+            if (message.positionId != null && Object.hasOwnProperty.call(message, "positionId"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.positionId);
             return writer;
         };
@@ -3385,21 +3385,21 @@ $root.ProtobufBroker = (function() {
         BrokerRequest.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.id != null && message.hasOwnProperty("id"))
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
-            if (message.placeOrderRequest != null && message.hasOwnProperty("placeOrderRequest"))
+            if (message.placeOrderRequest != null && Object.hasOwnProperty.call(message, "placeOrderRequest"))
                 $root.ProtobufBroker.PlaceOrderRequest.encode(message.placeOrderRequest, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.cancelOrderRequest != null && message.hasOwnProperty("cancelOrderRequest"))
+            if (message.cancelOrderRequest != null && Object.hasOwnProperty.call(message, "cancelOrderRequest"))
                 $root.ProtobufBroker.CancelOrderRequest.encode(message.cancelOrderRequest, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.syncRequest != null && message.hasOwnProperty("syncRequest"))
+            if (message.syncRequest != null && Object.hasOwnProperty.call(message, "syncRequest"))
                 $root.ProtobufBroker.SyncRequest.encode(message.syncRequest, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.closePositionRequest != null && message.hasOwnProperty("closePositionRequest"))
+            if (message.closePositionRequest != null && Object.hasOwnProperty.call(message, "closePositionRequest"))
                 $root.ProtobufBroker.ClosePositionRequest.encode(message.closePositionRequest, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-            if (message.replaceOrderRequest != null && message.hasOwnProperty("replaceOrderRequest"))
+            if (message.replaceOrderRequest != null && Object.hasOwnProperty.call(message, "replaceOrderRequest"))
                 $root.ProtobufBroker.ReplaceOrderRequest.encode(message.replaceOrderRequest, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-            if (message.marketId != null && message.hasOwnProperty("marketId"))
+            if (message.marketId != null && Object.hasOwnProperty.call(message, "marketId"))
                 writer.uint32(/* id 7, wireType 0 =*/56).int64(message.marketId);
-            if (message.settlePositionRequest != null && message.hasOwnProperty("settlePositionRequest"))
+            if (message.settlePositionRequest != null && Object.hasOwnProperty.call(message, "settlePositionRequest"))
                 $root.ProtobufBroker.SettlePositionRequest.encode(message.settlePositionRequest, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
             return writer;
         };
@@ -4892,17 +4892,17 @@ $root.ProtobufBroker = (function() {
         RequestResolutionUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.id != null && message.hasOwnProperty("id"))
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
-            if (message.error != null && message.hasOwnProperty("error"))
+            if (message.error != null && Object.hasOwnProperty.call(message, "error"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.error);
-            if (message.message != null && message.hasOwnProperty("message"))
+            if (message.message != null && Object.hasOwnProperty.call(message, "message"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.message);
-            if (message.placeOrderResult != null && message.hasOwnProperty("placeOrderResult"))
+            if (message.placeOrderResult != null && Object.hasOwnProperty.call(message, "placeOrderResult"))
                 $root.ProtobufBroker.PlaceOrderResult.encode(message.placeOrderResult, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.cancelOrderResult != null && message.hasOwnProperty("cancelOrderResult"))
+            if (message.cancelOrderResult != null && Object.hasOwnProperty.call(message, "cancelOrderResult"))
                 $root.ProtobufBroker.CancelOrderResult.encode(message.cancelOrderResult, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-            if (message.errorV2 != null && message.hasOwnProperty("errorV2"))
+            if (message.errorV2 != null && Object.hasOwnProperty.call(message, "errorV2"))
                 $root.ProtobufBroker.Error.encode(message.errorV2, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             return writer;
         };
@@ -5182,9 +5182,9 @@ $root.ProtobufBroker = (function() {
         AnonymousSessionStatusUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.expiration != null && message.hasOwnProperty("expiration"))
+            if (message.expiration != null && Object.hasOwnProperty.call(message, "expiration"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int64(message.expiration);
-            if (message.token != null && message.hasOwnProperty("token"))
+            if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.token);
             return writer;
         };
@@ -5424,13 +5424,13 @@ $root.ProtobufBroker = (function() {
         SessionStatusUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.initialized != null && message.hasOwnProperty("initialized"))
+            if (message.initialized != null && Object.hasOwnProperty.call(message, "initialized"))
                 writer.uint32(/* id 1, wireType 0 =*/8).bool(message.initialized);
-            if (message.syncing != null && message.hasOwnProperty("syncing"))
+            if (message.syncing != null && Object.hasOwnProperty.call(message, "syncing"))
                 writer.uint32(/* id 2, wireType 0 =*/16).bool(message.syncing);
-            if (message.lastSyncTime != null && message.hasOwnProperty("lastSyncTime"))
+            if (message.lastSyncTime != null && Object.hasOwnProperty.call(message, "lastSyncTime"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int64(message.lastSyncTime);
-            if (message.syncError != null && message.hasOwnProperty("syncError"))
+            if (message.syncError != null && Object.hasOwnProperty.call(message, "syncError"))
                 writer.uint32(/* id 4, wireType 0 =*/32).int32(message.syncError);
             return writer;
         };
@@ -5713,9 +5713,9 @@ $root.ProtobufBroker = (function() {
             if (message.agreements != null && message.agreements.length)
                 for (var i = 0; i < message.agreements.length; ++i)
                     $root.ProtobufBroker.PermissionsUpdate.Agreement.encode(message.agreements[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.leverageLevels != null && message.hasOwnProperty("leverageLevels"))
+            if (message.leverageLevels != null && Object.hasOwnProperty.call(message, "leverageLevels"))
                 $root.ProtobufBroker.PermissionsUpdate.LeverageLevels.encode(message.leverageLevels, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-            if (message.supportsOrderExpiry != null && message.hasOwnProperty("supportsOrderExpiry"))
+            if (message.supportsOrderExpiry != null && Object.hasOwnProperty.call(message, "supportsOrderExpiry"))
                 writer.uint32(/* id 7, wireType 0 =*/56).bool(message.supportsOrderExpiry);
             return writer;
         };
@@ -6107,9 +6107,9 @@ $root.ProtobufBroker = (function() {
             Agreement.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.key != null && message.hasOwnProperty("key"))
+                if (message.key != null && Object.hasOwnProperty.call(message, "key"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.key);
-                if (message.body != null && message.hasOwnProperty("body"))
+                if (message.body != null && Object.hasOwnProperty.call(message, "body"))
                     writer.uint32(/* id 2, wireType 2 =*/18).string(message.body);
                 return writer;
             };
@@ -6571,11 +6571,11 @@ $root.ProtobufBroker = (function() {
         APIAccessorStatusUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.hasAccess != null && message.hasOwnProperty("hasAccess"))
+            if (message.hasAccess != null && Object.hasOwnProperty.call(message, "hasAccess"))
                 writer.uint32(/* id 1, wireType 0 =*/8).bool(message.hasAccess);
-            if (message.status != null && message.hasOwnProperty("status"))
+            if (message.status != null && Object.hasOwnProperty.call(message, "status"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int32(message.status);
-            if (message.statusString != null && message.hasOwnProperty("statusString"))
+            if (message.statusString != null && Object.hasOwnProperty.call(message, "statusString"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.statusString);
             return writer;
         };
@@ -6916,33 +6916,33 @@ $root.ProtobufBroker = (function() {
         BrokerUpdateMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.ordersUpdate != null && message.hasOwnProperty("ordersUpdate"))
+            if (message.ordersUpdate != null && Object.hasOwnProperty.call(message, "ordersUpdate"))
                 $root.ProtobufBroker.OrdersUpdate.encode(message.ordersUpdate, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.tradesUpdate != null && message.hasOwnProperty("tradesUpdate"))
+            if (message.tradesUpdate != null && Object.hasOwnProperty.call(message, "tradesUpdate"))
                 $root.ProtobufBroker.TradesUpdate.encode(message.tradesUpdate, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.balancesUpdate != null && message.hasOwnProperty("balancesUpdate"))
+            if (message.balancesUpdate != null && Object.hasOwnProperty.call(message, "balancesUpdate"))
                 $root.ProtobufBroker.BalancesUpdate.encode(message.balancesUpdate, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.requestResolutionUpdate != null && message.hasOwnProperty("requestResolutionUpdate"))
+            if (message.requestResolutionUpdate != null && Object.hasOwnProperty.call(message, "requestResolutionUpdate"))
                 $root.ProtobufBroker.RequestResolutionUpdate.encode(message.requestResolutionUpdate, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.anonymousSessionStatusUpdate != null && message.hasOwnProperty("anonymousSessionStatusUpdate"))
+            if (message.anonymousSessionStatusUpdate != null && Object.hasOwnProperty.call(message, "anonymousSessionStatusUpdate"))
                 $root.ProtobufBroker.AnonymousSessionStatusUpdate.encode(message.anonymousSessionStatusUpdate, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-            if (message.permissionsUpdate != null && message.hasOwnProperty("permissionsUpdate"))
+            if (message.permissionsUpdate != null && Object.hasOwnProperty.call(message, "permissionsUpdate"))
                 $root.ProtobufBroker.PermissionsUpdate.encode(message.permissionsUpdate, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-            if (message.sessionStatusUpdate != null && message.hasOwnProperty("sessionStatusUpdate"))
+            if (message.sessionStatusUpdate != null && Object.hasOwnProperty.call(message, "sessionStatusUpdate"))
                 $root.ProtobufBroker.SessionStatusUpdate.encode(message.sessionStatusUpdate, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-            if (message.positionsUpdate != null && message.hasOwnProperty("positionsUpdate"))
+            if (message.positionsUpdate != null && Object.hasOwnProperty.call(message, "positionsUpdate"))
                 $root.ProtobufBroker.PositionsUpdate.encode(message.positionsUpdate, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-            if (message.apiAccessorStatusUpdate != null && message.hasOwnProperty("apiAccessorStatusUpdate"))
+            if (message.apiAccessorStatusUpdate != null && Object.hasOwnProperty.call(message, "apiAccessorStatusUpdate"))
                 $root.ProtobufBroker.APIAccessorStatusUpdate.encode(message.apiAccessorStatusUpdate, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
-            if (message.authenticationResult != null && message.hasOwnProperty("authenticationResult"))
+            if (message.authenticationResult != null && Object.hasOwnProperty.call(message, "authenticationResult"))
                 $root.ProtobufStream.AuthenticationResult.encode(message.authenticationResult, writer.uint32(/* id 10, wireType 2 =*/82).fork()).ldelim();
-            if (message.marketId != null && message.hasOwnProperty("marketId"))
+            if (message.marketId != null && Object.hasOwnProperty.call(message, "marketId"))
                 writer.uint32(/* id 11, wireType 0 =*/88).int64(message.marketId);
-            if (message.subscriptionResult != null && message.hasOwnProperty("subscriptionResult"))
+            if (message.subscriptionResult != null && Object.hasOwnProperty.call(message, "subscriptionResult"))
                 $root.ProtobufStream.SubscriptionResult.encode(message.subscriptionResult, writer.uint32(/* id 12, wireType 2 =*/98).fork()).ldelim();
-            if (message.webAuthenticationResult != null && message.hasOwnProperty("webAuthenticationResult"))
+            if (message.webAuthenticationResult != null && Object.hasOwnProperty.call(message, "webAuthenticationResult"))
                 $root.ProtobufClient.WebAuthenticationResult.encode(message.webAuthenticationResult, writer.uint32(/* id 14, wireType 2 =*/114).fork()).ldelim();
-            if (message.ledgersUpdate != null && message.hasOwnProperty("ledgersUpdate"))
+            if (message.ledgersUpdate != null && Object.hasOwnProperty.call(message, "ledgersUpdate"))
                 $root.ProtobufBroker.LedgersUpdate.encode(message.ledgersUpdate, writer.uint32(/* id 15, wireType 2 =*/122).fork()).ldelim();
             return writer;
         };
@@ -7469,11 +7469,11 @@ $root.ProtobufBroker = (function() {
         Error.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.kind != null && message.hasOwnProperty("kind"))
+            if (message.kind != null && Object.hasOwnProperty.call(message, "kind"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.kind);
-            if (message.code != null && message.hasOwnProperty("code"))
+            if (message.code != null && Object.hasOwnProperty.call(message, "code"))
                 writer.uint32(/* id 2, wireType 0 =*/16).uint64(message.code);
-            if (message.message != null && message.hasOwnProperty("message"))
+            if (message.message != null && Object.hasOwnProperty.call(message, "message"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.message);
             if (message.details != null && message.details.length)
                 for (var i = 0; i < message.details.length; ++i)
@@ -7723,7 +7723,7 @@ $root.ProtobufBroker = (function() {
         /**
          * Kind enum.
          * @name ProtobufBroker.Error.Kind
-         * @enum {string}
+         * @enum {number}
          * @property {number} KIND_UNKNOWN=0 KIND_UNKNOWN value
          * @property {number} KIND_INTERNAL=1 KIND_INTERNAL value
          * @property {number} KIND_TRANSIENT=2 KIND_TRANSIENT value
@@ -7754,7 +7754,7 @@ $root.ProtobufBroker = (function() {
     /**
      * FundingType enum.
      * @name ProtobufBroker.FundingType
-     * @enum {string}
+     * @enum {number}
      * @property {number} Spot=0 Spot value
      * @property {number} Margin=1 Margin value
      * @property {number} Staking=2 Staking value
@@ -8014,51 +8014,51 @@ $root.ProtobufBroker = (function() {
         PrivateOrder.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.id != null && message.hasOwnProperty("id"))
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.time);
-            if (message.side != null && message.hasOwnProperty("side"))
+            if (message.side != null && Object.hasOwnProperty.call(message, "side"))
                 writer.uint32(/* id 5, wireType 0 =*/40).int32(message.side);
-            if (message.type != null && message.hasOwnProperty("type"))
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                 writer.uint32(/* id 6, wireType 0 =*/48).int32(message.type);
-            if (message.fundingType != null && message.hasOwnProperty("fundingType"))
+            if (message.fundingType != null && Object.hasOwnProperty.call(message, "fundingType"))
                 writer.uint32(/* id 7, wireType 0 =*/56).int32(message.fundingType);
             if (message.priceParams != null && message.priceParams.length)
                 for (var i = 0; i < message.priceParams.length; ++i)
                     $root.ProtobufBroker.PrivateOrder.PriceParam.encode(message.priceParams[i], writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-            if (message.leverage != null && message.hasOwnProperty("leverage"))
+            if (message.leverage != null && Object.hasOwnProperty.call(message, "leverage"))
                 writer.uint32(/* id 10, wireType 2 =*/82).string(message.leverage);
-            if (message.startTime != null && message.hasOwnProperty("startTime"))
+            if (message.startTime != null && Object.hasOwnProperty.call(message, "startTime"))
                 writer.uint32(/* id 13, wireType 0 =*/104).int64(message.startTime);
-            if (message.expireTime != null && message.hasOwnProperty("expireTime"))
+            if (message.expireTime != null && Object.hasOwnProperty.call(message, "expireTime"))
                 writer.uint32(/* id 14, wireType 0 =*/112).int64(message.expireTime);
-            if (message.rate != null && message.hasOwnProperty("rate"))
+            if (message.rate != null && Object.hasOwnProperty.call(message, "rate"))
                 writer.uint32(/* id 15, wireType 5 =*/125).float(message.rate);
-            if (message.amountParamString != null && message.hasOwnProperty("amountParamString"))
+            if (message.amountParamString != null && Object.hasOwnProperty.call(message, "amountParamString"))
                 writer.uint32(/* id 16, wireType 2 =*/130).string(message.amountParamString);
-            if (message.amountFilledString != null && message.hasOwnProperty("amountFilledString"))
+            if (message.amountFilledString != null && Object.hasOwnProperty.call(message, "amountFilledString"))
                 writer.uint32(/* id 17, wireType 2 =*/138).string(message.amountFilledString);
-            if (message.currentStopString != null && message.hasOwnProperty("currentStopString"))
+            if (message.currentStopString != null && Object.hasOwnProperty.call(message, "currentStopString"))
                 writer.uint32(/* id 18, wireType 2 =*/146).string(message.currentStopString);
-            if (message.initialStopString != null && message.hasOwnProperty("initialStopString"))
+            if (message.initialStopString != null && Object.hasOwnProperty.call(message, "initialStopString"))
                 writer.uint32(/* id 19, wireType 2 =*/154).string(message.initialStopString);
-            if (message.hasClosingOrder != null && message.hasOwnProperty("hasClosingOrder"))
+            if (message.hasClosingOrder != null && Object.hasOwnProperty.call(message, "hasClosingOrder"))
                 writer.uint32(/* id 20, wireType 0 =*/160).bool(message.hasClosingOrder);
-            if (message.closingOrderType != null && message.hasOwnProperty("closingOrderType"))
+            if (message.closingOrderType != null && Object.hasOwnProperty.call(message, "closingOrderType"))
                 writer.uint32(/* id 21, wireType 0 =*/168).int32(message.closingOrderType);
             if (message.closingOrderPriceParams != null && message.closingOrderPriceParams.length)
                 for (var i = 0; i < message.closingOrderPriceParams.length; ++i)
                     $root.ProtobufBroker.PrivateOrder.PriceParam.encode(message.closingOrderPriceParams[i], writer.uint32(/* id 22, wireType 2 =*/178).fork()).ldelim();
-            if (message.feeCurrency != null && message.hasOwnProperty("feeCurrency"))
+            if (message.feeCurrency != null && Object.hasOwnProperty.call(message, "feeCurrency"))
                 writer.uint32(/* id 23, wireType 0 =*/184).int32(message.feeCurrency);
-            if (message.postOnly != null && message.hasOwnProperty("postOnly"))
+            if (message.postOnly != null && Object.hasOwnProperty.call(message, "postOnly"))
                 writer.uint32(/* id 24, wireType 0 =*/192).bool(message.postOnly);
-            if (message.groupId != null && message.hasOwnProperty("groupId"))
+            if (message.groupId != null && Object.hasOwnProperty.call(message, "groupId"))
                 writer.uint32(/* id 25, wireType 2 =*/202).string(message.groupId);
-            if (message.fillOrKill != null && message.hasOwnProperty("fillOrKill"))
+            if (message.fillOrKill != null && Object.hasOwnProperty.call(message, "fillOrKill"))
                 writer.uint32(/* id 26, wireType 0 =*/208).bool(message.fillOrKill);
-            if (message.immediateOrCancel != null && message.hasOwnProperty("immediateOrCancel"))
+            if (message.immediateOrCancel != null && Object.hasOwnProperty.call(message, "immediateOrCancel"))
                 writer.uint32(/* id 27, wireType 0 =*/216).bool(message.immediateOrCancel);
             return writer;
         };
@@ -8675,7 +8675,7 @@ $root.ProtobufBroker = (function() {
         /**
          * Type enum.
          * @name ProtobufBroker.PrivateOrder.Type
-         * @enum {string}
+         * @enum {number}
          * @property {number} Market=0 Market value
          * @property {number} Limit=1 Limit value
          * @property {number} StopLoss=2 StopLoss value
@@ -8711,7 +8711,7 @@ $root.ProtobufBroker = (function() {
         /**
          * PriceParamType enum.
          * @name ProtobufBroker.PrivateOrder.PriceParamType
-         * @enum {string}
+         * @enum {number}
          * @property {number} AbsoluteValue=0 AbsoluteValue value
          * @property {number} OffsetValue=1 OffsetValue value
          * @property {number} PrecentageOffsetValue=2 PrecentageOffsetValue value
@@ -8789,9 +8789,9 @@ $root.ProtobufBroker = (function() {
             PriceParam.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.type != null && message.hasOwnProperty("type"))
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                     writer.uint32(/* id 2, wireType 0 =*/16).int32(message.type);
-                if (message.valueString != null && message.hasOwnProperty("valueString"))
+                if (message.valueString != null && Object.hasOwnProperty.call(message, "valueString"))
                     writer.uint32(/* id 3, wireType 2 =*/26).string(message.valueString);
                 return writer;
             };
@@ -8955,7 +8955,7 @@ $root.ProtobufBroker = (function() {
         /**
          * CurrencyPairSide enum.
          * @name ProtobufBroker.PrivateOrder.CurrencyPairSide
-         * @enum {string}
+         * @enum {number}
          * @property {number} CURRENCY_PAIR_SIDE_UNKNOWN=0 CURRENCY_PAIR_SIDE_UNKNOWN value
          * @property {number} CURRENCY_PAIR_SIDE_BASE=1 CURRENCY_PAIR_SIDE_BASE value
          * @property {number} CURRENCY_PAIR_SIDE_QUOTE=2 CURRENCY_PAIR_SIDE_QUOTE value
@@ -9090,21 +9090,21 @@ $root.ProtobufBroker = (function() {
         PrivateTrade.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.id != null && message.hasOwnProperty("id"))
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int64(message.id);
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.time);
-            if (message.side != null && message.hasOwnProperty("side"))
+            if (message.side != null && Object.hasOwnProperty.call(message, "side"))
                 writer.uint32(/* id 5, wireType 0 =*/40).int32(message.side);
-            if (message.timeMillis != null && message.hasOwnProperty("timeMillis"))
+            if (message.timeMillis != null && Object.hasOwnProperty.call(message, "timeMillis"))
                 writer.uint32(/* id 6, wireType 0 =*/48).int64(message.timeMillis);
-            if (message.externalId != null && message.hasOwnProperty("externalId"))
+            if (message.externalId != null && Object.hasOwnProperty.call(message, "externalId"))
                 writer.uint32(/* id 7, wireType 2 =*/58).string(message.externalId);
-            if (message.orderId != null && message.hasOwnProperty("orderId"))
+            if (message.orderId != null && Object.hasOwnProperty.call(message, "orderId"))
                 writer.uint32(/* id 8, wireType 2 =*/66).string(message.orderId);
-            if (message.priceString != null && message.hasOwnProperty("priceString"))
+            if (message.priceString != null && Object.hasOwnProperty.call(message, "priceString"))
                 writer.uint32(/* id 9, wireType 2 =*/74).string(message.priceString);
-            if (message.amountString != null && message.hasOwnProperty("amountString"))
+            if (message.amountString != null && Object.hasOwnProperty.call(message, "amountString"))
                 writer.uint32(/* id 10, wireType 2 =*/82).string(message.amountString);
             return writer;
         };
@@ -9485,11 +9485,11 @@ $root.ProtobufBroker = (function() {
         PrivatePosition.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.id != null && message.hasOwnProperty("id"))
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.id);
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.time);
-            if (message.side != null && message.hasOwnProperty("side"))
+            if (message.side != null && Object.hasOwnProperty.call(message, "side"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int32(message.side);
             if (message.orderIds != null && message.orderIds.length)
                 for (var i = 0; i < message.orderIds.length; ++i)
@@ -9497,13 +9497,13 @@ $root.ProtobufBroker = (function() {
             if (message.tradeIds != null && message.tradeIds.length)
                 for (var i = 0; i < message.tradeIds.length; ++i)
                     writer.uint32(/* id 8, wireType 2 =*/66).string(message.tradeIds[i]);
-            if (message.avgPriceString != null && message.hasOwnProperty("avgPriceString"))
+            if (message.avgPriceString != null && Object.hasOwnProperty.call(message, "avgPriceString"))
                 writer.uint32(/* id 9, wireType 2 =*/74).string(message.avgPriceString);
-            if (message.amountOpenString != null && message.hasOwnProperty("amountOpenString"))
+            if (message.amountOpenString != null && Object.hasOwnProperty.call(message, "amountOpenString"))
                 writer.uint32(/* id 10, wireType 2 =*/82).string(message.amountOpenString);
-            if (message.amountClosedString != null && message.hasOwnProperty("amountClosedString"))
+            if (message.amountClosedString != null && Object.hasOwnProperty.call(message, "amountClosedString"))
                 writer.uint32(/* id 11, wireType 2 =*/90).string(message.amountClosedString);
-            if (message.profitLoss != null && message.hasOwnProperty("profitLoss"))
+            if (message.profitLoss != null && Object.hasOwnProperty.call(message, "profitLoss"))
                 writer.uint32(/* id 12, wireType 2 =*/98).string(message.profitLoss);
             return writer;
         };
@@ -9832,9 +9832,9 @@ $root.ProtobufBroker = (function() {
         Balance.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.currency != null && message.hasOwnProperty("currency"))
+            if (message.currency != null && Object.hasOwnProperty.call(message, "currency"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.currency);
-            if (message.amountString != null && message.hasOwnProperty("amountString"))
+            if (message.amountString != null && Object.hasOwnProperty.call(message, "amountString"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.amountString);
             return writer;
         };
@@ -10043,7 +10043,7 @@ $root.ProtobufBroker = (function() {
         Balances.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.fundingType != null && message.hasOwnProperty("fundingType"))
+            if (message.fundingType != null && Object.hasOwnProperty.call(message, "fundingType"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.fundingType);
             if (message.balances != null && message.balances.length)
                 for (var i = 0; i < message.balances.length; ++i)
@@ -10336,19 +10336,19 @@ $root.ProtobufBroker = (function() {
         PrivateLedger.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.externalId != null && message.hasOwnProperty("externalId"))
+            if (message.externalId != null && Object.hasOwnProperty.call(message, "externalId"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.externalId);
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 $root.google.protobuf.Timestamp.encode(message.time, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.type != null && message.hasOwnProperty("type"))
+            if (message.type != null && Object.hasOwnProperty.call(message, "type"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int32(message.type);
-            if (message.symbol != null && message.hasOwnProperty("symbol"))
+            if (message.symbol != null && Object.hasOwnProperty.call(message, "symbol"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.symbol);
-            if (message.amountString != null && message.hasOwnProperty("amountString"))
+            if (message.amountString != null && Object.hasOwnProperty.call(message, "amountString"))
                 writer.uint32(/* id 5, wireType 2 =*/42).string(message.amountString);
-            if (message.feeAmountString != null && message.hasOwnProperty("feeAmountString"))
+            if (message.feeAmountString != null && Object.hasOwnProperty.call(message, "feeAmountString"))
                 writer.uint32(/* id 6, wireType 2 =*/50).string(message.feeAmountString);
-            if (message.balanceString != null && message.hasOwnProperty("balanceString"))
+            if (message.balanceString != null && Object.hasOwnProperty.call(message, "balanceString"))
                 writer.uint32(/* id 7, wireType 2 =*/58).string(message.balanceString);
             return writer;
         };
@@ -10589,7 +10589,7 @@ $root.ProtobufBroker = (function() {
         /**
          * Type enum.
          * @name ProtobufBroker.PrivateLedger.Type
-         * @enum {string}
+         * @enum {number}
          * @property {number} All=0 All value
          * @property {number} Deposit=1 Deposit value
          * @property {number} Withdrawal=2 Withdrawal value
@@ -10740,17 +10740,17 @@ $root.ProtobufClient = (function() {
         ClientMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.identification != null && message.hasOwnProperty("identification"))
+            if (message.identification != null && Object.hasOwnProperty.call(message, "identification"))
                 $root.ProtobufClient.ClientIdentificationMessage.encode(message.identification, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.subscribe != null && message.hasOwnProperty("subscribe"))
+            if (message.subscribe != null && Object.hasOwnProperty.call(message, "subscribe"))
                 $root.ProtobufClient.ClientSubscribeMessage.encode(message.subscribe, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.unsubscribe != null && message.hasOwnProperty("unsubscribe"))
+            if (message.unsubscribe != null && Object.hasOwnProperty.call(message, "unsubscribe"))
                 $root.ProtobufClient.ClientUnsubscribeMessage.encode(message.unsubscribe, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.webAuthentication != null && message.hasOwnProperty("webAuthentication"))
+            if (message.webAuthentication != null && Object.hasOwnProperty.call(message, "webAuthentication"))
                 $root.ProtobufClient.WebAuthenticationMessage.encode(message.webAuthentication, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.apiAuthentication != null && message.hasOwnProperty("apiAuthentication"))
+            if (message.apiAuthentication != null && Object.hasOwnProperty.call(message, "apiAuthentication"))
                 $root.ProtobufClient.APIAuthenticationMessage.encode(message.apiAuthentication, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-            if (message.clientSession != null && message.hasOwnProperty("clientSession"))
+            if (message.clientSession != null && Object.hasOwnProperty.call(message, "clientSession"))
                 $root.ProtobufClient.ClientSessionMessage.encode(message.clientSession, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             return writer;
         };
@@ -11109,13 +11109,13 @@ $root.ProtobufClient = (function() {
         ClientIdentificationMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.useragent != null && message.hasOwnProperty("useragent"))
+            if (message.useragent != null && Object.hasOwnProperty.call(message, "useragent"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.useragent);
-            if (message.revision != null && message.hasOwnProperty("revision"))
+            if (message.revision != null && Object.hasOwnProperty.call(message, "revision"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.revision);
-            if (message.integration != null && message.hasOwnProperty("integration"))
+            if (message.integration != null && Object.hasOwnProperty.call(message, "integration"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.integration);
-            if (message.locale != null && message.hasOwnProperty("locale"))
+            if (message.locale != null && Object.hasOwnProperty.call(message, "locale"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.locale);
             if (message.subscriptions != null && message.subscriptions.length)
                 for (var i = 0; i < message.subscriptions.length; ++i)
@@ -11427,11 +11427,11 @@ $root.ProtobufClient = (function() {
         WebAuthenticationMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.identification != null && message.hasOwnProperty("identification"))
+            if (message.identification != null && Object.hasOwnProperty.call(message, "identification"))
                 $root.ProtobufClient.ClientIdentificationMessage.encode(message.identification, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.token != null && message.hasOwnProperty("token"))
+            if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.token);
-            if (message.nonce != null && message.hasOwnProperty("nonce"))
+            if (message.nonce != null && Object.hasOwnProperty.call(message, "nonce"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.nonce);
             if (message.accessList != null && message.accessList.length)
                 for (var i = 0; i < message.accessList.length; ++i)
@@ -11675,7 +11675,7 @@ $root.ProtobufClient = (function() {
         WebAuthenticationResult.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.status != null && message.hasOwnProperty("status"))
+            if (message.status != null && Object.hasOwnProperty.call(message, "status"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.status);
             return writer;
         };
@@ -11829,7 +11829,7 @@ $root.ProtobufClient = (function() {
         /**
          * Status enum.
          * @name ProtobufClient.WebAuthenticationResult.Status
-         * @enum {string}
+         * @enum {number}
          * @property {number} UNKNOWN=0 UNKNOWN value
          * @property {number} AUTHENTICATED=1 AUTHENTICATED value
          * @property {number} INVALID_SESSION=2 INVALID_SESSION value
@@ -11930,13 +11930,13 @@ $root.ProtobufClient = (function() {
         TradeSessionAuth.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.apiKey != null && message.hasOwnProperty("apiKey"))
+            if (message.apiKey != null && Object.hasOwnProperty.call(message, "apiKey"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.apiKey);
-            if (message.apiSecret != null && message.hasOwnProperty("apiSecret"))
+            if (message.apiSecret != null && Object.hasOwnProperty.call(message, "apiSecret"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.apiSecret);
-            if (message.customerId != null && message.hasOwnProperty("customerId"))
+            if (message.customerId != null && Object.hasOwnProperty.call(message, "customerId"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.customerId);
-            if (message.keyPassphrase != null && message.hasOwnProperty("keyPassphrase"))
+            if (message.keyPassphrase != null && Object.hasOwnProperty.call(message, "keyPassphrase"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.keyPassphrase);
             return writer;
         };
@@ -12166,9 +12166,9 @@ $root.ProtobufClient = (function() {
         TradeSubscription.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.marketId != null && message.hasOwnProperty("marketId"))
+            if (message.marketId != null && Object.hasOwnProperty.call(message, "marketId"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.marketId);
-            if (message.auth != null && message.hasOwnProperty("auth"))
+            if (message.auth != null && Object.hasOwnProperty.call(message, "auth"))
                 $root.ProtobufClient.TradeSessionAuth.encode(message.auth, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             return writer;
         };
@@ -12372,7 +12372,7 @@ $root.ProtobufClient = (function() {
         StreamSubscription.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.resource != null && message.hasOwnProperty("resource"))
+            if (message.resource != null && Object.hasOwnProperty.call(message, "resource"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.resource);
             return writer;
         };
@@ -12582,9 +12582,9 @@ $root.ProtobufClient = (function() {
         UserPushSubscription.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.triggeredHandlers != null && message.hasOwnProperty("triggeredHandlers"))
+            if (message.triggeredHandlers != null && Object.hasOwnProperty.call(message, "triggeredHandlers"))
                 $root.ProtobufClient.UserPushSubscription.TriggeredHandlers.encode(message.triggeredHandlers, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.achievements != null && message.hasOwnProperty("achievements"))
+            if (message.achievements != null && Object.hasOwnProperty.call(message, "achievements"))
                 $root.ProtobufClient.UserPushSubscription.Achievements.encode(message.achievements, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             return writer;
         };
@@ -13325,13 +13325,13 @@ $root.ProtobufClient = (function() {
         ClientSubscription.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.streamSubscription != null && message.hasOwnProperty("streamSubscription"))
+            if (message.streamSubscription != null && Object.hasOwnProperty.call(message, "streamSubscription"))
                 $root.ProtobufClient.StreamSubscription.encode(message.streamSubscription, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.tradeSubscription != null && message.hasOwnProperty("tradeSubscription"))
+            if (message.tradeSubscription != null && Object.hasOwnProperty.call(message, "tradeSubscription"))
                 $root.ProtobufClient.TradeSubscription.encode(message.tradeSubscription, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.triggerSubscription != null && message.hasOwnProperty("triggerSubscription"))
+            if (message.triggerSubscription != null && Object.hasOwnProperty.call(message, "triggerSubscription"))
                 $root.ProtobufClient.TriggerSubscription.encode(message.triggerSubscription, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.userPushSubscription != null && message.hasOwnProperty("userPushSubscription"))
+            if (message.userPushSubscription != null && Object.hasOwnProperty.call(message, "userPushSubscription"))
                 $root.ProtobufClient.UserPushSubscription.encode(message.userPushSubscription, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             return writer;
         };
@@ -13653,15 +13653,15 @@ $root.ProtobufClient = (function() {
         APIAuthenticationMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.token != null && message.hasOwnProperty("token"))
+            if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.token);
-            if (message.nonce != null && message.hasOwnProperty("nonce"))
+            if (message.nonce != null && Object.hasOwnProperty.call(message, "nonce"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.nonce);
-            if (message.apiKey != null && message.hasOwnProperty("apiKey"))
+            if (message.apiKey != null && Object.hasOwnProperty.call(message, "apiKey"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.apiKey);
-            if (message.source != null && message.hasOwnProperty("source"))
+            if (message.source != null && Object.hasOwnProperty.call(message, "source"))
                 writer.uint32(/* id 4, wireType 0 =*/32).int32(message.source);
-            if (message.version != null && message.hasOwnProperty("version"))
+            if (message.version != null && Object.hasOwnProperty.call(message, "version"))
                 writer.uint32(/* id 5, wireType 2 =*/42).string(message.version);
             if (message.subscriptions != null && message.subscriptions.length)
                 for (var i = 0; i < message.subscriptions.length; ++i)
@@ -13933,7 +13933,7 @@ $root.ProtobufClient = (function() {
         /**
          * Source enum.
          * @name ProtobufClient.APIAuthenticationMessage.Source
-         * @enum {string}
+         * @enum {number}
          * @property {number} UNKNOWN=0 UNKNOWN value
          * @property {number} GOLANG_SDK=1 GOLANG_SDK value
          * @property {number} JAVASCRIPT_SDK=2 JAVASCRIPT_SDK value
@@ -14052,13 +14052,13 @@ $root.ProtobufClient = (function() {
         ClientSessionMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.session != null && message.hasOwnProperty("session"))
+            if (message.session != null && Object.hasOwnProperty.call(message, "session"))
                 $root.ProtobufClient.ClientSessionMessage.Session.encode(message.session, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.anonymousTradingSession != null && message.hasOwnProperty("anonymousTradingSession"))
+            if (message.anonymousTradingSession != null && Object.hasOwnProperty.call(message, "anonymousTradingSession"))
                 $root.ProtobufClient.ClientSessionMessage.AnonymousTradingSession.encode(message.anonymousTradingSession, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.identification != null && message.hasOwnProperty("identification"))
+            if (message.identification != null && Object.hasOwnProperty.call(message, "identification"))
                 $root.ProtobufClient.ClientIdentificationMessage.encode(message.identification, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.anonymousUserSession != null && message.hasOwnProperty("anonymousUserSession"))
+            if (message.anonymousUserSession != null && Object.hasOwnProperty.call(message, "anonymousUserSession"))
                 $root.ProtobufClient.ClientSessionMessage.AnonymousUserSession.encode(message.anonymousUserSession, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             return writer;
         };
@@ -14342,13 +14342,13 @@ $root.ProtobufClient = (function() {
             Session.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.userId != null && message.hasOwnProperty("userId"))
+                if (message.userId != null && Object.hasOwnProperty.call(message, "userId"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.userId);
-                if (message.expires != null && message.hasOwnProperty("expires"))
+                if (message.expires != null && Object.hasOwnProperty.call(message, "expires"))
                     writer.uint32(/* id 2, wireType 0 =*/16).int64(message.expires);
-                if (message.token != null && message.hasOwnProperty("token"))
+                if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                     writer.uint32(/* id 3, wireType 2 =*/26).string(message.token);
-                if (message.mfaToken != null && message.hasOwnProperty("mfaToken"))
+                if (message.mfaToken != null && Object.hasOwnProperty.call(message, "mfaToken"))
                     writer.uint32(/* id 4, wireType 2 =*/34).string(message.mfaToken);
                 return writer;
             };
@@ -14601,11 +14601,11 @@ $root.ProtobufClient = (function() {
             AnonymousTradingSession.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.exchange != null && message.hasOwnProperty("exchange"))
+                if (message.exchange != null && Object.hasOwnProperty.call(message, "exchange"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.exchange);
-                if (message.token != null && message.hasOwnProperty("token"))
+                if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                     writer.uint32(/* id 2, wireType 2 =*/18).string(message.token);
-                if (message.expiration != null && message.hasOwnProperty("expiration"))
+                if (message.expiration != null && Object.hasOwnProperty.call(message, "expiration"))
                     writer.uint32(/* id 3, wireType 0 =*/24).int64(message.expiration);
                 return writer;
             };
@@ -14829,7 +14829,7 @@ $root.ProtobufClient = (function() {
             AnonymousUserSession.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.token != null && message.hasOwnProperty("token"))
+                if (message.token != null && Object.hasOwnProperty.call(message, "token"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.token);
                 return writer;
             };
@@ -15548,9 +15548,9 @@ $root.ProtobufMarkets = (function() {
         AssetUpdateMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.asset != null && message.hasOwnProperty("asset"))
+            if (message.asset != null && Object.hasOwnProperty.call(message, "asset"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.asset);
-            if (message.usdVolumeUpdate != null && message.hasOwnProperty("usdVolumeUpdate"))
+            if (message.usdVolumeUpdate != null && Object.hasOwnProperty.call(message, "usdVolumeUpdate"))
                 $root.ProtobufMarkets.AssetUSDVolumeUpdate.encode(message.usdVolumeUpdate, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
             return writer;
         };
@@ -15759,7 +15759,7 @@ $root.ProtobufMarkets = (function() {
         AssetUSDVolumeUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.volume != null && message.hasOwnProperty("volume"))
+            if (message.volume != null && Object.hasOwnProperty.call(message, "volume"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.volume);
             return writer;
         };
@@ -15991,17 +15991,17 @@ $root.ProtobufMarkets = (function() {
         Index.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.id != null && message.hasOwnProperty("id"))
+            if (message.id != null && Object.hasOwnProperty.call(message, "id"))
                 writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.id);
-            if (message.symbol != null && message.hasOwnProperty("symbol"))
+            if (message.symbol != null && Object.hasOwnProperty.call(message, "symbol"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.symbol);
-            if (message.indexType != null && message.hasOwnProperty("indexType"))
+            if (message.indexType != null && Object.hasOwnProperty.call(message, "indexType"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.indexType);
-            if (message.cwIndex != null && message.hasOwnProperty("cwIndex"))
+            if (message.cwIndex != null && Object.hasOwnProperty.call(message, "cwIndex"))
                 writer.uint32(/* id 4, wireType 0 =*/32).bool(message.cwIndex);
-            if (message.exchangeId != null && message.hasOwnProperty("exchangeId"))
+            if (message.exchangeId != null && Object.hasOwnProperty.call(message, "exchangeId"))
                 writer.uint32(/* id 5, wireType 0 =*/40).uint64(message.exchangeId);
-            if (message.instrumentId != null && message.hasOwnProperty("instrumentId"))
+            if (message.instrumentId != null && Object.hasOwnProperty.call(message, "instrumentId"))
                 writer.uint32(/* id 6, wireType 0 =*/48).uint64(message.instrumentId);
             return writer;
         };
@@ -16336,15 +16336,15 @@ $root.ProtobufMarkets = (function() {
         IndexUpdateMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.index != null && message.hasOwnProperty("index"))
+            if (message.index != null && Object.hasOwnProperty.call(message, "index"))
                 $root.ProtobufMarkets.Index.encode(message.index, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.tickerUpdate != null && message.hasOwnProperty("tickerUpdate"))
+            if (message.tickerUpdate != null && Object.hasOwnProperty.call(message, "tickerUpdate"))
                 $root.ProtobufMarkets.TickerUpdate.encode(message.tickerUpdate, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.intervalsUpdate != null && message.hasOwnProperty("intervalsUpdate"))
+            if (message.intervalsUpdate != null && Object.hasOwnProperty.call(message, "intervalsUpdate"))
                 $root.ProtobufMarkets.IntervalsUpdate.encode(message.intervalsUpdate, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.summaryUpdate != null && message.hasOwnProperty("summaryUpdate"))
+            if (message.summaryUpdate != null && Object.hasOwnProperty.call(message, "summaryUpdate"))
                 $root.ProtobufMarkets.SummaryUpdate.encode(message.summaryUpdate, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.sparklineUpdate != null && message.hasOwnProperty("sparklineUpdate"))
+            if (message.sparklineUpdate != null && Object.hasOwnProperty.call(message, "sparklineUpdate"))
                 $root.ProtobufMarkets.SparklineUpdate.encode(message.sparklineUpdate, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
             return writer;
         };
@@ -16853,11 +16853,11 @@ $root.ProtobufMarkets = (function() {
         Ticker.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.value != null && message.hasOwnProperty("value"))
+            if (message.value != null && Object.hasOwnProperty.call(message, "value"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.value);
-            if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+            if (message.timestamp != null && Object.hasOwnProperty.call(message, "timestamp"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.timestamp);
-            if (message.timestampNano != null && message.hasOwnProperty("timestampNano"))
+            if (message.timestampNano != null && Object.hasOwnProperty.call(message, "timestampNano"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int64(message.timestampNano);
             return writer;
         };
@@ -17131,15 +17131,15 @@ $root.ProtobufMarkets = (function() {
         Market.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.exchange != null && message.hasOwnProperty("exchange"))
+            if (message.exchange != null && Object.hasOwnProperty.call(message, "exchange"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.exchange);
-            if (message.currencyPair != null && message.hasOwnProperty("currencyPair"))
+            if (message.currencyPair != null && Object.hasOwnProperty.call(message, "currencyPair"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.currencyPair);
-            if (message.exchangeId != null && message.hasOwnProperty("exchangeId"))
+            if (message.exchangeId != null && Object.hasOwnProperty.call(message, "exchangeId"))
                 writer.uint32(/* id 3, wireType 0 =*/24).uint64(message.exchangeId);
-            if (message.currencyPairId != null && message.hasOwnProperty("currencyPairId"))
+            if (message.currencyPairId != null && Object.hasOwnProperty.call(message, "currencyPairId"))
                 writer.uint32(/* id 4, wireType 0 =*/32).uint64(message.currencyPairId);
-            if (message.marketId != null && message.hasOwnProperty("marketId"))
+            if (message.marketId != null && Object.hasOwnProperty.call(message, "marketId"))
                 writer.uint32(/* id 5, wireType 0 =*/40).uint64(message.marketId);
             return writer;
         };
@@ -17422,9 +17422,9 @@ $root.ProtobufMarkets = (function() {
         Order.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.priceStr != null && message.hasOwnProperty("priceStr"))
+            if (message.priceStr != null && Object.hasOwnProperty.call(message, "priceStr"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.priceStr);
-            if (message.amountStr != null && message.hasOwnProperty("amountStr"))
+            if (message.amountStr != null && Object.hasOwnProperty.call(message, "amountStr"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.amountStr);
             return writer;
         };
@@ -17668,17 +17668,17 @@ $root.ProtobufMarkets = (function() {
         Trade.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+            if (message.timestamp != null && Object.hasOwnProperty.call(message, "timestamp"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.timestamp);
-            if (message.priceStr != null && message.hasOwnProperty("priceStr"))
+            if (message.priceStr != null && Object.hasOwnProperty.call(message, "priceStr"))
                 writer.uint32(/* id 8, wireType 2 =*/66).string(message.priceStr);
-            if (message.amountStr != null && message.hasOwnProperty("amountStr"))
+            if (message.amountStr != null && Object.hasOwnProperty.call(message, "amountStr"))
                 writer.uint32(/* id 9, wireType 2 =*/74).string(message.amountStr);
-            if (message.timestampNano != null && message.hasOwnProperty("timestampNano"))
+            if (message.timestampNano != null && Object.hasOwnProperty.call(message, "timestampNano"))
                 writer.uint32(/* id 10, wireType 0 =*/80).int64(message.timestampNano);
-            if (message.externalId != null && message.hasOwnProperty("externalId"))
+            if (message.externalId != null && Object.hasOwnProperty.call(message, "externalId"))
                 writer.uint32(/* id 11, wireType 2 =*/90).string(message.externalId);
-            if (message.orderSide != null && message.hasOwnProperty("orderSide"))
+            if (message.orderSide != null && Object.hasOwnProperty.call(message, "orderSide"))
                 writer.uint32(/* id 13, wireType 0 =*/104).int32(message.orderSide);
             return writer;
         };
@@ -17911,7 +17911,7 @@ $root.ProtobufMarkets = (function() {
         /**
          * OrderSide enum.
          * @name ProtobufMarkets.Trade.OrderSide
-         * @enum {string}
+         * @enum {number}
          * @property {number} UNKNOWN=0 UNKNOWN value
          * @property {number} BUYSIDE=1 BUYSIDE value
          * @property {number} SELLSIDE=2 SELLSIDE value
@@ -17927,7 +17927,7 @@ $root.ProtobufMarkets = (function() {
         /**
          * Side enum.
          * @name ProtobufMarkets.Trade.Side
-         * @enum {string}
+         * @enum {number}
          * @property {number} BUY=0 BUY value
          * @property {number} SELL=1 SELL value
          */
@@ -18083,23 +18083,23 @@ $root.ProtobufMarkets = (function() {
         MarketUpdateMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.orderBookUpdate != null && message.hasOwnProperty("orderBookUpdate"))
+            if (message.orderBookUpdate != null && Object.hasOwnProperty.call(message, "orderBookUpdate"))
                 $root.ProtobufMarkets.OrderBookUpdate.encode(message.orderBookUpdate, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.orderBookDeltaUpdate != null && message.hasOwnProperty("orderBookDeltaUpdate"))
+            if (message.orderBookDeltaUpdate != null && Object.hasOwnProperty.call(message, "orderBookDeltaUpdate"))
                 $root.ProtobufMarkets.OrderBookDeltaUpdate.encode(message.orderBookDeltaUpdate, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.tradesUpdate != null && message.hasOwnProperty("tradesUpdate"))
+            if (message.tradesUpdate != null && Object.hasOwnProperty.call(message, "tradesUpdate"))
                 $root.ProtobufMarkets.TradesUpdate.encode(message.tradesUpdate, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.intervalsUpdate != null && message.hasOwnProperty("intervalsUpdate"))
+            if (message.intervalsUpdate != null && Object.hasOwnProperty.call(message, "intervalsUpdate"))
                 $root.ProtobufMarkets.IntervalsUpdate.encode(message.intervalsUpdate, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-            if (message.summaryUpdate != null && message.hasOwnProperty("summaryUpdate"))
+            if (message.summaryUpdate != null && Object.hasOwnProperty.call(message, "summaryUpdate"))
                 $root.ProtobufMarkets.SummaryUpdate.encode(message.summaryUpdate, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-            if (message.sparklineUpdate != null && message.hasOwnProperty("sparklineUpdate"))
+            if (message.sparklineUpdate != null && Object.hasOwnProperty.call(message, "sparklineUpdate"))
                 $root.ProtobufMarkets.SparklineUpdate.encode(message.sparklineUpdate, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-            if (message.market != null && message.hasOwnProperty("market"))
+            if (message.market != null && Object.hasOwnProperty.call(message, "market"))
                 $root.ProtobufMarkets.Market.encode(message.market, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
-            if (message.orderBookSpreadUpdate != null && message.hasOwnProperty("orderBookSpreadUpdate"))
+            if (message.orderBookSpreadUpdate != null && Object.hasOwnProperty.call(message, "orderBookSpreadUpdate"))
                 $root.ProtobufMarkets.OrderBookSpreadUpdate.encode(message.orderBookSpreadUpdate, writer.uint32(/* id 11, wireType 2 =*/90).fork()).ldelim();
-            if (message.orderBookLiquidityUpdate != null && message.hasOwnProperty("orderBookLiquidityUpdate"))
+            if (message.orderBookLiquidityUpdate != null && Object.hasOwnProperty.call(message, "orderBookLiquidityUpdate"))
                 $root.ProtobufMarkets.OrderBookLiquidityUpdate.encode(message.orderBookLiquidityUpdate, writer.uint32(/* id 12, wireType 2 =*/98).fork()).ldelim();
             return writer;
         };
@@ -18509,9 +18509,9 @@ $root.ProtobufMarkets = (function() {
             if (message.asks != null && message.asks.length)
                 for (var i = 0; i < message.asks.length; ++i)
                     $root.ProtobufMarkets.Order.encode(message.asks[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.aggregationModulusStr != null && message.hasOwnProperty("aggregationModulusStr"))
+            if (message.aggregationModulusStr != null && Object.hasOwnProperty.call(message, "aggregationModulusStr"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.aggregationModulusStr);
-            if (message.seqNum != null && message.hasOwnProperty("seqNum"))
+            if (message.seqNum != null && Object.hasOwnProperty.call(message, "seqNum"))
                 writer.uint32(/* id 5, wireType 0 =*/40).int32(message.seqNum);
             return writer;
         };
@@ -18799,13 +18799,13 @@ $root.ProtobufMarkets = (function() {
         OrderBookDeltaUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.bids != null && message.hasOwnProperty("bids"))
+            if (message.bids != null && Object.hasOwnProperty.call(message, "bids"))
                 $root.ProtobufMarkets.OrderBookDeltaUpdate.OrderDeltas.encode(message.bids, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.asks != null && message.hasOwnProperty("asks"))
+            if (message.asks != null && Object.hasOwnProperty.call(message, "asks"))
                 $root.ProtobufMarkets.OrderBookDeltaUpdate.OrderDeltas.encode(message.asks, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.aggregationModulusStr != null && message.hasOwnProperty("aggregationModulusStr"))
+            if (message.aggregationModulusStr != null && Object.hasOwnProperty.call(message, "aggregationModulusStr"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.aggregationModulusStr);
-            if (message.seqNum != null && message.hasOwnProperty("seqNum"))
+            if (message.seqNum != null && Object.hasOwnProperty.call(message, "seqNum"))
                 writer.uint32(/* id 5, wireType 0 =*/40).int32(message.seqNum);
             return writer;
         };
@@ -19344,11 +19344,11 @@ $root.ProtobufMarkets = (function() {
         OrderBookSpreadUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+            if (message.timestamp != null && Object.hasOwnProperty.call(message, "timestamp"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int64(message.timestamp);
-            if (message.bid != null && message.hasOwnProperty("bid"))
+            if (message.bid != null && Object.hasOwnProperty.call(message, "bid"))
                 $root.ProtobufMarkets.Order.encode(message.bid, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.ask != null && message.hasOwnProperty("ask"))
+            if (message.ask != null && Object.hasOwnProperty.call(message, "ask"))
                 $root.ProtobufMarkets.Order.encode(message.ask, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
@@ -19600,11 +19600,11 @@ $root.ProtobufMarkets = (function() {
         OrderBookLiquidityUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+            if (message.timestamp != null && Object.hasOwnProperty.call(message, "timestamp"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int64(message.timestamp);
-            if (message.bid != null && message.hasOwnProperty("bid"))
+            if (message.bid != null && Object.hasOwnProperty.call(message, "bid"))
                 $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquidityUpdateSide.encode(message.bid, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.ask != null && message.hasOwnProperty("ask"))
+            if (message.ask != null && Object.hasOwnProperty.call(message, "ask"))
                 $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquidityUpdateSide.encode(message.ask, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
@@ -19844,9 +19844,9 @@ $root.ProtobufMarkets = (function() {
             OrderBookLiquiditySums.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.totalBase != null && message.hasOwnProperty("totalBase"))
+                if (message.totalBase != null && Object.hasOwnProperty.call(message, "totalBase"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.totalBase);
-                if (message.totalQuote != null && message.hasOwnProperty("totalQuote"))
+                if (message.totalQuote != null && Object.hasOwnProperty.call(message, "totalQuote"))
                     writer.uint32(/* id 2, wireType 2 =*/18).string(message.totalQuote);
                 return writer;
             };
@@ -20126,25 +20126,25 @@ $root.ProtobufMarkets = (function() {
             OrderBookLiquidityUpdateSide.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.bip25 != null && message.hasOwnProperty("bip25"))
+                if (message.bip25 != null && Object.hasOwnProperty.call(message, "bip25"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip25, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-                if (message.bip50 != null && message.hasOwnProperty("bip50"))
+                if (message.bip50 != null && Object.hasOwnProperty.call(message, "bip50"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip50, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-                if (message.bip75 != null && message.hasOwnProperty("bip75"))
+                if (message.bip75 != null && Object.hasOwnProperty.call(message, "bip75"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip75, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-                if (message.bip100 != null && message.hasOwnProperty("bip100"))
+                if (message.bip100 != null && Object.hasOwnProperty.call(message, "bip100"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip100, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-                if (message.bip150 != null && message.hasOwnProperty("bip150"))
+                if (message.bip150 != null && Object.hasOwnProperty.call(message, "bip150"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip150, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-                if (message.bip200 != null && message.hasOwnProperty("bip200"))
+                if (message.bip200 != null && Object.hasOwnProperty.call(message, "bip200"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip200, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-                if (message.bip250 != null && message.hasOwnProperty("bip250"))
+                if (message.bip250 != null && Object.hasOwnProperty.call(message, "bip250"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip250, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-                if (message.bip300 != null && message.hasOwnProperty("bip300"))
+                if (message.bip300 != null && Object.hasOwnProperty.call(message, "bip300"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip300, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-                if (message.bip400 != null && message.hasOwnProperty("bip400"))
+                if (message.bip400 != null && Object.hasOwnProperty.call(message, "bip400"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip400, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
-                if (message.bip500 != null && message.hasOwnProperty("bip500"))
+                if (message.bip500 != null && Object.hasOwnProperty.call(message, "bip500"))
                     $root.ProtobufMarkets.OrderBookLiquidityUpdate.OrderBookLiquiditySums.encode(message.bip500, writer.uint32(/* id 10, wireType 2 =*/82).fork()).ldelim();
                 return writer;
             };
@@ -20737,17 +20737,17 @@ $root.ProtobufMarkets = (function() {
         Interval.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.closetime != null && message.hasOwnProperty("closetime"))
+            if (message.closetime != null && Object.hasOwnProperty.call(message, "closetime"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int64(message.closetime);
-            if (message.ohlc != null && message.hasOwnProperty("ohlc"))
+            if (message.ohlc != null && Object.hasOwnProperty.call(message, "ohlc"))
                 $root.ProtobufMarkets.Interval.OHLC.encode(message.ohlc, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.period != null && message.hasOwnProperty("period"))
+            if (message.period != null && Object.hasOwnProperty.call(message, "period"))
                 writer.uint32(/* id 4, wireType 0 =*/32).int32(message.period);
-            if (message.volumeBaseStr != null && message.hasOwnProperty("volumeBaseStr"))
+            if (message.volumeBaseStr != null && Object.hasOwnProperty.call(message, "volumeBaseStr"))
                 writer.uint32(/* id 6, wireType 2 =*/50).string(message.volumeBaseStr);
-            if (message.volumeQuoteStr != null && message.hasOwnProperty("volumeQuoteStr"))
+            if (message.volumeQuoteStr != null && Object.hasOwnProperty.call(message, "volumeQuoteStr"))
                 writer.uint32(/* id 7, wireType 2 =*/58).string(message.volumeQuoteStr);
-            if (message.periodName != null && message.hasOwnProperty("periodName"))
+            if (message.periodName != null && Object.hasOwnProperty.call(message, "periodName"))
                 writer.uint32(/* id 9, wireType 2 =*/74).string(message.periodName);
             return writer;
         };
@@ -21033,13 +21033,13 @@ $root.ProtobufMarkets = (function() {
             OHLC.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.openStr != null && message.hasOwnProperty("openStr"))
+                if (message.openStr != null && Object.hasOwnProperty.call(message, "openStr"))
                     writer.uint32(/* id 5, wireType 2 =*/42).string(message.openStr);
-                if (message.highStr != null && message.hasOwnProperty("highStr"))
+                if (message.highStr != null && Object.hasOwnProperty.call(message, "highStr"))
                     writer.uint32(/* id 6, wireType 2 =*/50).string(message.highStr);
-                if (message.lowStr != null && message.hasOwnProperty("lowStr"))
+                if (message.lowStr != null && Object.hasOwnProperty.call(message, "lowStr"))
                     writer.uint32(/* id 7, wireType 2 =*/58).string(message.lowStr);
-                if (message.closeStr != null && message.hasOwnProperty("closeStr"))
+                if (message.closeStr != null && Object.hasOwnProperty.call(message, "closeStr"))
                     writer.uint32(/* id 8, wireType 2 =*/66).string(message.closeStr);
                 return writer;
             };
@@ -21534,21 +21534,21 @@ $root.ProtobufMarkets = (function() {
         SummaryUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.numTrades != null && message.hasOwnProperty("numTrades"))
+            if (message.numTrades != null && Object.hasOwnProperty.call(message, "numTrades"))
                 writer.uint32(/* id 8, wireType 0 =*/64).int32(message.numTrades);
-            if (message.lastStr != null && message.hasOwnProperty("lastStr"))
+            if (message.lastStr != null && Object.hasOwnProperty.call(message, "lastStr"))
                 writer.uint32(/* id 10, wireType 2 =*/82).string(message.lastStr);
-            if (message.highStr != null && message.hasOwnProperty("highStr"))
+            if (message.highStr != null && Object.hasOwnProperty.call(message, "highStr"))
                 writer.uint32(/* id 11, wireType 2 =*/90).string(message.highStr);
-            if (message.lowStr != null && message.hasOwnProperty("lowStr"))
+            if (message.lowStr != null && Object.hasOwnProperty.call(message, "lowStr"))
                 writer.uint32(/* id 12, wireType 2 =*/98).string(message.lowStr);
-            if (message.volumeBaseStr != null && message.hasOwnProperty("volumeBaseStr"))
+            if (message.volumeBaseStr != null && Object.hasOwnProperty.call(message, "volumeBaseStr"))
                 writer.uint32(/* id 13, wireType 2 =*/106).string(message.volumeBaseStr);
-            if (message.volumeQuoteStr != null && message.hasOwnProperty("volumeQuoteStr"))
+            if (message.volumeQuoteStr != null && Object.hasOwnProperty.call(message, "volumeQuoteStr"))
                 writer.uint32(/* id 14, wireType 2 =*/114).string(message.volumeQuoteStr);
-            if (message.changeAbsoluteStr != null && message.hasOwnProperty("changeAbsoluteStr"))
+            if (message.changeAbsoluteStr != null && Object.hasOwnProperty.call(message, "changeAbsoluteStr"))
                 writer.uint32(/* id 15, wireType 2 =*/122).string(message.changeAbsoluteStr);
-            if (message.changePercentStr != null && message.hasOwnProperty("changePercentStr"))
+            if (message.changePercentStr != null && Object.hasOwnProperty.call(message, "changePercentStr"))
                 writer.uint32(/* id 16, wireType 2 =*/130).string(message.changePercentStr);
             return writer;
         };
@@ -21822,9 +21822,9 @@ $root.ProtobufMarkets = (function() {
         SparklineUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.time);
-            if (message.priceStr != null && message.hasOwnProperty("priceStr"))
+            if (message.priceStr != null && Object.hasOwnProperty.call(message, "priceStr"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.priceStr);
             return writer;
         };
@@ -22078,13 +22078,13 @@ $root.ProtobufMarkets = (function() {
         PairUpdateMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.pair != null && message.hasOwnProperty("pair"))
+            if (message.pair != null && Object.hasOwnProperty.call(message, "pair"))
                 writer.uint32(/* id 1, wireType 0 =*/8).uint64(message.pair);
-            if (message.vwapUpdate != null && message.hasOwnProperty("vwapUpdate"))
+            if (message.vwapUpdate != null && Object.hasOwnProperty.call(message, "vwapUpdate"))
                 $root.ProtobufMarkets.PairVwapUpdate.encode(message.vwapUpdate, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.performanceUpdate != null && message.hasOwnProperty("performanceUpdate"))
+            if (message.performanceUpdate != null && Object.hasOwnProperty.call(message, "performanceUpdate"))
                 $root.ProtobufMarkets.PairPerformanceUpdate.encode(message.performanceUpdate, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.trendlineUpdate != null && message.hasOwnProperty("trendlineUpdate"))
+            if (message.trendlineUpdate != null && Object.hasOwnProperty.call(message, "trendlineUpdate"))
                 $root.ProtobufMarkets.PairTrendlineUpdate.encode(message.trendlineUpdate, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             return writer;
         };
@@ -22371,11 +22371,11 @@ $root.ProtobufMarkets = (function() {
         PairVwapUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.vwap != null && message.hasOwnProperty("vwap"))
+            if (message.vwap != null && Object.hasOwnProperty.call(message, "vwap"))
                 writer.uint32(/* id 1, wireType 1 =*/9).double(message.vwap);
-            if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+            if (message.timestamp != null && Object.hasOwnProperty.call(message, "timestamp"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.timestamp);
-            if (message.timestampNano != null && message.hasOwnProperty("timestampNano"))
+            if (message.timestampNano != null && Object.hasOwnProperty.call(message, "timestampNano"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int64(message.timestampNano);
             return writer;
         };
@@ -22622,9 +22622,9 @@ $root.ProtobufMarkets = (function() {
         PairPerformanceUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.window != null && message.hasOwnProperty("window"))
+            if (message.window != null && Object.hasOwnProperty.call(message, "window"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.window);
-            if (message.performance != null && message.hasOwnProperty("performance"))
+            if (message.performance != null && Object.hasOwnProperty.call(message, "performance"))
                 writer.uint32(/* id 2, wireType 1 =*/17).double(message.performance);
             return writer;
         };
@@ -22850,13 +22850,13 @@ $root.ProtobufMarkets = (function() {
         PairTrendlineUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.window != null && message.hasOwnProperty("window"))
+            if (message.window != null && Object.hasOwnProperty.call(message, "window"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.window);
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.time);
-            if (message.price != null && message.hasOwnProperty("price"))
+            if (message.price != null && Object.hasOwnProperty.call(message, "price"))
                 writer.uint32(/* id 3, wireType 2 =*/26).string(message.price);
-            if (message.volume != null && message.hasOwnProperty("volume"))
+            if (message.volume != null && Object.hasOwnProperty.call(message, "volume"))
                 writer.uint32(/* id 4, wireType 2 =*/34).string(message.volume);
             return writer;
         };
@@ -23198,25 +23198,25 @@ $root.ProtobufStream = (function() {
         StreamMessage.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.authenticationResult != null && message.hasOwnProperty("authenticationResult"))
+            if (message.authenticationResult != null && Object.hasOwnProperty.call(message, "authenticationResult"))
                 $root.ProtobufStream.AuthenticationResult.encode(message.authenticationResult, writer.uint32(/* id 1, wireType 2 =*/10).fork()).ldelim();
-            if (message.marketUpdate != null && message.hasOwnProperty("marketUpdate"))
+            if (message.marketUpdate != null && Object.hasOwnProperty.call(message, "marketUpdate"))
                 $root.ProtobufMarkets.MarketUpdateMessage.encode(message.marketUpdate, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.pairUpdate != null && message.hasOwnProperty("pairUpdate"))
+            if (message.pairUpdate != null && Object.hasOwnProperty.call(message, "pairUpdate"))
                 $root.ProtobufMarkets.PairUpdateMessage.encode(message.pairUpdate, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
-            if (message.assetUpdate != null && message.hasOwnProperty("assetUpdate"))
+            if (message.assetUpdate != null && Object.hasOwnProperty.call(message, "assetUpdate"))
                 $root.ProtobufMarkets.AssetUpdateMessage.encode(message.assetUpdate, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
-            if (message.subscriptionResult != null && message.hasOwnProperty("subscriptionResult"))
+            if (message.subscriptionResult != null && Object.hasOwnProperty.call(message, "subscriptionResult"))
                 $root.ProtobufStream.SubscriptionResult.encode(message.subscriptionResult, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-            if (message.unsubscriptionResult != null && message.hasOwnProperty("unsubscriptionResult"))
+            if (message.unsubscriptionResult != null && Object.hasOwnProperty.call(message, "unsubscriptionResult"))
                 $root.ProtobufStream.UnsubscriptionResult.encode(message.unsubscriptionResult, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
-            if (message.missedMessages != null && message.hasOwnProperty("missedMessages"))
+            if (message.missedMessages != null && Object.hasOwnProperty.call(message, "missedMessages"))
                 $root.ProtobufStream.MissedMessages.encode(message.missedMessages, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
-            if (message.indexUpdate != null && message.hasOwnProperty("indexUpdate"))
+            if (message.indexUpdate != null && Object.hasOwnProperty.call(message, "indexUpdate"))
                 $root.ProtobufMarkets.IndexUpdateMessage.encode(message.indexUpdate, writer.uint32(/* id 8, wireType 2 =*/66).fork()).ldelim();
-            if (message.bandwidthUpdate != null && message.hasOwnProperty("bandwidthUpdate"))
+            if (message.bandwidthUpdate != null && Object.hasOwnProperty.call(message, "bandwidthUpdate"))
                 $root.ProtobufStream.BandwidthUpdate.encode(message.bandwidthUpdate, writer.uint32(/* id 9, wireType 2 =*/74).fork()).ldelim();
-            if (message.heartbeat != null && message.hasOwnProperty("heartbeat"))
+            if (message.heartbeat != null && Object.hasOwnProperty.call(message, "heartbeat"))
                 $root.ProtobufStream.Heartbeat.encode(message.heartbeat, writer.uint32(/* id 10, wireType 2 =*/82).fork()).ldelim();
             return writer;
         };
@@ -23620,7 +23620,7 @@ $root.ProtobufStream = (function() {
         AuthenticationResult.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.status != null && message.hasOwnProperty("status"))
+            if (message.status != null && Object.hasOwnProperty.call(message, "status"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.status);
             return writer;
         };
@@ -23794,7 +23794,7 @@ $root.ProtobufStream = (function() {
         /**
          * Status enum.
          * @name ProtobufStream.AuthenticationResult.Status
-         * @enum {string}
+         * @enum {number}
          * @property {number} UNKNOWN=0 UNKNOWN value
          * @property {number} AUTHENTICATED=1 AUTHENTICATED value
          * @property {number} BAD_NONCE=2 BAD_NONCE value
@@ -23912,7 +23912,7 @@ $root.ProtobufStream = (function() {
             if (message.failed != null && message.failed.length)
                 for (var i = 0; i < message.failed.length; ++i)
                     $root.ProtobufStream.SubscribeError.encode(message.failed[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.status != null && message.hasOwnProperty("status"))
+            if (message.status != null && Object.hasOwnProperty.call(message, "status"))
                 $root.ProtobufStream.SubscriptionStatus.encode(message.status, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             if (message.subscriptions != null && message.subscriptions.length)
                 for (var i = 0; i < message.subscriptions.length; ++i)
@@ -24230,7 +24230,7 @@ $root.ProtobufStream = (function() {
             if (message.failed != null && message.failed.length)
                 for (var i = 0; i < message.failed.length; ++i)
                     $root.ProtobufStream.UnsubscribeError.encode(message.failed[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
-            if (message.status != null && message.hasOwnProperty("status"))
+            if (message.status != null && Object.hasOwnProperty.call(message, "status"))
                 $root.ProtobufStream.SubscriptionStatus.encode(message.status, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             if (message.subscriptions != null && message.subscriptions.length)
                 for (var i = 0; i < message.subscriptions.length; ++i)
@@ -24530,11 +24530,11 @@ $root.ProtobufStream = (function() {
         SubscribeError.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.key != null && message.hasOwnProperty("key"))
+            if (message.key != null && Object.hasOwnProperty.call(message, "key"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.key);
-            if (message.error != null && message.hasOwnProperty("error"))
+            if (message.error != null && Object.hasOwnProperty.call(message, "error"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.error);
-            if (message.subscription != null && message.hasOwnProperty("subscription"))
+            if (message.subscription != null && Object.hasOwnProperty.call(message, "subscription"))
                 $root.ProtobufClient.ClientSubscription.encode(message.subscription, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
@@ -24767,11 +24767,11 @@ $root.ProtobufStream = (function() {
         UnsubscribeError.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.key != null && message.hasOwnProperty("key"))
+            if (message.key != null && Object.hasOwnProperty.call(message, "key"))
                 writer.uint32(/* id 1, wireType 2 =*/10).string(message.key);
-            if (message.error != null && message.hasOwnProperty("error"))
+            if (message.error != null && Object.hasOwnProperty.call(message, "error"))
                 writer.uint32(/* id 2, wireType 2 =*/18).string(message.error);
-            if (message.subscription != null && message.hasOwnProperty("subscription"))
+            if (message.subscription != null && Object.hasOwnProperty.call(message, "subscription"))
                 $root.ProtobufClient.ClientSubscription.encode(message.subscription, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
             return writer;
         };
@@ -25233,7 +25233,7 @@ $root.ProtobufStream = (function() {
         MissedMessages.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.numMissedMessages != null && message.hasOwnProperty("numMissedMessages"))
+            if (message.numMissedMessages != null && Object.hasOwnProperty.call(message, "numMissedMessages"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int64(message.numMissedMessages);
             return writer;
         };
@@ -25452,11 +25452,11 @@ $root.ProtobufStream = (function() {
         BandwidthUpdate.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.ok != null && message.hasOwnProperty("ok"))
+            if (message.ok != null && Object.hasOwnProperty.call(message, "ok"))
                 writer.uint32(/* id 1, wireType 0 =*/8).bool(message.ok);
-            if (message.bytesRemaining != null && message.hasOwnProperty("bytesRemaining"))
+            if (message.bytesRemaining != null && Object.hasOwnProperty.call(message, "bytesRemaining"))
                 writer.uint32(/* id 2, wireType 0 =*/16).int64(message.bytesRemaining);
-            if (message.bytesUsed != null && message.hasOwnProperty("bytesUsed"))
+            if (message.bytesUsed != null && Object.hasOwnProperty.call(message, "bytesUsed"))
                 writer.uint32(/* id 3, wireType 0 =*/24).int64(message.bytesUsed);
             return writer;
         };
@@ -25694,7 +25694,7 @@ $root.ProtobufStream = (function() {
         Heartbeat.encode = function encode(message, writer) {
             if (!writer)
                 writer = $Writer.create();
-            if (message.time != null && message.hasOwnProperty("time"))
+            if (message.time != null && Object.hasOwnProperty.call(message, "time"))
                 writer.uint32(/* id 1, wireType 0 =*/8).int64(message.time);
             return writer;
         };
