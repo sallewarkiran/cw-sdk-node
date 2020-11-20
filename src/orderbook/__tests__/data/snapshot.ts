@@ -1,4 +1,4 @@
-import { OrderBookSnapshot } from "util/types/shared";
+import { OrderBookSnapshot } from '../../../util/types/shared';
 
 export const mockSnapshot: OrderBookSnapshot = {
     seqNum: 1012077,

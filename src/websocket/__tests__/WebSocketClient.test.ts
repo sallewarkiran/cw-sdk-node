@@ -1,6 +1,6 @@
-import WebSocketClient from 'websocket/WebSocketClient';
+import WebSocketClient from '../../websocket/WebSocketClient';
 import { getConnOpts, getMockWebSocketServer } from './ws-test-server';
-import { StateWaitingToReconnect } from 'websocket/constants';
+import { StateWaitingToReconnect } from '../../websocket/constants';
 
 test('error-missing-credentials', () => {
   function createConnWithoutApiKey(): WebSocketClient {

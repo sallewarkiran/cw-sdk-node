@@ -1,8 +1,8 @@
 import deepmerge from 'deepmerge';
 import getPort from 'get-port';
 import { Server } from 'ws';
-import { ProtobufClient, ProtobufStream } from 'websocket/modules/proto';
-import { TradeOpts, WebSocketOpts } from 'websocket/types/client';
+import { ProtobufClient, ProtobufStream } from '../../../websocket/modules/proto';
+import { TradeOpts, WebSocketOpts } from '../../../websocket/types/client';
 
 export const validToken =
   '55v1hv+29RY+xdtJBnFeyoFLjY4r+d8kmx761jCPWi5NgJJPqjPBp5SdqXjrTy/wBoRIcwGAUFVtpGrY7QAOLw==';

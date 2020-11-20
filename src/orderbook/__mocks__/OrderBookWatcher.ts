@@ -1,5 +1,5 @@
 import { Updater } from './Updater';
-import { StreamClient } from 'websocket';
+import { StreamClient } from '../../websocket';
 import { cachedMocks } from './mockCache';
 
 export class OrderBookWatcher {
