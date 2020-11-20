@@ -24,7 +24,7 @@ Internal class to handle retrieving orderbook snapshots via the REST API.
 
 \+ **new SnapshotRetriever**(`marketSymbol`: [MarketSymbol](../README.md#marketsymbol), `restClient`: [RESTClient](restclient.md)): *[SnapshotRetriever](snapshotretriever.md)*
 
-*Defined in [src/orderbook/SnapshotRetriever.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/orderbook/SnapshotRetriever.ts#L9)*
+*Defined in [src/orderbook/SnapshotRetriever.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/orderbook/SnapshotRetriever.ts#L9)*
 
 **Parameters:**
 
@@ -41,6 +41,6 @@ Name | Type |
 
 ▸ **getOrderBookSnapshot**(): *Promise‹[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)›*
 
-*Defined in [src/orderbook/SnapshotRetriever.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/orderbook/SnapshotRetriever.ts#L16)*
+*Defined in [src/orderbook/SnapshotRetriever.ts:16](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/orderbook/SnapshotRetriever.ts#L16)*
 
 **Returns:** *Promise‹[OrderBookSnapshot](../interfaces/orderbooksnapshot.md)›*

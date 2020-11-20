@@ -19,7 +19,7 @@
 
 • **timestamp**: *Date*
 
-*Defined in [src/websocket/types/pairs.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/pairs.ts#L14)*
+*Defined in [src/websocket/types/pairs.ts:14](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/pairs.ts#L14)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **vwap**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:13](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/pairs.ts#L13)*
+*Defined in [src/websocket/types/pairs.ts:13](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/pairs.ts#L13)*

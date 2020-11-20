@@ -18,4 +18,4 @@
 
 • **id**: *number*
 
-*Defined in [src/websocket/types/pairs.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/pairs.ts#L9)*
+*Defined in [src/websocket/types/pairs.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/pairs.ts#L9)*

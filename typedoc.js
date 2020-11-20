@@ -7,5 +7,6 @@ module.exports = {
   externalPattern: '**/modules/proto/*',
   readme: 'none',
   logger: 'console',
-  exclude: ['**/__tests__/*', '**/__mocks__/*']
+  exclude: ['**/__tests__/*', '**/__mocks__/*'],
+  gitRevision: 'master'
 };

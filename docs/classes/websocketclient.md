@@ -59,7 +59,7 @@
 
 \+ **new WebSocketClient**(`opts`: [WebSocketOpts](../interfaces/websocketopts.md)): *[WebSocketClient](websocketclient.md)*
 
-*Defined in [src/websocket/WebSocketClient.ts:64](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L64)*
+*Defined in [src/websocket/WebSocketClient.ts:64](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L64)*
 
 **Parameters:**
 
@@ -75,7 +75,7 @@ Name | Type |
 
 • **connState**: *symbol*
 
-*Defined in [src/websocket/WebSocketClient.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L58)*
+*Defined in [src/websocket/WebSocketClient.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L58)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **subscriptions**: *object*
 
-*Defined in [src/websocket/WebSocketClient.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L47)*
+*Defined in [src/websocket/WebSocketClient.ts:47](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L47)*
 
 #### Type declaration:
 
@@ -133,7 +133,7 @@ ___
 
 ▸ **connect**(): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:101](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L101)*
+*Defined in [src/websocket/WebSocketClient.ts:101](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L101)*
 
 **Returns:** *void*
 
@@ -143,7 +143,7 @@ ___
 
 ▸ **disconnect**(): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:161](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L161)*
+*Defined in [src/websocket/WebSocketClient.ts:161](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L161)*
 
 **Returns:** *void*
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **error**(`e`: string): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:133](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L133)*
+*Defined in [src/websocket/WebSocketClient.ts:133](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L133)*
 
 **Parameters:**
 
@@ -218,7 +218,7 @@ ___
 
 ▸ **getSubscriptions**(): *ClientSubscription[]*
 
-*Defined in [src/websocket/WebSocketClient.ts:173](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L173)*
+*Defined in [src/websocket/WebSocketClient.ts:173](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L173)*
 
 **Returns:** *ClientSubscription[]*
 
@@ -324,7 +324,7 @@ ___
 
 ▸ **onConnect**(`fn`: function): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:138](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L138)*
+*Defined in [src/websocket/WebSocketClient.ts:138](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L138)*
 
 **Parameters:**
 
@@ -340,7 +340,7 @@ ___
 
 ▸ **onDisconnect**(`fn`: function): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:142](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L142)*
+*Defined in [src/websocket/WebSocketClient.ts:142](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L142)*
 
 **Parameters:**
 
@@ -356,7 +356,7 @@ ___
 
 ▸ **onError**(`fn`: function): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:150](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L150)*
+*Defined in [src/websocket/WebSocketClient.ts:150](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L150)*
 
 **Parameters:**
 
@@ -378,7 +378,7 @@ ___
 
 ▸ **onStateChange**(`fn`: function): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:146](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L146)*
+*Defined in [src/websocket/WebSocketClient.ts:146](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L146)*
 
 **Parameters:**
 
@@ -552,7 +552,7 @@ ___
 
 ▸ **send**(`data`: Buffer | Uint8Array): *void*
 
-*Defined in [src/websocket/WebSocketClient.ts:154](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L154)*
+*Defined in [src/websocket/WebSocketClient.ts:154](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L154)*
 
 **Parameters:**
 
@@ -588,7 +588,7 @@ ___
 
 ▸ **state**(): *symbol*
 
-*Defined in [src/websocket/WebSocketClient.ts:169](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/WebSocketClient.ts#L169)*
+*Defined in [src/websocket/WebSocketClient.ts:169](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/WebSocketClient.ts#L169)*
 
 **Returns:** *symbol*
 

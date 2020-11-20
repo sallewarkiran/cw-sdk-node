@@ -19,7 +19,7 @@
 
 • **error**? : *Error*
 
-*Defined in [src/websocket/types/trading.ts:74](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/trading.ts#L74)*
+*Defined in [src/websocket/types/trading.ts:74](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/trading.ts#L74)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **resolution**? : *RequestResolutionUpdate*
 
-*Defined in [src/websocket/types/trading.ts:73](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/trading.ts#L73)*
+*Defined in [src/websocket/types/trading.ts:73](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/trading.ts#L73)*

@@ -25,7 +25,7 @@
 
 • **intervals**? : *[Interval](interval.md)[]*
 
-*Defined in [src/websocket/types/markets.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L10)*
+*Defined in [src/websocket/types/markets.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L10)*
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 • **market**: *Market*
 
-*Defined in [src/websocket/types/markets.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L5)*
+*Defined in [src/websocket/types/markets.ts:5](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L5)*
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 • **orderBookDelta**? : *[OrderBookDelta](orderbookdelta.md)*
 
-*Defined in [src/websocket/types/markets.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L7)*
+*Defined in [src/websocket/types/markets.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L7)*
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 • **orderBookSnapshot**? : *[OrderBookSnapshot](orderbooksnapshot.md)*
 
-*Defined in [src/websocket/types/markets.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L6)*
+*Defined in [src/websocket/types/markets.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L6)*
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 • **orderBookSpread**? : *[OrderBookSpread](orderbookspread.md)*
 
-*Defined in [src/websocket/types/markets.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L8)*
+*Defined in [src/websocket/types/markets.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L8)*
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 • **sparkline**? : *[Sparkline](sparkline.md)*
 
-*Defined in [src/websocket/types/markets.ts:12](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L12)*
+*Defined in [src/websocket/types/markets.ts:12](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L12)*
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 • **summary**? : *[Summary](summary.md)*
 
-*Defined in [src/websocket/types/markets.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L11)*
+*Defined in [src/websocket/types/markets.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L11)*
 
 ___
 
@@ -81,4 +81,4 @@ ___
 
 • **trades**? : *[PublicTrade](publictrade.md)[]*
 
-*Defined in [src/websocket/types/markets.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L9)*
+*Defined in [src/websocket/types/markets.ts:9](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L9)*

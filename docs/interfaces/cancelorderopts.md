@@ -20,7 +20,7 @@
 
 • **marketID**: *number*
 
-*Defined in [src/websocket/types/trading.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/trading.ts#L58)*
+*Defined in [src/websocket/types/trading.ts:58](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/trading.ts#L58)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **orderID**: *string*
 
-*Defined in [src/websocket/types/trading.ts:59](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/trading.ts#L59)*
+*Defined in [src/websocket/types/trading.ts:59](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/trading.ts#L59)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **requestID**? : *string*
 
-*Defined in [src/websocket/types/trading.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/trading.ts#L62)*
+*Defined in [src/websocket/types/trading.ts:62](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/trading.ts#L62)*

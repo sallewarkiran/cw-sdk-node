@@ -24,7 +24,7 @@
 
 • **asks**: *[PublicOrder](publicorder.md)[]*
 
-*Defined in [src/util/types/shared.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/shared.ts#L4)*
+*Defined in [src/util/types/shared.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/util/types/shared.ts#L4)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 • **bids**: *[PublicOrder](publicorder.md)[]*
 
-*Defined in [src/util/types/shared.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/shared.ts#L3)*
+*Defined in [src/util/types/shared.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/util/types/shared.ts#L3)*
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 • **seqNum**: *number*
 
-*Defined in [src/util/types/shared.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/shared.ts#L2)*
+*Defined in [src/util/types/shared.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/util/types/shared.ts#L2)*

@@ -20,7 +20,7 @@
 
 • **ask**: *[PublicOrder](publicorder.md)*
 
-*Defined in [src/websocket/types/markets.ts:52](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L52)*
+*Defined in [src/websocket/types/markets.ts:52](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L52)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **bid**: *[PublicOrder](publicorder.md)*
 
-*Defined in [src/websocket/types/markets.ts:51](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L51)*
+*Defined in [src/websocket/types/markets.ts:51](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L51)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **timestamp**: *Date*
 
-*Defined in [src/websocket/types/markets.ts:50](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/markets.ts#L50)*
+*Defined in [src/websocket/types/markets.ts:50](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/markets.ts#L50)*
