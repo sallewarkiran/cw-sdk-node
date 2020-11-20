@@ -19,7 +19,7 @@
 
 • **type**: *PriceParamType*
 
-*Defined in [src/websocket/types/trading.ts:79](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/trading.ts#L79)*
+*Defined in [src/websocket/types/trading.ts:79](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/trading.ts#L79)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **value**: *number*
 
-*Defined in [src/websocket/types/trading.ts:78](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/trading.ts#L78)*
+*Defined in [src/websocket/types/trading.ts:78](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/trading.ts#L78)*

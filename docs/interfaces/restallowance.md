@@ -20,7 +20,7 @@
 
 • **cost**: *number*
 
-*Defined in [src/rest/types/client.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L2)*
+*Defined in [src/rest/types/client.ts:2](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/client.ts#L2)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **remaining**: *number*
 
-*Defined in [src/rest/types/client.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L3)*
+*Defined in [src/rest/types/client.ts:3](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/client.ts#L3)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **upgrade**: *string*
 
-*Defined in [src/rest/types/client.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L4)*
+*Defined in [src/rest/types/client.ts:4](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/client.ts#L4)*

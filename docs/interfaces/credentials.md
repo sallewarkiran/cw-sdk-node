@@ -20,7 +20,7 @@
 
 • **apiKey**: *string*
 
-*Defined in [src/util/types/credentials.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/credentials.ts#L6)*
+*Defined in [src/util/types/credentials.ts:6](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/util/types/credentials.ts#L6)*
 
 ___
 
@@ -28,7 +28,7 @@ ___
 
 • **secretKey**: *string*
 
-*Defined in [src/util/types/credentials.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/credentials.ts#L7)*
+*Defined in [src/util/types/credentials.ts:7](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/util/types/credentials.ts#L7)*
 
 ___
 
@@ -36,4 +36,4 @@ ___
 
 • **url**? : *string*
 
-*Defined in [src/util/types/credentials.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/util/types/credentials.ts#L8)*
+*Defined in [src/util/types/credentials.ts:8](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/util/types/credentials.ts#L8)*

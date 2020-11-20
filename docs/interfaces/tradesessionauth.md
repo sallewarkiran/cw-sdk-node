@@ -21,7 +21,7 @@
 
 • **apiKey**: *string*
 
-*Defined in [src/websocket/types/client.ts:49](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/client.ts#L49)*
+*Defined in [src/websocket/types/client.ts:49](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/client.ts#L49)*
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 • **apiSecret**: *string*
 
-*Defined in [src/websocket/types/client.ts:50](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/client.ts#L50)*
+*Defined in [src/websocket/types/client.ts:50](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/client.ts#L50)*
 
 ___
 
@@ -37,7 +37,7 @@ ___
 
 • **customerID**? : *string*
 
-*Defined in [src/websocket/types/client.ts:51](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/client.ts#L51)*
+*Defined in [src/websocket/types/client.ts:51](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/client.ts#L51)*
 
 ___
 
@@ -45,4 +45,4 @@ ___
 
 • **keyPassphrase**? : *string*
 
-*Defined in [src/websocket/types/client.ts:52](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/client.ts#L52)*
+*Defined in [src/websocket/types/client.ts:52](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/client.ts#L52)*

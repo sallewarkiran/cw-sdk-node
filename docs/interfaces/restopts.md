@@ -18,6 +18,6 @@
 
 • **creds**: *object*
 
-*Defined in [src/rest/types/client.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/types/client.ts#L18)*
+*Defined in [src/rest/types/client.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/types/client.ts#L18)*
 
 #### Type declaration:

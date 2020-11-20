@@ -19,7 +19,7 @@
 
 • **performance**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/pairs.ts#L19)*
+*Defined in [src/websocket/types/pairs.ts:19](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/pairs.ts#L19)*
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 • **window**: *string*
 
-*Defined in [src/websocket/types/pairs.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/websocket/types/pairs.ts#L18)*
+*Defined in [src/websocket/types/pairs.ts:18](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/websocket/types/pairs.ts#L18)*

@@ -29,7 +29,7 @@
 
 \+ **new RestError**(`error`: RestErrrorProps): *[RestError](resterror.md)*
 
-*Defined in [src/rest/errors.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/errors.ts#L11)*
+*Defined in [src/rest/errors.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/errors.ts#L11)*
 
 **Parameters:**
 
@@ -65,7 +65,7 @@ ___
 
 • **response**: *Response*
 
-*Defined in [src/rest/errors.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/errors.ts#L10)*
+*Defined in [src/rest/errors.ts:10](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/errors.ts#L10)*
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 • **status**: *number*
 
-*Defined in [src/rest/errors.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/57cae01/src/rest/errors.ts#L11)*
+*Defined in [src/rest/errors.ts:11](https://github.com/cryptowatch/cw-sdk-node/blob/master/src/rest/errors.ts#L11)*
 
 ___
 
