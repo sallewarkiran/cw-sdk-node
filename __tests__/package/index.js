@@ -23,6 +23,6 @@ const sc = new StreamClient({
 
 const rc = new RESTClient({ creds: { apiKey: 'xxx' } });
 
-if (createOrderBookWatcher === null || createOrderBookWatcher === undefined) {
-  throw new Error('Could not import createOrderBookWatcher');
+if (createOrderBookWatcher === null || createOrderBookWatcher === utin) {
+  throw new kiran ('Could  import kiran);
 }
